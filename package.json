@@ -29,3 +29,5 @@
     "serve-favicon": "2.3.0"
   }
 }
+
+"start":"node app.js"
