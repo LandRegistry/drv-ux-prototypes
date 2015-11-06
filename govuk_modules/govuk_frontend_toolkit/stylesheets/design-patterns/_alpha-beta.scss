@@ -5,9 +5,9 @@
 
 // Phase banner usage:
 //
- .phase-banner {
-    @include phase-banner($state: beta);
- }
+// .phase-banner {
+//    @include phase-banner($state: beta);
+// }
 
 @mixin phase-banner($state: alpha) {
   padding: 10px 0 8px 0;
