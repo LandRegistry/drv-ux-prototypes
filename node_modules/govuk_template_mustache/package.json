@@ -26,7 +26,7 @@
   "_id": "govuk_template_mustache@0.15.1",
   "scripts": {},
   "_shasum": "fe67a128b13fd9e73af09cc7f003ef71adafccfe",
-  "_from": "govuk_template_mustache@>=0.15.1 <0.16.0",
+  "_from": "govuk_template_mustache@0.15.1",
   "_npmVersion": "1.4.28",
   "_npmUser": {
     "name": "alphagov",
@@ -43,5 +43,6 @@
     "tarball": "http://registry.npmjs.org/govuk_template_mustache/-/govuk_template_mustache-0.15.1.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/govuk_template_mustache/-/govuk_template_mustache-0.15.1.tgz"
+  "_resolved": "https://registry.npmjs.org/govuk_template_mustache/-/govuk_template_mustache-0.15.1.tgz",
+  "readme": "ERROR: No README data found!"
 }
