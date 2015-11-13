@@ -1,0 +1,69 @@
+{{<layout}}
+
+{{$pageTitle}}Find a Property - Property Result{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <!-- private beta banner -->
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+    </p>
+  </div>
+  <!-- -->
+  <!-- breadcrumb & sign out row -->
+  <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="/drv-15/search">Search the land and property register</a></li>
+              <li><a href="" onClick="history.go(-1); return false;">Search results</a></li>
+              <li><strong>Property details</strong></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    <div class="column-quarter column-flip">
+      <div class="account">
+          <a href="/drv-15/" id="signout">Sign out</a>
+      </div>
+    </div>
+  </div>
+  <!-- -->
+
+  <!-- Open a Grid Row -->
+  <div class="grid-row">
+    <!-- Limit width to two-thirds -->
+
+    <div class="column-two-thirds">
+
+      <!-- 1. Start Title information (number, address and tenure information) -->
+      <h1 class="heading-large">Property details</h1>
+      <div class="text">
+        <h2 itemscope itemtype="http://schema.org/PostalAddress" class="heading-medium collapse-bottom">
+          <span itemprop="streetAddress">
+            <b>4 Mandela Way</b><br>
+          </span>
+          <span itemprop="addressLocality"><b>Southampton</b></span><br>
+          <span itemprop="postalCode"><b>SO15 5RZ</b></span>
+        </h2>
+        <hr>
+        <p class="collapse-top">There is no title information associated with this Property</p>
+            <hr>
+        <h3 class="heading-medium">Why isn't there any information on this property?</h3>
+        <p>There could be many reasons why we cannot provide you a title number at this time. However if you would like any additional help on this, please call Land Registry on <b>0300 006 0411</b>.</p>
+</div>
+    </div>
+  </div>
+  <br/>
+  <!-- Offer user a link back to the Search Results -->
+  <a href="" onClick="history.go(-1); return false;">Back to search results</a>
+</div>
+</main>
+
+{{/content}}
+
+{{/layout}}

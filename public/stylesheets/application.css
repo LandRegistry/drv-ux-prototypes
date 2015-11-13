@@ -4058,3 +4058,11 @@ input[type=number] {
 .button-print:link, .button-print:hover, .button-print:focus, .button-print:visited {
   color: #000;
 }
+
+.no-title {
+  color: #6F777B;
+}
+
+.no-title-message {
+  background-color: #2B8CC4;
+}
