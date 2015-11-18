@@ -1,0 +1,112 @@
+{{<govuk_template}}
+
+{{$pageTitle}}
+  Create an account
+{{/pageTitle}}
+
+{{$head}}
+  {{>includes/head}}
+  <link href="/public/vendor/leaflet/leaflet.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/public/stylesheets/alphagov-static.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/public/stylesheets/land-registry-elements.css" media="screen" rel="stylesheet" type="text/css" />
+{{/head}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>digital-register/includes/banner}}
+
+  <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+        </p>
+      </div>
+  <!-- breadcrumb & sign out row -->
+  <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="index">Digital Register Login</a></li>
+              <li><strong>Create Account</strong></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    <div class="column-quarter column-flip">
+      <div class="account">
+          &nbsp;
+      </div>
+    </div>
+  </div>
+  <!-- -->
+  <h1 class="heading-large collapse-top">Create an account</h1>
+  <p class="font-xsmall">Step 1/3</p>
+
+    <p>Create an account using your Email Address &amp; Password</p>
+  <div class="text">
+
+    <form class="form" action="create-account-2" method="post">
+
+      <div class="form-group">
+        <label class="form-label-bold" for="email-address">Email address</label>
+        <input class="form-control" type="email" id="email-address" name="email" required>
+      </div><!-- form-group -->
+
+      <div class="form-group">
+        <label class="form-label-bold" for="password">
+          Password
+          <span class="form-hint">Your password must have at least six characters.</span>
+        </label>
+        <input class="form-control" type="password" id="password" minlength="6" required>
+        <!--p><a href="#" id="passwordToggle">Show typing</a></p--><br/>
+        <label class="form-label" for="password">
+          <span class="form-hint">Confirm your password, your passwords must match.</span>
+        </label>
+        <input class="form-control" type="password" id="password" minlength="6" required>
+      </div><!-- form-group -->
+      <div class="text legal-division--top font-xsmall">
+        <div class="panel-indent">
+          <p>By creating an account you are agreeing to the <a href="t_cs">Terms and Conditions</a>.</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <a class="button" href="create-account-2">Continue</a><br/>
+        <a href="index" id="cancel">Cancel</a>
+      </div>
+
+
+    </form>
+
+  </div>
+</main>
+
+{{/content}}
+
+{{$footerSupportLinks}}
+  {{>property-page/prototype-v1/includes/footer-support-links}}
+{{/footerSupportLinks}}
+
+{{$bodyEnd}}
+  {{>includes/scripts}}
+  <script type="text/javascript" src="/public/javascripts/jquery-1.11.2.js"></script>
+  <script type="text/javascript">
+    var $link = $('#passwordToggle');
+    var $el = $('#password');
+    $link.on('click', function(e) {
+      e.preventDefault();
+      if ($el.attr('type') == 'password') {
+        $el.attr('type', 'text');
+        $link.text('Hide typing');
+      } else {
+        $el.attr('type', 'password');
+        $link.text('Show typing');
+      }
+    });
+  </script>
+{{/bodyEnd}}
+
+{{/govuk_template}}

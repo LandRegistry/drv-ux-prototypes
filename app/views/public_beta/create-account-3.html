@@ -1,0 +1,72 @@
+{{<govuk_template}}
+
+{{$pageTitle}}
+  Create an account
+{{/pageTitle}}
+
+{{$head}}
+  {{>includes/head}}
+  <link href="/public/vendor/leaflet/leaflet.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/public/stylesheets/alphagov-static.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/public/stylesheets/land-registry-elements.css" media="screen" rel="stylesheet" type="text/css" />
+{{/head}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>digital-register/includes/banner}}
+  <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+        </p>
+      </div>
+  <!-- breadcrumb & sign out row -->
+  <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="index">Digital Register Login</a></li>
+              <li><strong>Create Account</strong></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    <div class="column-quarter column-flip">
+      <div class="account">
+          &nbsp;
+      </div>
+    </div>
+  </div>
+  <!-- -->
+  <h1 class="heading-large collapse-top">Create an account</h1>
+  <p class="font-xsmall">Step 3/3</p>
+  <div class="text">
+    <form class="form" action="#" method="post">
+      <p>Enter an account username of 6 - 30 characters. If your account has been deleted for non-use and you are setting up a new account, you will need to select a different username to the one used on your previous account.</p>
+      <div class="form-group">
+        <label class="form-label-bold" for="username">Username</label>
+        <input class="form-control" type="text" id="username" name="username">
+      </div><!-- form-group -->
+      <div class="form-group">
+        <a class="button" href="account-creation-success">Create Account</a><br/>
+                <a href="index" id="cancel">Cancel</a>
+      </div>
+    </form>
+
+  </div>
+</main>
+
+{{/content}}
+
+{{$footerSupportLinks}}
+  {{>property-page/prototype-v1/includes/footer-support-links}}
+{{/footerSupportLinks}}
+
+{{$bodyEnd}}
+  {{>includes/scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

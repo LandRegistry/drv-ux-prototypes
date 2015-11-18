@@ -1,0 +1,63 @@
+{{<layout}}
+
+{{$pageTitle}}Find a Property - Property Search{{/pageTitle}}
+
+{{$content}}
+
+<style>
+.register_msg{
+color: #000000;
+padding:5px;
+margin-top:10px;
+border:4px solid #2b8cc4;
+}
+</style>
+
+<main id="content" role="main">
+  <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+        </p>
+    </div>
+
+    <!-- breadcrumb & sign out row -->
+    <div class="grid-row">
+        <div class="column-two-thirds">
+          <div class=" register_msg">
+          <p class="font-small"><b>Thank you for registering.</b></p>
+          <p class="font-xsmall"> You will need your username and password to sign-in in the future.</p>
+        </div>
+        </div>
+      <div class="column-quarter column-flip">
+        <div class="account">
+            <a href="login" id="signout">Sign out</a>
+        </div>
+      </div>
+    </div>
+    <!-- -->
+
+    <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+               <h1 class="heading-large form-title">Search the land and property register</h1>
+               <p class="lede">
+                 <label for="search_term">You can get information about registered property or land in England and Wales, even if you don’t own it.</label></p>
+
+             <p class="form-hint">For example a postcode, street name or title number</p>
+             <input type="text" class="form-control" name="search_term" id="search_term" required autofocus="autofocus">
+
+           <br/><br/>
+           <div class="form-group">
+             <a class="button" href="search_results">Search</a>
+           </div>
+
+           <p><a href="https://www.gov.uk/get-information-about-property-and-land" target="_blank">Use a different service</a> if you need detailed information like the deeds, title plan or to prove ownership in court or for a visa application.</p>
+</div>
+</div>
+</main>
+
+{{/content}}
+
+{{/layout}}

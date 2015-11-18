@@ -1,0 +1,208 @@
+{{<layout}}
+
+{{$pageTitle}}Find a Property - Sign In{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+        </p>
+      </div>
+
+      <div class="grid-row">
+          <div class="column-two-thirds">
+            <div class="global-breadcrumb">
+              <nav role="navigation">
+                <ol>
+                  <li><a href="search">Search the land and property register</a></li>
+                  <li><a href="search_results">Search results</a></li>
+                  <li><a href="result">AZ679451</a></li>
+                  <li><strong>Payment</strong></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        <div class="column-quarter column-flip">
+          <div class="account">
+            <a href="login" id="signout">Sign out</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge">Pay by credit card</h1>
+
+
+        <form action="#" method="post">
+          <dl>
+
+    <div class="form-group">
+
+        <label for="full_name" class="form-label-bold"><label for="full_name">Full name</label></label>
+        <input id="full_name" name="full_name" type="text" value="">
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="card_number" class="form-label-bold"><label for="card_number">Card number</label></label>
+        <input id="card_number" name="card_number" type="text" value="">
+
+
+    </div>
+
+
+    <div class="" style="display:inline-block">
+
+          <label class="label" for="card_security_code" style="font-weight:700;">Card security code</label><br>
+          <div class="form-hint">
+            This is the 3 digit code on the back of your card<br>
+          </div>
+          <input id="card_security_code" name="card_security_code" size="10" type="text" value="">
+          <img src="/public/images/card-security-icon.png" alt="card security icon" style="float:right">
+
+
+    </div>
+
+            <h3 class="heading-small">Expiry date</h3>
+            <div class="form-hint">
+              For example, 07/17
+            </div>
+
+    <div class="" style="display:inline-block">
+
+          <label for="expiry_month">Month</label><br>
+          <input id="expiry_month" name="expiry_month" size="5" type="text" value="">
+
+
+    </div>
+
+
+    <div class="" style="display:inline-block">
+
+          <label for="expiry_year">Year</label><br>
+          <input id="expiry_year" name="expiry_year" size="5" type="text" value="">
+
+
+    </div>
+
+            <p></p>
+
+
+            <div class="panel-indent">
+              We have used the address details provided when creating your Account, if you wish to use an alternitive billing address, please change below
+            </div>
+    <div class="form-group">
+
+        <label for="building_and_street_1" class="form-label-bold"><label for="building_and_street_1">Building and street</label></label>
+
+        <input id="building_and_street_1" name="building_and_street_1" size="40" type="text" value="10, King Road">
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="building_and_street_2" class="form-label-bold"></label>
+        <input id="building_and_street_2" name="building_and_street_2" size="40" type="text" value="">
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="town" class="form-label-bold"><label for="town">Town</label></label>
+        <input id="town" name="town" size="30" type="text" value="Ipswich">
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="county" class="form-label-bold"><label for="county">County (optional)</label></label>
+        <input id="county" name="county" size="30" type="text" value="United Kingdom">
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="postcode" class="form-label-bold"><label for="postcode">Postcode</label></label>
+        <input id="postcode" name="postcode" type="text" value="IP26RY">
+
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="email" class="form-label-bold"><label for="email">Email</label></label>
+        <div class="form-hint">
+          We'll send your payment confirmation here
+        </div>
+        <input id="email" name="email" size="40" type="text" value="joe@bloggs.com">
+
+
+    </div>
+
+            <p></p>
+          </dl>
+          <a class="button" href="payment-processing">Pay Now</a>
+        </form>
+        <a href="search" id="cancel">Cancel</a>
+      </div>
+
+      <div class="column-third">
+        <div class="panel-simple">
+          <div>
+            <p>
+              <strong>Payment summary</strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <b>Title number</b><br>
+              AZ679451
+            </p>
+          </div>
+          <div>
+            <b>Address</b><br>
+            <p>3a Mandela Way<br>Southampton<br>SO15 5RZ</p>
+          </div>
+
+            <div>
+              <b>Tenure</b><br>
+              <p>Leasehold</p>
+            </div>
+
+          <table class="payment_confirmation">
+            <tbody><tr>
+              <th style="font-size: 23px">Total to pay</th>
+            </tr>
+            <tr>
+              <td style="font-size: 23px"><b>&pound;1.20</b> <small>(incl. VAT)</small></td>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+
+    </div>
+
+
+</main>
+
+
+{{/content}}
+
+{{/layout}}

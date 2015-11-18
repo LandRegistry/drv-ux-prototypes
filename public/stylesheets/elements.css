@@ -1025,16 +1025,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-.form-title {
-  margin-bottom: 30px;
-}
-
-@media (min-width: 641px) {
-  .form-title {
-    margin-bottom: 45px;
-  }
-}
-
 .form-label,
 .form-label-bold {
   display: block;
@@ -1084,12 +1074,14 @@ legend .form-label-bold {
 .form-block {
   float: left;
   width: 100%;
+  margin-top: -5px;
   margin-bottom: 5px;
 }
 
 @media (min-width: 641px) {
   .form-block {
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -1124,7 +1116,7 @@ legend .form-label-bold {
   width: 100%;
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #bfc1c3;
+  border: 2px solid #6f777b;
 }
 
 @media (min-width: 641px) {
