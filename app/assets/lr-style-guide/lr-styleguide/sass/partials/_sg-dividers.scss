@@ -1,0 +1,65 @@
+// Dividers - borders etc
+// ==========================================================================
+
+.division-standard {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+  border-top: 1px solid $grey-3;
+  border-bottom: 1px solid $grey-3;
+}
+
+.division-standard-top {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 1px solid $grey-3;
+}
+
+.division-standard-bottom {
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+  border-bottom: 1px solid $grey-3;
+}
+
+.division-primary {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+  border-top: 4px solid $light-blue;
+  border-bottom: 4px solid $light-blue;
+}
+
+.division-primary-top {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 4px solid $light-blue;
+}
+
+.division-primary-bottom {
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+  border-bottom: 4px solid $light-blue;
+}
+
+.division-secondary {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 2px solid $grey-3;
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+  border-bottom: 2px solid $grey-3;
+}
+
+.division-secondary-top {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 2px solid $grey-3;
+}
+
+.division-secondary-bottom {
+  margin-bottom: $gutter;
+  padding-bottom: $gutter;
+  border-bottom: 2px solid $grey-3;
+}
