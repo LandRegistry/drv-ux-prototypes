@@ -3,7 +3,7 @@
 // Modified to use the new grid layout mixins
 
 #global-breadcrumb {
-
+// This should work 
   @extend %grid-row;
 
   ol {
