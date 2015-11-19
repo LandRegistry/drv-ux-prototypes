@@ -13,7 +13,7 @@
     margin: 0 auto;
   }
 
-  .button-print {
+.button-print {
     background-color: #ffffff;
     position: relative;
     display: -moz-inline-stack;
@@ -160,7 +160,8 @@ dl {
 
 // An inline definition list - name:value pairs for example
 
-/* dd */.definition-inline {
+/* dd */
+.definition-inline {
   @extend %contain-floats;
 
   dt {
