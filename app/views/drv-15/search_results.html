@@ -18,7 +18,7 @@
   <!-- breadcrumb & sign out row -->
   <div class="grid-row">
       <div class="column-two-thirds">
-        <div class="global-breadcrumb">
+        <div id="global-breadcrumb">
           <nav role="navigation">
             <ol>
               <li><a href="search">Search the land and property register</a></li>
@@ -29,28 +29,23 @@
       </div>
     <div class="column-quarter column-flip">
       <div class="account">
-          <a href="index" id="signout">Sign out</a>
+          <a href="index" class="font-xsmall">Sign out</a>
       </div>
     </div>
   </div>
   <!-- -->
-
-  <form class="form" action="" method="post" role="form">
-    <div style="display:none;"><input id="csrf_token" name="csrf_token" type="hidden" value="None"></div>
-    <div class="form-group">
-      <h1 class="heading-medium">
-        <label for="search_term">
-          Search results for <span class="visuallyhidden">SO155RZ</span>
-        </label>
-      </h1>
+  <div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large collapse-top">Search the land and property register</h1>
+      <p>
+          Search results for <strong>SO155RZ</strong>
+      </p>
       <input type="text" class="form-control" name="search_term" id="search_term" value="SO155RZ"  autofocus="autofocus">
-      <input type="submit" value="Search" class="button search-button">
-    </div>
-  </form>
+      <a class="button" href="search_results">Search</a>
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2 class="font-xsmall expand-bottom-half">50 results found</h2>
+      <h2 class="font-xsmall expand-bottom-half">1-20 of 40 results</h2>
       <ol class="search-results-listing">
 
         <li>
@@ -100,7 +95,7 @@
 
         <li>
           <h2 class="heading-small">
-            <a href="/drv-15/result">3a Mandela Way, Southampton, SO15 5RZ</a>
+            <a href="result">3a Mandela Way, Southampton, SO15 5RZ</a>
           </h2>
           <div class="font-xsmall">
             Title number: <b>AZ679451</b><br>
@@ -115,7 +110,7 @@
 
         <li class="no-title">
           <h2 class="heading-small">
-            <a href="/drv-15/no_result">4 Mandela Way, Southampton, SO15 5RZ</a>
+            <a href="no_result">4 Mandela Way, Southampton, SO15 5RZ</a>
           </h2>
           <div class="font-xsmall">
             Title number: <b>Not found</b>
@@ -167,7 +162,7 @@
           </div>
         </li>
 
-        <li class="no-title">
+        <li>
           <h2 class="heading-small">
             <a href="">8 Mandela Way, Southampton, SO15 5RZ</a>
           </h2>
@@ -344,7 +339,7 @@
       <div class="pagination-prev-next">
         <ul>
           <li class="next-page">
-            <a href="/drv-15/search_results_2">
+            <a href="search_results_2">
               <span class="pagination-label">Next <span class="visuallyhidden">page</span></span>
             </a>
           </li>
@@ -353,7 +348,7 @@
       <div id="pagination" style="text-align: center">Page 1 of 2</div>
     </div>
   </div>
-
+</div></div>
 </main>
 
 {{/content}}

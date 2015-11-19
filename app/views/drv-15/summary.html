@@ -12,13 +12,11 @@
       <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
     </p>
   </div>
-  <!-- -->
 
-
-  <!-- breadcrumb & sign out row -->
-  <div class="grid-row">
+  <!-- breadcrumb & sign out row . Hide for Print View -->
+  <div class="grid-row printhidden">
     <div class="column-two-thirds">
-      <div class="global-breadcrumb">
+      <div id="global-breadcrumb">
         <nav role="navigation">
           <ol>
             <li><a href="search">Search the land and property register</a></li>
@@ -30,106 +28,79 @@
     </div>
     <div class="column-quarter column-flip">
       <div class="account">
-        <a href="index" id="signout">Sign out</a>
+        <a href="index" class="font-xsmall">Sign out</a>
       </div>
     </div>
   </div>
-  <!-- -->
+  <!-- end Breadcrumbs-->
 
-  <h1 class="heading-large">Summary of title AZ679451</li>
-  </h1>
-  <p>This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
-
-
+  <!-- start main summary content-->
   <div class="grid-row">
-    <div class="column-two-thirds">
-      <h2 class="heading-medium collapse-top">
+<script>
+function toggle(obj) {
 
-        3a Mandela Way<br>Southampton<br>SO15 5RZ
+var el = document.getElementById(obj);
 
-      </h2>
+if ( el.style.display != 'none' ) {
 
-      <dl class="definition-tabular expand-top-half">
-        <!--dt>Title number</dt>
-        <dd><b>AZ679451</b></dd-->
-        <dt>Owner</dt>
-        <dd>
+el.style.display = 'none';
 
-          <h5 class="expand-bottom-half ">
-            <span class="heading-small">Fred Smith</span>
-          </h5>
+}
 
+else {
 
-          <div>3a Mandela Way<br>Southampton<br>SO15 5RZ</div>
+el.style.display = '';
 
+}
 
-        </dd>
+}
+</script>
 
-        <dt>Lender</dt>
-        <dd>
-
-          <h5 class="expand-bottom-half ">
-            <span class="heading-small">Abbey National PLC</span>
-          </h5>
-
-
-
-          <div>101 Midsummer Boulevard<br>Milton Keynes<br>MK9 1AA</div>
-
-
-        </dd>
-
-
-
-        <dt>Tenure type</dt>
-        <dd><b>Leasehold</b></dd>
-
-
-        <dt>Lease term</dt>
-        <dd><b>99 years</b> from 3 October 2012</dd>
-
-
-        <dt>Price paid</dt>
-        <dd><b>The price stated to have been paid on 3 October 2012 was £188,000</b></dd>
-
-      </dl>
-      <div class="govuk-box-highlight">
-        <p><b>You'll only be able to view this information once</b><br>
-          If you want to keep a copy, you'll need to print it out or take a screen shot.</p>
-
-          <a class="button-print" href="javascript:window.print();">Print this page</a>
-
+      <div class="column-two-thirds">
+        <h1 class="heading-large collapse-top">Summary of title AZ679451</h1>
+          <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+        <hr>
+        <dl class="definition-tabular expand-top-half">
+          <dt>Address</dt>
+          <dd><span class="heading-medium">3a Mandela Way<br>Southampton<br>SO15 5RZ</span></dd>
+          <dt>Owner</dt>
+          <dd><span class="heading-small">Fred Smith</span><br>3a Mandela Way<br>Southampton<br>SO15 5RZ</dd>
+          <dt>Lender</dt>
+          <dd><span class="heading-small">Abbey National PLC</span><br>101 Midsummer Boulevard<br>Milton Keynes<br>MK9 1AA</dd>
+          <dt>Tenure type</dt>
+          <dd><span class="heading-small">Leasehold</span></dd>
+          <dt>Lease term</dt>
+          <dd><span class="heading-small">99 years</span><br>from 3 October 2012</dd>
+          <dt>Price paid</dt>
+          <dd><span class="heading-small">£188,000</span><br>the price stated to have been paid on 3 October 2012</dd>
+        </dl>
+        <div class="govuk-box-highlight printhidden">
+          <p><b>You'll only be able to view this information once</b><br>
+            If you want to keep a copy, you'll need to print it out or take a screen shot.</p>
+            <a class="button-print" href="javascript:window.print();">Print this page</a>
         </div>
-      </div>
-      <div class="column-third">
-        <div id="map">
-          <div class="panel-simple">
-            <p>The map relies on JavaScript being enabled in your browser.</p>
+        <hr>
+            <div class="panel-indent">
+              <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
+              <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
+            </div>
+          <div class="text printhidden">
+            <h6 class="heading-medium">What next</h6>
+            <ul>
+              <li><a href="search">Search for another title using this service</a></li>
+              <li><a href="https://gov.uk">Return to GOV.UK</a></li>
+            </ul>
           </div>
         </div>
-        <p class="font-xsmall">This map shows the property's rough extent and location, <b>not legal boundaries.</b></p>
-      </div>
-
-    </div>
-
-
-
-
-    <div class="grid-row">
-      <div class="text legal-division--top font-xsmall">
-        <div class="panel-indent">
-          <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
-          <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
+        <div class="column-third">
+          <div id="map">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
+            </div>
+          </div>
+          <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
         </div>
       </div>
-      <div class="text printhidden">
-        <h6 class="heading-medium">What next</h6>
-        <ul>
-          <li><a href="/drv-15/search">Search for another title using this service</a></li>
-          <li><a href="https://gov.uk">Return to GOV.UK</a></li>
-        </ul>
-      </div>
-    </dv>
   </div>
 
   <script type='text/javascript'>
@@ -146,12 +117,10 @@
 </main>
 
 {{/content}}
-{{$footerTop}}
-{{/footerTop}}
 {{$footerSupportLinks}}
 <ul>
-            <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
-            <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
-          </ul>
+  <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
+  <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+</ul>
 {{/footerSupportLinks}}
 {{/layout}}

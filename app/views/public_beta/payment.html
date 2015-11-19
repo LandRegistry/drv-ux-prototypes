@@ -14,7 +14,7 @@
 
       <div class="grid-row">
           <div class="column-two-thirds">
-            <div class="global-breadcrumb">
+            <div id="global-breadcrumb">
               <nav role="navigation">
                 <ol>
                   <li><a href="search">Search the land and property register</a></li>
@@ -27,18 +27,16 @@
           </div>
         <div class="column-quarter column-flip">
           <div class="account">
-            <a href="login" id="signout">Sign out</a>
+            <a href="login" class="font-xsmall">Sign out</a>
           </div>
         </div>
       </div>
 
-    <div class="grid-row">
+      <div class="grid-row">
+          <div class="column-two-thirds">
+            <!-- 1. Start Title information (number, address and tenure information) -->
+            <h1 class="heading-large collapse-top">Pay by credit card</h1>
 
-      <div class="column-two-thirds">
-        <h1 class="heading-xlarge">Pay by credit card</h1>
-
-
-        <form action="#" method="post">
           <dl>
 
     <div class="form-group">
@@ -49,7 +47,7 @@
 
     </div>
 
-
+<hr>
     <div class="form-group">
 
         <label for="card_number" class="form-label-bold"><label for="card_number">Card number</label></label>
@@ -93,12 +91,12 @@
 
     </div>
 
-            <p></p>
 
 
-            <div class="panel-indent">
-              We have used the address details provided when creating your Account, if you wish to use an alternitive billing address, please change below
-            </div>
+<hr>
+            <div class="panel-indent font-xsmall">
+              We have used the address details provided when creating your Account, if you wish to use an alternitive billing address, please amend the details below
+            </div><br>
     <div class="form-group">
 
         <label for="building_and_street_1" class="form-label-bold"><label for="building_and_street_1">Building and street</label></label>
@@ -143,9 +141,8 @@
 
 
     </div>
-
-
     <div class="form-group">
+      <hr>
 
         <label for="email" class="form-label-bold"><label for="email">Email</label></label>
         <div class="form-hint">
@@ -159,7 +156,7 @@
             <p></p>
           </dl>
           <a class="button" href="payment-processing">Pay Now</a>
-        </form>
+  <br>
         <a href="search" id="cancel">Cancel</a>
       </div>
 

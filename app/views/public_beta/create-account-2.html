@@ -15,40 +15,35 @@
 
 <main id="content" role="main">
 
-  {{>digital-register/includes/banner}}
+
   <div class="phase-banner">
-        <p>
-          <strong class="phase-tag">BETA</strong>
-          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
-        </p>
-      </div>
-  <!-- breadcrumb & sign out row -->
-  <div class="grid-row">
-      <div class="column-two-thirds">
-        <div class="global-breadcrumb">
-          <nav role="navigation">
-            <ol>
-              <li><a href="index">Digital Register Login</a></li>
-              <li><strong>Create Account</strong></li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    <div class="column-quarter column-flip">
-      <div class="account">
-          &nbsp;
-      </div>
-    </div>
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+    </p>
   </div>
-  <!-- -->
-  <h1 class="heading-large collapse-top">Create an account</h1>
+        <!-- breadcrumb & sign out row -->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+              <div id="global-breadcrumb">
+                <nav role="navigation">
+                  <ol>
+                    <li><a href="search">Digital Property Register</a></li>
+                    <li>Create Account</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+        </div>
+        <!-- -->
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+              <!-- 1. Start Title information (number, address and tenure information) -->
+              <h1 class="heading-large collapse-top">Create an account</h1>
   <p class="font-xsmall">Step 2/3</p>
 
     <p>Provide further details</p>
-
-  <div class="text">
-
-    <form class="form" action="#" method="post">
 
       <div class="form-group">
         <label class="form-label-bold" for="individual-name">Your name</label>
@@ -88,9 +83,8 @@
         <a class="button" href="#">Continue</a><br/>
                 <a href="index" id="cancel">Cancel</a>
       </div>
-    </form>
-
   </div>
+</div>
 </main>
 
 {{/content}}

@@ -16,10 +16,10 @@
   <!-- breadcrumb & sign out row -->
   <div class="grid-row">
       <div class="column-two-thirds">
-        <div class="global-breadcrumb">
+        <div id="global-breadcrumb">
           <nav role="navigation">
             <ol>
-              <li><a href="/drv-15/search">Search the land and property register</a></li>
+              <li><a href="search">Search the land and property register</a></li>
               <li>Search results</li>
             </ol>
           </nav>
@@ -27,28 +27,21 @@
       </div>
     <div class="column-quarter column-flip">
       <div class="account">
-          <a href="/drv-15/" id="signout">Sign out</a>
+          <a href="index" class="font-xsmall">Sign out</a>
       </div>
     </div>
   </div>
   <!-- -->
+  <div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large collapse-top">Search the land and property register</h1>
+      <p>
+          Search results for <strong>SO155RZ</strong>
+      </p>
+      <input type="text" class="form-control" name="search_term" id="search_term" value="SO155RZ"  autofocus="autofocus">
+      <a class="button" href="search_results">Search</a>
 
-    <form class="form" action="" method="post" role="form">
-       <div style="display:none;"><input id="csrf_token" name="csrf_token" type="hidden" value="None"></div>
-       <div class="form-group">
-         <h1 class="heading-medium">
-           <label for="search_term">
-             Search results for <span class="visuallyhidden">SO155RZ</span>
-           </label>
-         </h1>
-         <input type="text" class="form-control" name="search_term" id="search_term" value="SO155RZ"  autofocus="autofocus">
-         <input type="submit" value="Search" class="button search-button">
-       </div>
-     </form>
-
-     <div class="grid-row">
-       <div class="column-two-thirds">
-         <h2 class="font-xsmall expand-bottom-half">50 results found</h2>
+         <h2 class="font-xsmall expand-bottom-half">21-40 of 40 results</h2>
          <ol class="search-results-listing">
 
              <li>
@@ -83,7 +76,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1004/choose_summary_or_documents?page=2&amp;search_term=ASDASD">21 Mandela Way, Southampton, (SO15 5RZ)</a>
+                 <a href="/titles/AGL1004/choose_summary_or_documents?page=2&amp;search_term=ASDASD">21 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1004</b><br>
@@ -98,7 +91,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1001/choose_summary_or_documents?page=2&amp;search_term=ASDASD">22 Mandela Way, Southampton, (SO15 5RZ)</a>
+                 <a href="/titles/AGL1001/choose_summary_or_documents?page=2&amp;search_term=ASDASD">22 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1001</b><br>
@@ -203,7 +196,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1003/choose_summary_or_documents?page=2&amp;search_term=ASDASD">29 Mandela Way, Southampton</a>
+                 <a href="/titles/AGL1003/choose_summary_or_documents?page=2&amp;search_term=ASDASD">29 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1003</b><br>
@@ -218,7 +211,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1006/choose_summary_or_documents?page=2&amp;search_term=ASDASD">30 Mandela Way, Southampton, (SO15 5RZ)</a>
+                 <a href="/titles/AGL1006/choose_summary_or_documents?page=2&amp;search_term=ASDASD">30 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1006</b><br>
@@ -233,7 +226,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1011/choose_summary_or_documents?page=2&amp;search_term=ASDASD">31 Mandela Way, Southampton, (SO15 5RZ)</a>
+                 <a href="/titles/AGL1011/choose_summary_or_documents?page=2&amp;search_term=ASDASD">31 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1011</b><br>
@@ -248,7 +241,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1009/choose_summary_or_documents?page=2&amp;search_term=ASDASD">32 Mandela Way, Southampton, (SO15 5RZ)</a>
+                 <a href="/titles/AGL1009/choose_summary_or_documents?page=2&amp;search_term=ASDASD">32 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1009</b><br>
@@ -263,7 +256,7 @@
 
              <li>
                <h2 class="heading-small">
-                 <a href="/titles/AGL1010/choose_summary_or_documents?page=2&amp;search_term=ASDASD">33 Mandela Way, Southampton, (SO15 5RZ)</a>
+                 <a href="/titles/AGL1010/choose_summary_or_documents?page=2&amp;search_term=ASDASD">33 Mandela Way, Southampton, SO15 5RZ</a>
                </h2>
                <div class="font-xsmall">
                    Title  number <b>AGL1010</b><br>
@@ -359,7 +352,7 @@
                <ul>
 
                    <li class="previous-page">
-                     <a href="/drv-15/search_results">
+                     <a href="search_results">
                        <span class="pagination-label">Previous <span class="visuallyhidden">page</span></span>
                      </a>
                    </li>
