@@ -1,3 +1,7 @@
+# DRV UX prototypes
+
+Follow the installation instructions below to install. It's that simple.
+
 # GOV.UK Prototyping Kit
 
 The kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
@@ -28,9 +32,9 @@ If you don't have Node, download it here: [http://nodejs.org/](http://nodejs.org
 
 Install Node.js (see requirements)
 
-#### Download the prototype kit
+#### Download the drv ux prototype kit
 
-[Download the zip file](https://github.com/alphagov/govuk_prototype_kit/archive/master.zip)
+[Download the ZIP](https://github.com/LandRegistry/drv-ux-prototypes/archive/master.zip)
 
 Unzip the file
 
@@ -42,7 +46,7 @@ Open a command line app (Terminal on OSX) and change to the unzipped directory. 
 npm install
 ```
 
-This will install extra code that the prototype kit needs.
+This will install extra code that the govuk prototype kit needs.
 
 #### Run the app
 
@@ -58,7 +62,7 @@ If you want to view multiple prototypes at the same time you can give them uniqu
 PORT=3005 node start.js
 ```
 
-To change the port number permanently, edit the port variable in /server.js. 
+To change the port number permanently, edit the port variable in /server.js.
 
 #### Hot reload
 
@@ -78,4 +82,3 @@ The app recompiles app/assets/stylesheets/application.scss everytime changes are
 - [Creating routes (server-side programming)](docs/creating-routes.md)
 
 This project is built on top of Express, the idea is that it is straightforward to create simple static pages out of the box. However, you're not limited to that - more dynamic sites can be built with more understanding of Express. Here's a good [Express tutorial.](http://code.tutsplus.com/tutorials/introduction-to-express--net-33367)
-
