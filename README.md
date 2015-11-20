@@ -2,18 +2,6 @@
 
 Follow the installation instructions below to install. It's that simple.
 
-# GOV.UK Prototyping Kit
-
-The kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
-
-It's built on the [Express](http://expressjs.com/) framework, and uses these GOV.UK resources:
-
-- [GOV.UK template](https://github.com/alphagov/govuk_template)
-- [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
-- [GOV.UK elements](https://github.com/alphagov/govuk_elements)
-
-Read the [project principles](docs/principles.md).
-
 ## Requirements
 
 #### [Node](http://nodejs.org/)
@@ -69,6 +57,18 @@ To change the port number permanently, edit the port variable in /server.js.
 Any code changes should update in the browser without you restarting the app.
 
 The app recompiles app/assets/stylesheets/application.scss everytime changes are observed.
+
+# GOV.UK Prototyping Kit
+
+The kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
+
+It's built on the [Express](http://expressjs.com/) framework, and uses these GOV.UK resources:
+
+- [GOV.UK template](https://github.com/alphagov/govuk_template)
+- [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
+- [GOV.UK elements](https://github.com/alphagov/govuk_elements)
+
+Read the [project principles](docs/principles.md).
 
 ## Documentation
 
