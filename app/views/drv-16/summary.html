@@ -19,8 +19,8 @@
       <div id="global-breadcrumb">
         <nav role="navigation">
           <ol>
-            <li><a href="search">Search the land and property register</a></li>
-            <li><a href="search_result">Search results</a></li>
+            <li><a href="../search">Search the land and property register</a></li>
+            <li><a href="../search/1">Search results</a></li>
             <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
           </ol>
         </nav>
@@ -74,14 +74,29 @@ el.style.display = '';
                 {{.}}<br>
               {{/address}}
             </dd>
-            <dt>Lender</dt>
-            <dd><span class="heading-small">Abbey National PLC</span><br>101 Midsummer Boulevard<br>Milton Keynes<br>MK9 1AA</dd>
+
+            {{#lender_name}}
+              <dt>Lender</dt>
+              <dd>
+                <span class="heading-small">{{lender_name}}</span><br>
+                {{#lender_address}}
+                  {{.}}<br>
+                {{/lender_address}}
+              </dd>
+            {{/lender_name}}
+
             <dt>Tenure type</dt>
-            <dd><span class="heading-small">Leasehold</span></dd>
-            <dt>Lease term</dt>
-            <dd><span class="heading-small">99 years</span><br>from 3 October 2012</dd>
-            <dt>Price paid</dt>
-            <dd><span class="heading-small">£188,000</span><br>the price stated to have been paid on 3 October 2012</dd>
+            <dd><span class="heading-small">{{tenure}}</span></dd>
+
+            {{#lease_term}}
+              <dt>Lease term</dt>
+              <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
+            {{/lease_term}}
+
+            {{#price}}
+              <dt>Price paid</dt>
+              <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
+            {{/price}}
           </dl>
         {{/result}}
         <div class="govuk-box-highlight printhidden">
