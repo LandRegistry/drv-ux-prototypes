@@ -21,7 +21,7 @@
           <ol>
             <li><a href="search">Search the land and property register</a></li>
             <li><a href="search_result">Search results</a></li>
-            <li>Viewing AZ679451</li>
+            <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
           </ol>
         </nav>
       </div>
@@ -57,23 +57,33 @@ el.style.display = '';
 </script>
 
       <div class="column-two-thirds">
-        <h1 class="heading-large collapse-top">Summary of title AZ679451</h1>
-          <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
-        <hr>
-        <dl class="definition-tabular expand-top-half">
-          <dt>Address</dt>
-          <dd><span class="heading-medium">3a Mandela Way<br>Southampton<br>SO15 5RZ</span></dd>
-          <dt>Owner</dt>
-          <dd><span class="heading-small">Fred Smith</span><br>3a Mandela Way<br>Southampton<br>SO15 5RZ</dd>
-          <dt>Lender</dt>
-          <dd><span class="heading-small">Abbey National PLC</span><br>101 Midsummer Boulevard<br>Milton Keynes<br>MK9 1AA</dd>
-          <dt>Tenure type</dt>
-          <dd><span class="heading-small">Leasehold</span></dd>
-          <dt>Lease term</dt>
-          <dd><span class="heading-small">99 years</span><br>from 3 October 2012</dd>
-          <dt>Price paid</dt>
-          <dd><span class="heading-small">£188,000</span><br>the price stated to have been paid on 3 October 2012</dd>
-        </dl>
+        {{#result}}
+          <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
+            <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+          <hr>
+          <dl class="definition-tabular expand-top-half">
+            <dt>Address</dt>
+            <dd><span class="heading-medium">
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </span></dd>
+            <dt>Owner</dt>
+            <dd><span class="heading-small">{{owner}}</span><br>
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </dd>
+            <dt>Lender</dt>
+            <dd><span class="heading-small">Abbey National PLC</span><br>101 Midsummer Boulevard<br>Milton Keynes<br>MK9 1AA</dd>
+            <dt>Tenure type</dt>
+            <dd><span class="heading-small">Leasehold</span></dd>
+            <dt>Lease term</dt>
+            <dd><span class="heading-small">99 years</span><br>from 3 October 2012</dd>
+            <dt>Price paid</dt>
+            <dd><span class="heading-small">£188,000</span><br>the price stated to have been paid on 3 October 2012</dd>
+          </dl>
+        {{/result}}
         <div class="govuk-box-highlight printhidden">
           <p><b>You'll only be able to view this information once</b><br>
             If you want to keep a copy, you'll need to print it out or take a screen shot.</p>

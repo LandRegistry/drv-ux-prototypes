@@ -22,7 +22,7 @@
             <ol>
               <li><a href="search">Search the land and property register</a></li>
               <li><a href="search_results">Search results</a></li>
-              <li>Viewing AZ679451</li>
+              <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
             </ol>
           </nav>
         </div>
@@ -39,18 +39,20 @@
 
   <div class="grid-row">
       <div class="column-two-thirds">
-        <!-- 1. Start Title information (number, address and tenure information) -->
-        <h1 class="heading-large collapse-top">Summary of title AZ679451</h1>
-        <p class="lede">The summary is a cut-down version of the information Land Registry holds. It costs &pound;1.20.</p>
-          <h2 class="heading-medium collapse-top">
-            3a Mandela Way<br>Southampton<br>SO15 5RZ
-          </h2>
-          <dl class="definition-tabular expand-top-half">
-            <!--dt>Title number</dt>
-            <dd><b>AZ679451</b></dd-->
-            <dt>Tenure type</dt>
-            <dd><b>Leasehold</b></dd>
-          </dl>
+        {{#result}}
+          <!-- 1. Start Title information (number, address and tenure information) -->
+          <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
+          <p class="lede">The summary is a cut-down version of the information Land Registry holds. It costs &pound;1.20.</p>
+            <h2 class="heading-medium collapse-top">
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </h2>
+            <dl class="definition-tabular expand-top-half">
+              <dt>Tenure type</dt>
+              <dd><b>{{tenure}}</b></dd>
+            </dl>
+          {{/result}}
           <div class="panel-indent panel-indent-info">
              <p>
                If you require other types of tenure for this property, you will need to <a href="search">search again</a>
@@ -90,7 +92,7 @@
         <li> a printer, if you want to print the summary to refer to later</li>
       </ul>
 
-      <p class="collapse-bottom"><a href="worldpay_1" class="button">Buy title summary</a></p>
+      <p class="collapse-bottom"><a href="../worldpay_1?id={{id}}" class="button">Buy title summary</a></p>
       <p>for <b>&pound;1.20</b> <small>(incl. VAT)</small></p>
 
     </div>
