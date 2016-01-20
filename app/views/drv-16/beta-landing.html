@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}Find a Property - Property Result{{/pageTitle}}
+{{$pageTitle}}Find a Property - Property Summary{{/pageTitle}}
 
 {{$content}}
 
@@ -12,53 +12,33 @@
       <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
     </p>
   </div>
-  <!-- -->
 
-  <!-- breadcrumb & sign out row -->
-  <div class="grid-row">
-      <div class="column-two-thirds">
-        <div id="global-breadcrumb">
-          <nav role="navigation">
-            <ol>
-              <li><a href="search">Search the land and property register</a></li>
-              <li><a href="search_results">Search results</a></li>
-              <li>Viewing AZ679451</li>
-            </ol>
-          </nav>
-        </div>
+  <!-- breadcrumb & sign out row . Hide for Print View -->
+  <div class="grid-row printhidden">
+    <div class="column-two-thirds">
+      <div id="global-breadcrumb">
+        <nav role="navigation">
+          <ol>
+            <li><a href="search">Search the land and property register</a></li>
+            <li>Beta</li>
+          </ol>
+        </nav>
       </div>
+    </div>
     <div class="column-quarter column-flip">
       <div class="account">
-          <!-- <a href="index" class="font-xsmall">Sign out</a> -->
+        <a href="start" class="font-xsmall">Sign out</a>
       </div>
     </div>
   </div>
-  <!-- -->
+  <!-- end Breadcrumbs-->
 
-
-
-  <div class="grid-row">
+    <div class="grid-row">
       <div class="column-two-thirds">
         <!-- 1. Start Title information (number, address and tenure information) -->
-        <h1 class="heading-large collapse-top">Summary of title AZ679451</h1>
-        <p class="lede">The summary is a cut-down version of the information Land Registry holds. It costs &pound;1.20.</p>
-          <h2 class="heading-medium collapse-top">
-            3a Mandela Way<br>Southampton<br>SO15 5RZ
-          </h2>
-          <dl class="definition-tabular expand-top-half">
-            <!--dt>Title number</dt>
-            <dd><b>AZ679451</b></dd-->
-            <dt>Tenure type</dt>
-            <dd><b>Leasehold</b></dd>
-          </dl>
-          <div class="panel-indent panel-indent-info">
-             <p>
-               If you require other types of tenure for this property, you will need to <a href="search">search again</a>
-             </p>
-          </div>
-          <hr>
-
-          <h2 class="heading-medium">What you'll get</h2>
+        <h1 class="heading-large collapse-top">Using the Beta</h1>
+          
+        <h2 class="heading-medium">What you'll get</h2>
             <p>The summary can tell you</p>
             <ul class="list-bullet">
               <li>owner's name and address</li>
@@ -72,6 +52,9 @@
             </div>
             <hr>
 
+          <a href="sign-in" class="button button-start" role="button">Try the Beta</a>
+          <p>or <a href="#">use the standard Land Registry service</a></p>
+
           <h2 class="heading-medium">You won't get</h2>
             <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information like</p>
             <ul>
@@ -83,27 +66,32 @@
               <li>details of previous owners</li>
             </ul>
 
-            <hr>
+          <hr>
 
-      <h2 class="heading-medium">You will need</h2><ul>
-        <li> a credit or debit card</li>
-        <li> a printer, if you want to print the summary to refer to later</li>
-      </ul>
-
-      <p class="collapse-bottom"><a href="worldpay_1" class="button">Buy title summary</a></p>
-      <p>for <b>&pound;1.20</b> <small>(incl. VAT)</small></p>
+          <h2 class="heading-medium">You will need</h2><ul>
+            <li> a credit or debit card</li>
+            <li> a printer, if you want to print the summary to refer to later</li>
+          </ul>
 
     </div>
   </div>
 
       <div class="column-third">&nbsp;</div>
 
-  <br/>
-  <!-- Offer user a link back to the Search Results -->
-  <a href="" onClick="history.go(-1); return false;">Back to search results</a>
-</div>
+  <script src="/public/javascripts/map.js"></script>
+  <link rel="stylesheet" href="/public/vendor/leaflet-0.7.3/leaflet.css" />
+  <script src="/public/vendor/leaflet-0.7.3/leaflet.js"></script><!-- Leaflet -->
+  <script src="/public/javascripts/proj4.js"></script><!-- proj4js -->
+  <script src="/public/javascripts/proj4leaflet.js"></script><!-- proj4leaflet -->
+
+
 </main>
 
 {{/content}}
-
+{{$footerSupportLinks}}
+<ul>
+  <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
+  <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+</ul>
+{{/footerSupportLinks}}
 {{/layout}}
