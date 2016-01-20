@@ -5,8 +5,9 @@ var results = [];
 var numResults = 50;
 
 var tenures = [
-  'Freehold',
-  'Leasehold'
+  'Freehold', 'Freehold', 'Freehold', 'Freehold', // TODO: Do this in a less stupid way
+  'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold',
+  'Caution against first registration'
 ];
 
 var firstNames = ['Fred', 'Bob', 'George', 'Julia', 'Sophie', 'David', 'Andy', 'Heather'];
@@ -15,7 +16,7 @@ var lastNames = ['Smith', 'Jones', 'McDonald'];
 
 for(var i=1; i<=numResults; i++) {
   var address = [
-    i + ' Pretend Street',
+    'Pretend Street',
     'Trumpton',
     'TR15 5RZ'
   ];
@@ -29,11 +30,18 @@ for(var i=1; i<=numResults; i++) {
     'title': address.join(','),
     'address': address,
     'id': i,
+    'title_prefix': i,
     'tenure': tenures[Math.floor(rand * tenures.length)],
     'title_number': 'FAKE' + Math.floor(rand * 1000000),
     'owner': firstNames[Math.floor(rand * firstNames.length)] + ' ' + lastNames[Math.floor(rand * lastNames.length)],
     'date': date.format('D MMMM YYYY')
   };
+
+  if(result.tenure === 'Caution against first registration') {
+    result.title_number_prefix = 'Caution ';
+    result.title_prefix = 'Land at';
+    result.title = address.join(',');
+  }
 
   // Lease term if it's *not* freehold
   if(result.tenure !== 'freehold') {

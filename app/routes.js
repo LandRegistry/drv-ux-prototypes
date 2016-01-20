@@ -44,7 +44,7 @@ router.get('/drv-16/result/:id', function (req, res) {
 
   res.render('drv-16/result', {
     'id': id,
-    'result': results.slice(id, id + 1)
+    'result': results[id - 1]
   });
 });
 
@@ -57,7 +57,7 @@ router.get('/drv-16/summary/:id', function (req, res) {
 
   res.render('drv-16/summary', {
     'id': id,
-    'result': results.slice(id, id + 1)
+    'result': results[id - 1]
   });
 });
 
