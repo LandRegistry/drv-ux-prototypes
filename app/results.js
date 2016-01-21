@@ -5,8 +5,8 @@ var results = [];
 var numResults = 50;
 
 var tenures = [
-  'Freehold', 'Freehold', 'Freehold', 'Freehold', // TODO: Do this in a less stupid way
-  'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold',
+  'Freehold', 'Freehold', 'Freehold', 'Freehold', 'Freehold', 'Freehold', 'Freehold', 'Freehold', // TODO: Do this in a less stupid way
+  'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold', 'Leasehold',
   'Caution against first registration'
 ];
 
@@ -34,7 +34,9 @@ for(var i=1; i<=numResults; i++) {
     'tenure': tenures[Math.floor(rand * tenures.length)],
     'title_number': 'FAKE' + Math.floor(rand * 1000000),
     'owner': firstNames[Math.floor(rand * firstNames.length)] + ' ' + lastNames[Math.floor(rand * lastNames.length)],
-    'date': date.format('D MMMM YYYY')
+    'date': date.format('D MMMM YYYY'),
+    'has_data': rand > 0.1,
+    'empty': rand <= 0.1  // Inverted boolean of the above, because mustache does not have logic so we have to use "guarded ifs"
   };
 
   if(result.tenure === 'Caution against first registration') {

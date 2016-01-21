@@ -53,10 +53,18 @@
             <h2 class="heading-small">
               <a href="/drv-16/result/{{id}}">{{title_prefix}} {{title}}</a>
             </h2>
-            <div class="font-xsmall">
-              {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
-              <b class="bold-xsmall">{{tenure}}</b>
-            </div>
+            {{#has_data}}
+              <div class="font-xsmall">
+                {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
+                <b class="bold-xsmall">{{tenure}}</b>
+              </div>
+            {{/has_data}}
+
+            {{#empty}}
+              <div class="font-xsmall">
+                Title number: <b>Not found</b>
+              </div>
+            {{/empty}}
           </li>
         {{/results}}
 
