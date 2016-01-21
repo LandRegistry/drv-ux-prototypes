@@ -1,105 +1,104 @@
 {{<layout}}
 
-{{$pageTitle}}Find a Property - Results{{/pageTitle}}
+  {{$pageTitle}}Find a Property - Results{{/pageTitle}}
 
-{{$content}}
+  {{$content}}
 
-<main id="content" role="main">
-  <!-- private beta banner -->
-  <div class="phase-banner">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
-    </p>
-  </div>
-  <!-- -->
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+        </p>
+      </div>
+      <!-- -->
 
-
-  <!-- breadcrumb & sign out row -->
-  <div class="grid-row">
-      <div class="column-two-thirds">
-        <div id="global-breadcrumb">
-          <nav role="navigation">
-            <ol>
-              <li><a href="search">Search the land and property register</a></li>
-              <li>Search results</li>
-            </ol>
-          </nav>
+      <!-- breadcrumb & sign out row -->
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <div id="global-breadcrumb">
+            <nav role="navigation">
+              <ol>
+                <li><a href="search">Search the land and property register</a></li>
+                <li>Search results</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="column-quarter column-flip">
+          <div class="account">
+            <!-- <a href="index" class="font-xsmall">Sign out</a> -->
+          </div>
         </div>
       </div>
-    <div class="column-quarter column-flip">
-      <div class="account">
-          <!-- <a href="index" class="font-xsmall">Sign out</a> -->
+      <!-- -->
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <p>Page {{page}}</p>
+          <p>
+            <label class="bold-medium" for="search_term">Search results for</label>
+          </p>
+          <input type="text" class="form-control" name="search_term" id="search_term" value="SO155RZ"  autofocus="autofocus">
+          <a class="button" href="search_results">Search</a>
+
+          <h2 class="font-xsmall expand-bottom-half">32 results found</h2>
+          <ol class="search-results-listing">
+
+            {{#results}}
+              <li>
+                <h2 class="heading-small">
+                  <a href="/drv-16/result/{{id}}">{{title_prefix}} {{title}}</a>
+                </h2>
+                {{#has_data}}
+                  <div class="font-xsmall">
+                    {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
+                    <b class="bold-xsmall">{{tenure}}</b>
+                  </div>
+                {{/has_data}}
+
+                {{#empty}}
+                  <div class="font-xsmall">
+                    Title number: <b>Not found</b>
+                  </div>
+                {{/empty}}
+              </li>
+            {{/results}}
+
+          </ol>
+
+          <div class="pagination-prev-next">
+            <ul>
+              {{#prev}}
+                <li class="previous-page">
+                 <a href="{{prev}}">
+                   <span class="pagination-label">Previous <span class="visuallyhidden">page</span></span>
+                 </a>
+               </li>
+              {{/prev}}
+
+              <li class="next-page">
+                <a href="{{next}}">
+                  <span class="pagination-label">Next <span class="visuallyhidden">page</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="pagination" style="text-align: center">Page 1 of 2</div>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- -->
-  <div class="grid-row">
-  <div class="column-two-thirds">
-    <p>Page {{page}}</p>
-      <p>
-          <label class="bold-medium" for="search_term">Search results for</label>
-      </p>
-      <input type="text" class="form-control" name="search_term" id="search_term" value="SO155RZ"  autofocus="autofocus">
-      <a class="button" href="search_results">Search</a>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <h2 class="font-xsmall expand-bottom-half">32 results found</h2>
-      <ol class="search-results-listing">
+    </main>
 
-        {{#results}}
-          <li>
-            <h2 class="heading-small">
-              <a href="/drv-16/result/{{id}}">{{title_prefix}} {{title}}</a>
-            </h2>
-            {{#has_data}}
-              <div class="font-xsmall">
-                {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
-                <b class="bold-xsmall">{{tenure}}</b>
-              </div>
-            {{/has_data}}
+  {{/content}}
 
-            {{#empty}}
-              <div class="font-xsmall">
-                Title number: <b>Not found</b>
-              </div>
-            {{/empty}}
-          </li>
-        {{/results}}
-
-      </ol>
-
-      <div class="pagination-prev-next">
-        <ul>
-          {{#prev}}
-            <li class="previous-page">
-             <a href="{{prev}}">
-               <span class="pagination-label">Previous <span class="visuallyhidden">page</span></span>
-             </a>
-           </li>
-          {{/prev}}
-          <li class="next-page">
-            <a href="{{next}}">
-              <span class="pagination-label">Next <span class="visuallyhidden">page</span></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div id="pagination" style="text-align: center">Page 1 of 2</div>
-    </div>
-  </div>
-</div></div>
-</main>
-
-{{/content}}
-
-{{$footerSupportLinks}}
-<ul>
-  <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
-  <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
-  <li>If you need help using the service you can call Land Registry on 0300 006 0411.</li>
-</ul>
-{{/footerSupportLinks}}
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411.</li>
+    </ul>
+  {{/footerSupportLinks}}
 
 {{/layout}}
