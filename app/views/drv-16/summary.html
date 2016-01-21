@@ -57,86 +57,86 @@
           }
         </script>
 
-          <div class="column-two-thirds">
-            {{#result}}
-              <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
-                <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
-              <hr>
-              <dl class="definition-tabular expand-top-half">
-                <dt>Address</dt>
-                <dd><span class="heading-medium">
-                  {{title_prefix}}
-                  {{#address}}
-                    {{.}}<br>
-                  {{/address}}
-                </span></dd>
-                <dt>Owner</dt>
-                <dd><span class="heading-small">{{owner}}</span><br>
-                  {{#address}}
-                    {{.}}<br>
-                  {{/address}}
-                </dd>
-
-                {{#lender_name}}
-                  <dt>Lender</dt>
-                  <dd>
-                    <span class="heading-small">{{lender_name}}</span><br>
-                    {{#lender_address}}
-                      {{.}}<br>
-                    {{/lender_address}}
-                  </dd>
-                {{/lender_name}}
-
-                <dt>Tenure type</dt>
-                <dd><span class="heading-small">{{tenure}}</span></dd>
-
-                {{#lease_term}}
-                  <dt>Lease term</dt>
-                  <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
-                {{/lease_term}}
-
-                {{#price}}
-                  <dt>Price paid</dt>
-                  <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
-                {{/price}}
-              </dl>
-            {{/result}}
-
-            <div class="govuk-box-highlight printhidden">
-              <p>
-                <b>You'll only be able to view this information once</b><br>
-                If you want to keep a copy, you'll need to print it out or take a screen shot.
-              </p>
-
-              <a class="button-print" href="javascript:window.print();">Print this page</a>
+        <div class="column-third push-two-thirds">
+          <div id="map">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
             </div>
-
-            <hr>
-
-            <div class="panel-indent">
-              <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
-              <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
-            </div>
-
-            <div class="text printhidden">
-              <h6 class="heading-medium">What next</h6>
-              <ul>
-                <li><a href="search">Search for another title using this service</a></li>
-                <li><a href="https://gov.uk">Return to GOV.UK</a></li>
-              </ul>
-            </div>
-
           </div>
-
-          <div class="column-third">
-            <div id="map">
-              <div class="panel-simple">
-                <p>The map relies on JavaScript being enabled in your browser.</p>
-              </div>
-            </div>
-            <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
-          </div>
+          <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
         </div>
+
+        <div class="column-two-thirds pull-whole">
+          {{#result}}
+            <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
+              <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+            <hr>
+            <dl class="definition-tabular expand-top-half">
+              <dt>Address</dt>
+              <dd><span class="heading-medium">
+                {{title_prefix}}
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </span></dd>
+              <dt>Owner</dt>
+              <dd><span class="heading-small">{{owner}}</span><br>
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </dd>
+
+              {{#lender_name}}
+                <dt>Lender</dt>
+                <dd>
+                  <span class="heading-small">{{lender_name}}</span><br>
+                  {{#lender_address}}
+                    {{.}}<br>
+                  {{/lender_address}}
+                </dd>
+              {{/lender_name}}
+
+              <dt>Tenure type</dt>
+              <dd><span class="heading-small">{{tenure}}</span></dd>
+
+              {{#lease_term}}
+                <dt>Lease term</dt>
+                <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
+              {{/lease_term}}
+
+              {{#price}}
+                <dt>Price paid</dt>
+                <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
+              {{/price}}
+            </dl>
+          {{/result}}
+
+          <div class="govuk-box-highlight printhidden">
+            <p>
+              <b>You'll only be able to view this information once</b><br>
+              If you want to keep a copy, you'll need to print it out or take a screen shot.
+            </p>
+
+            <a class="button-print" href="javascript:window.print();">Print this page</a>
+          </div>
+
+          <hr>
+
+          <div class="panel-indent">
+            <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
+            <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
+          </div>
+
+          <div class="text printhidden">
+            <h6 class="heading-medium">What next</h6>
+            <ul>
+              <li><a href="search">Search for another title using this service</a></li>
+              <li><a href="https://gov.uk">Return to GOV.UK</a></li>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
 
       <script type='text/javascript'>

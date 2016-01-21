@@ -63,54 +63,57 @@
 @import 'patterns';
 
 #processing {
-    text-align: center;
-  }
+  text-align: center;
+}
+
 #processing img {
-    width: 56px;
-    margin: 0 auto;
-  }
+  width: 56px;
+  margin: 0 auto;
+}
 
 .button-print {
-    background-color: #ffffff;
-    position: relative;
-    display: -moz-inline-stack;
-    display: inline-block;
-    padding: 0.3em 0.6em 0.2em 0.6em;
-    border: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-appearance: none;
-    -webkit-box-shadow: 0 2px 0 #003518;
-    -moz-box-shadow: 0 2px 0 #003518;
-    box-shadow: 0 2px 0 #003518;
-    font-size: 1em;
-    line-height: 1.25;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
-    color: #000000;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0 15px 15px 0;
-    padding: 0.5263157895em 0.7894736842em 0.2631578947em 0.7894736842em;
-    vertical-align: top;
-    font-weight: bold;
-  }
+  background-color: #ffffff;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.2em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 15px 15px 0;
+  padding: 0.5263157895em 0.7894736842em 0.2631578947em 0.7894736842em;
+  vertical-align: top;
+  font-weight: bold;
+}
 
-  .button-print:link, .button-print:hover, .button-print:focus, .button-print:visited {
-    color: #000;
-  }
+.button-print:link, .button-print:hover, .button-print:focus, .button-print:visited {
+  color: #000;
+}
 
-  #map{
-    height:320px !important;
-    width:320px !important;
-  }
+#map {
+  height:0 !important;
+  padding-bottom: 100%!important;
+  width:100% !important;
+}
 
 .column-flip{
-    float:right;
+  float:right;
 }
+
 .account{
   padding: 9px 0 30px 0;
   text-align: right;
