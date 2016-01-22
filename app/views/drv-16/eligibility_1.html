@@ -1,0 +1,107 @@
+{{<layout}}
+
+  {{$pageTitle}}Find a Property{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+
+      <h1 class="heading-large">Existing account details</h1>
+
+      <div class="grid-row">
+
+        <div class="column-half">
+          <form method="get" action="search" id="eligibility-form" onsubmit="return checkEligibility()">
+
+            <fieldset class="form-group" id="eligibility_group">
+              <legend class="bold-medium">In the last 12 months, have you used the Land Registry website to find property registration information?</legend>
+
+              <label class="block-label expand-top" for="eligibility-1">
+                <input id="eligibility-1" type="radio" name="eligibility" value="eligible">
+                Yes
+              </label>
+
+              <label class="block-label" for="eligibility-2">
+                <input id="eligibility-2" type="radio" name="eligibility" value="ineligible">
+                No
+              </label>
+
+              <label class="block-label" for="eligibility-3">
+                <input id="eligibility-3" type="radio" name="eligibility" value="ineligible">
+                Not sure
+              </label>
+
+            </fieldset>
+
+            <div class="form-group">
+              <input type="submit" class="button button-start" value="Continue">
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="column-half">
+          <img src="/public/images/find-a-property.png" alt="Find a Property website" />
+        </div>
+      </div>
+
+      <script>
+        var msg = document.createElement('span');
+        msg.classList.add('error-message');
+        msg.textContent = 'Please choose an option';
+
+        var eligibiltyGroup = document.getElementById('eligibility_group');
+
+        function checkEligibility() {
+          var questions = document.querySelectorAll('input[name="eligibility"]');
+          var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+          var eligible = true;
+          var empty = true;
+
+          if(msg.parentNode) {
+            msg.parentNode.removeChild(msg);
+            eligibiltyGroup.classList.remove('error');
+          }
+
+          [].forEach.call(questions, function(item, index) {
+            if(item.checked) {
+              empty = false;
+            }
+          });
+
+          [].forEach.call(inEligibleQuestions, function(item, index) {
+            if(item.checked) {
+              eligible = false;
+            }
+          });
+
+          if(empty) {
+            eligibiltyGroup.classList.add('error');
+            eligibiltyGroup.appendChild(msg);
+
+            return false;
+          }
+
+          if(eligible) {
+            window.location = 'eligibility_2';
+          } else {
+            window.location = 'ineligible_account';
+          }
+
+          return false;
+        }
+      </script>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}
