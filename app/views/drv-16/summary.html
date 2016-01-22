@@ -9,7 +9,7 @@
       <div class="phase-banner">
         <p>
           <strong class="phase-tag">BETA</strong>
-          <span>This service is in private beta. Please give us your <a rel="external" href="mailto:digital-register-feedback@digital.landregistry.gov.uk">Feedback</a>.</span>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-16/feedback">Feedback</a>.</span>
         </p>
       </div>
 
@@ -57,16 +57,7 @@
           }
         </script>
 
-        <div class="column-third push-two-thirds">
-          <div id="map">
-            <div class="panel-simple">
-              <p>The map relies on JavaScript being enabled in your browser.</p>
-            </div>
-          </div>
-          <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
-        </div>
-
-        <div class="column-two-thirds pull-whole">
+        <div class="column-two-thirds">
           {{#result}}
             <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
               <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
@@ -113,14 +104,17 @@
 
           <div class="govuk-box-highlight printhidden">
             <p>
-              <b>You'll only be able to view this information once</b><br>
+              <b class="bold-small">You'll only be able to view this information once</b><br>
               If you want to keep a copy, you'll need to print it out or take a screen shot.
             </p>
 
-            <a class="button-print" href="javascript:window.print();">Print this page</a>
+            <a class="button-print" href="javascript:window.print();"><span style="color:red">PRINT ICON HERE</span> Print this page</a>
+
           </div>
 
           <hr>
+
+          <p style="color:red;font-weight: bold">VAT receipt goes here</p>
 
           <div class="panel-indent">
             <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
@@ -135,6 +129,15 @@
             </ul>
           </div>
 
+        </div>
+
+        <div class="column-third">
+          <div id="map">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
+            </div>
+          </div>
+          <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
         </div>
 
       </div>
