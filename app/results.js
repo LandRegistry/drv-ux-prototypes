@@ -50,13 +50,19 @@ for(var i=1; i<=numResults; i++) {
     result.lease_term = 50 + Math.floor(rand * 50);
   }
 
+  // Some don't have lenders
   if(rand > 0.3) {
     result.lender_name = 'Abbey National PLC';
-    result.lender_address = [ 
+    result.lender_address = [
       '101 Midsummer Boulevard',
       'Milton Keynes',
       'MK9 1AA'
     ];
+  }
+
+  // Some may not yet have been migrated
+  if(rand > 0.9) {
+
   }
 
   // If it's newer than 2000, display a price
