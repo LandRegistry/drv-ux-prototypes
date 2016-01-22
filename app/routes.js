@@ -61,4 +61,25 @@ router.get('/drv-16/summary/:id', function (req, res) {
   });
 });
 
+/**
+ * A & B routes for the start page options
+ */
+abRoutes = [
+  'drv-16/start',
+  'drv-16/eligibility_1'
+];
+
+abRoutes.forEach(function(route) {
+
+  router.get('/' + route, function (req, res) {
+    res.render(route, {
+      'mode': req.query.mode,
+      'modeA': req.query.mode === 'a',
+      'modeB': req.query.mode === 'b',
+    });
+  });
+
+})
+
+
 module.exports = router;
