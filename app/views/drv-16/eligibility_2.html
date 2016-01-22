@@ -1,0 +1,138 @@
+{{<layout}}
+
+  {{$pageTitle}}Find a Property{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <!-- 1. Start Title information (number, address and tenure information) -->
+          <h1 class="heading-large">Documents</h1>
+          <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
+
+            <fieldset class="form-group" id="eligibility_group">
+              <legend class="bold-medium">What documents do you need?</legend>
+
+
+              <label class="block-label expand-top" for="eligibility-1">
+                <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
+                Summary £2
+              </label>
+
+
+              <div class="clear">
+                <details>
+                  <summary>What is in the summary view?</summary>
+
+                  <p>The summary view contains reduced information of the full register. It consists of the following information only:</p>
+                  <ul class="list-bullet">
+                    <li>address and title number</li>
+                    <li>owner name and address details</li>
+                    <li>any lender name and address details</li>
+                    <li>tenure, title quality and price paid details</li>
+                  </ul>
+                </details>
+              </div>
+
+              <label class="block-label expand-top" for="eligibility-2">
+                <input id="eligibility-2" type="checkbox" name="eligibility" value="ineligible">
+                Complete title documents £3
+              </label>
+
+              <div class="clear">
+                <details>
+                  <summary>What are title documents?</summary>
+                  <p>Title documents are available in PDF format to download and keep.</p>
+                  <p>The <b>title register</b> has details about the property or land, including:</p>
+                  <ul class="list-bullet">
+                    <li>title number</li>
+                    <li>who owns it</li>
+                    <li>what they paid for it (properties only, if available)</li>
+                    <li>any rights of way</li>
+                    <li>whether a mortgage on it has been ‘discharged’, eg paid off</li>
+                  </ul>
+                  <p>The <b>title plan</b> includes details of:</p>
+                  <ul class="list-bullet">
+                    <li>the property’s location</li>
+                    <li>the general boundaries</li>
+                  </ul>
+                </details>
+              </div>
+
+              <label class="block-label expand-top" for="eligibility-3">
+                <input id="eligibility-3" type="checkbox" name="eligibility" value="ineligible">
+                Flood risk £9 (excl. VAT)
+              </label>
+
+            </fieldset>
+
+            <div class="form-group">
+              <input type="submit" class="button button-start" value="Continue">
+            </div>
+
+          </form>
+
+          <script>
+            var msg = document.createElement('span');
+            msg.classList.add('error-message');
+            msg.textContent = 'Please choose an option';
+
+            var eligibiltyGroup = document.getElementById('eligibility_group');
+
+            function checkEligibility() {
+              var questions = document.querySelectorAll('input[name="eligibility"]');
+              var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+              var eligible = true;
+              var empty = true;
+
+              if(msg.parentNode) {
+                msg.parentNode.removeChild(msg);
+                eligibiltyGroup.classList.remove('error');
+              }
+
+              [].forEach.call(questions, function(item, index) {
+                if(item.checked) {
+                  empty = false;
+                }
+              });
+
+              [].forEach.call(inEligibleQuestions, function(item, index) {
+                if(item.checked) {
+                  eligible = false;
+                }
+              });
+
+              if(empty) {
+                eligibiltyGroup.classList.add('error');
+                eligibiltyGroup.appendChild(msg);
+
+                return false;
+              }
+
+              if(eligible) {
+                window.location = 'sign-in';
+              } else {
+                window.location = 'ineligible_info';
+              }
+
+              return false;
+            }
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="summary_welsh">Ar gael yn y Gymraeg</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}
