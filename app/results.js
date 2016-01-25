@@ -45,8 +45,15 @@ for(var i=1; i<=numResults; i++) {
     result.title = address.join(',');
   }
 
+  // "Owner" label varies depending on tenure type
+  if(result.tenure === 'Leasehold') {
+    result.owner_label = 'leaseholder';
+  } else {
+    result.owner_label = 'owner';
+  }
+
   // Lease term if it's *not* freehold
-  if(result.tenure !== 'freehold') {
+  if(result.tenure !== 'Freehold') {
     result.lease_term = 50 + Math.floor(rand * 50);
   }
 
