@@ -394,3 +394,18 @@ dl {
 .clear {
   clear: both;
 }
+
+.block-label-transparent {
+  background-color: transparent;
+  padding: 0 0 0 40px;
+
+  &,
+  &:hover {
+    border: 0;
+  }
+
+  input {
+    top: 0;
+    left: 0;
+  }
+}
