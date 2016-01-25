@@ -67,11 +67,6 @@ for(var i=1; i<=numResults; i++) {
     ];
   }
 
-  // Some may not yet have been migrated
-  if(rand > 0.9) {
-
-  }
-
   // If it's newer than 2000, display a price
   if(date.isAfter('2000-01-01')) {
     result.price = Math.floor(100 + (rand * 300));

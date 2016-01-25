@@ -100,7 +100,6 @@
                 <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
               {{/price}}
             </dl>
-          {{/result}}
 
           <div class="govuk-box-highlight printhidden">
             <p>
@@ -108,14 +107,31 @@
               If you want to keep a copy, you'll need to print it out or take a screen shot.
             </p>
 
-            <a class="button-print" href="javascript:window.print();"><span style="color:red">PRINT ICON HERE</span> Print this page</a>
+            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
 
           </div>
 
           <hr>
 
-          <p style="color:red;font-weight: bold">VAT receipt goes here</p>
+          <h2 class="heading-medium">VAT receipt</h2>
+          <dl class="">
+            <dt class="bold-small">Invoice number</dt>
+            <dd class="expand-bottom-half">ABC1234578</dd>
+            <dt class="bold-small">Land Registry business name and address</dt>
+            <dd class="expand-bottom-half">Land Registry, PO Box 6344 Coventry CV3 9LL</dd>
+            <dt class="bold-small">Land Registry VAT number</dt>
+            <dd class="expand-bottom-half">12345678</dd>
+            <dt class="bold-small">Time of supply</dt>
+            <dd class="expand-bottom-half">25 Jan 2016</dd>
+            <dt class="bold-small">Description of the goods or services</dt>
+            <dd class="expand-bottom-half">Summary of title {{title_number}}</dd>
+            <dt class="bold-small">VAT rate</dt>
+            <dd class="expand-bottom-half">20%</dd>
+            <dt class="bold-small">Total amount (including VAT)</dt>
+            <dd class="expand-bottom-half">£2</dd>
+          </dl>
 
+          {{/result}}
           <div class="panel-indent">
             <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
             <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
