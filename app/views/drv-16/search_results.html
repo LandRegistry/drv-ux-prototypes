@@ -45,10 +45,11 @@
 
             {{#results}}
               <li>
-                <h2 class="heading-small">
-                  <a href="/drv-16/result/{{id}}">{{title_prefix}} {{title}}</a>
-                </h2>
                 {{#has_data}}
+                  <h2 class="heading-small">
+                    <a href="/drv-16/result/{{id}}">{{title_prefix}} {{title}}</a>
+                  </h2>
+
                   <div class="font-xsmall">
                     {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
                     <b class="bold-xsmall">{{tenure}}</b>
@@ -56,8 +57,20 @@
                 {{/has_data}}
 
                 {{#empty}}
+                  <h2 class="heading-small">
+                    {{title_prefix}} {{title}}
+                  </h2>
                   <div class="font-xsmall">
-                    Title number: <b>Not found</b>
+                    <p class="collapse-bottom">No title information found</p>
+
+                    <details>
+                      <summary>Why not?</summary>
+                      <div class="panel-indent">
+                        <img style="vertical-align: middle;margin-bottom:10px" src="/public/images/beta.png" alt="" />
+                        <p>There could be many reasons why we cannot provide you a title number at this time. Try the <a href="https://eservices.landregistry.gov.uk/www/wps/portal/!ut/p/b1/04_SjzS0MDc3NjeyNDDSj9CPykssy0xPLMnMz0vMAfGjzOKNjSxMDA1NjDwsjM3MDTxN3dyNDUNMjQ1MjPWDU_P0c6McFQGRbYf3/">existing Land Registry service</a> instead</p>
+                        <p>If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p>
+                      </div>
+                    </details>
                   </div>
                 {{/empty}}
               </li>
