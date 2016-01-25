@@ -112,41 +112,10 @@
                 <p style="overflow:hidden;margin:0;">You'll be able to view the information on screen. You'll only be able to view it once. If you want to keep a copy, you'll need to print it out or take a screen shot.</p>
               </div>
 
-              <br><br>
+              <br>
 
-              <div class="form-group" id="right_to_cancel_group">
-                <label class="block-label" for="right_to_cancel">
-                  <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
-                  I agree to your providing the Register View requested available to me immediately and agree that I will lose my right to cancel the contract once Register View has begun.
-                </label>
-              </div>
-
-              <a href="../worldpay_1?id={{id}}" class="button" onclick="return checkRightToCancel()">Buy title summary</a>
-              <p>for <b>&pound;2</b> <small>(incl. VAT)</small></p>
-
-              <script>
-                var msg = document.createElement('span');
-                msg.classList.add('error-message');
-                msg.textContent = 'You must agree that you will lose your right to cancel the contract once Register View has begun';
-
-                var rightToCancelGroup = document.getElementById('right_to_cancel_group');
-
-                function checkRightToCancel() {
-
-                  if(msg.parentNode) {
-                    msg.parentNode.removeChild(msg);
-                    rightToCancelGroup.classList.remove('error');
-                  }
-
-                  if(!document.getElementById('right_to_cancel').checked) {
-
-                    rightToCancelGroup.classList.add('error');
-                    rightToCancelGroup.appendChild(msg);
-
-                    return false;
-                  }
-                }
-              </script>
+              <p><a href="../worldpay_1?id={{id}}" class="button collapse-bottom" onclick="return checkRightToCancel()" style="vertical-align:middle">Buy title summary</a>for <b>&pound;2</b> <small>(incl. VAT)</small></p>
+              <p class="font-xsmall">By continuing, you agree that you forfeit your right to cancel under the Consumer Rights Act.</p>
             {{/has_data}}
           </div>
         </div>
