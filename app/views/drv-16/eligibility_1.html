@@ -5,17 +5,24 @@
   {{$content}}
 
     <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-16/feedback">Feedback</a>.</span>
+        </p>
+      </div>
+      <!-- -->
 
-      <h1 class="heading-large">Existing account details</h1>
 
       <div class="grid-row">
-
         <div class="column-half">
           <form method="get" action="search" id="eligibility-form" onsubmit="return checkEligibility()">
+            <h1 class="heading-medium" id="groupLabel">In the last 12 months, have you used the Land Registry website to find property registration information?</h1>
 
-            <fieldset class="form-group" id="eligibility_group">
-              <legend class="bold-medium">In the last 12 months, have you used the Land Registry website to find property registration information?</legend>
+            <fieldset class="form-group" id="eligibility_group"  aria-labelledby="groupLabel">
 
+              <p class="collapse-bottom">You'll need the username and password you used to access the current Land Registry service (shown in the screenshot) to use the ‘beta’.</p>
               <label class="block-label expand-top" for="eligibility-1">
                 <input id="eligibility-1" type="radio" name="eligibility" value="eligible">
                 Yes

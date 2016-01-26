@@ -7,17 +7,14 @@
     <main id="content" role="main">
       <div class="grid-row">
         <div class="column-two-thirds">
-          <!-- 1. Start Title information (number, address and tenure information) -->
-          <h1 class="heading-large">Documents</h1>
+          <h1 class="heading-large">What documents do you need?</h1>
           <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group">
-              <legend class="bold-medium">What documents do you need?</legend>
-
-
               <label class="block-label expand-top" for="eligibility-1">
                 <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
-                Summary £2
+                Title summary - £2 <span class="font-xsmall">(inc VAT)</span><br>
+                <p class="font-xsmall collapse-bottom">Brief facts from the register</p>
               </label>
 
 
@@ -25,7 +22,7 @@
                 <details>
                   <summary>What is in the summary view?</summary>
 
-                  <p>The summary view contains reduced information of the full register. It consists of the following information only:</p>
+                  <p>The <strong>summary view</strong> contains reduced information of the full register. It consists of the following information only:</p>
                   <ul class="list-bullet">
                     <li>address and title number</li>
                     <li>owner name and address details</li>
@@ -37,7 +34,8 @@
 
               <label class="block-label expand-top" for="eligibility-2">
                 <input id="eligibility-2" type="checkbox" name="eligibility" value="ineligible">
-                Complete title documents £3
+                Full title documents - £3 each<br>
+                <p class="font-xsmall collapse-bottom">The title register and title plan</p>
               </label>
 
               <div class="clear">
@@ -52,7 +50,7 @@
                     <li>any rights of way</li>
                     <li>whether a mortgage on it has been ‘discharged’, eg paid off</li>
                   </ul>
-                  <p>The <b>title plan</b> includes details of:</p>
+                  <p>The <b>title plan</b> is a map showing:</p>
                   <ul class="list-bullet">
                     <li>the property’s location</li>
                     <li>the general boundaries</li>
@@ -62,7 +60,7 @@
 
               <label class="block-label expand-top" for="eligibility-3">
                 <input id="eligibility-3" type="checkbox" name="eligibility" value="ineligible">
-                Flood risk £9 (excl. VAT)
+                Flood risk indicator - £10.80 <span class="font-xsmall">(inc VAT)</span>
               </label>
 
               <label class="block-label expand-top" for="eligibility-4">
