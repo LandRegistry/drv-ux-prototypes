@@ -53,7 +53,7 @@ for(var i=1; i<=numResults; i++) {
   }
 
   // Lease term if it's *not* freehold
-  if(result.tenure !== 'Freehold') {
+  if(result.tenure === 'Leasehold') {
     result.lease_term = 50 + Math.floor(rand * 50);
   }
 

@@ -89,9 +89,8 @@
               <ul class="list-bullet">
                 <li>current {{owner_label}}'s name and address</li>
                 <li>what they paid for the property – you won’t get this if it was bought before April 2000, if no money changed hands, or if the owner didn’t buy it outright</li>
+                {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
                 <li>if there is a mortgage on the property, the lender's name and  address</li>
-                <li>if it's a leasehold property, how long the lease is for</li>
-                <li>the rough extent and location of the property</li>
               </ul>
 
               <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p>
@@ -114,8 +113,10 @@
 
               <br><br>
 
-              <div style="border: 1px solid #454a4c;padding:25px">
+              <!-- <div style="border: 1px solid #454a4c;padding:25px"> -->
                 <div class="form-group expand-bottom-half" id="right_to_cancel_group">
+                  <h2 class="heading-medium collapse-top">Your right to cancel</h2>
+
                   <label class="block-label block-label-transparent" for="right_to_cancel">
                     <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
                     I agree to your providing the Register View requested available to me immediately and agree that I will lose my right to cancel the contract once Register View has begun.
@@ -124,7 +125,7 @@
 
                 <a style="margin-left: 40px;margin-bottom:10px" href="../worldpay_1?id={{id}}" class="button" onclick="return checkRightToCancel()">Buy title summary</a>
                 <p style="margin-left: 40px" class="collapse-bottom font-xsmall">for <b>&pound;2</b> <small>(incl. VAT)</small></p>
-              </div>
+              <!-- </div> -->
 
               <script>
                 var msg = document.createElement('span');
