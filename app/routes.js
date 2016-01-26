@@ -72,10 +72,15 @@ abRoutes = [
 abRoutes.forEach(function(route) {
 
   router.get('/' + route, function (req, res) {
+    var mode = req.query.mode;
+    if(!mode) {
+      mode = 'a';
+    }
+
     res.render(route, {
-      'mode': req.query.mode,
-      'modeA': req.query.mode === 'a',
-      'modeB': req.query.mode === 'b',
+      'mode': mode,
+      'modeA': mode === 'a',
+      'modeB': mode === 'b',
     });
   });
 
