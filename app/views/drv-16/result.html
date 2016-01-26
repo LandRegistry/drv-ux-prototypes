@@ -72,7 +72,20 @@
 
                   <details class="font-xsmall">
                     <summary>What's {{tenure}}?</summary>
-                    <p>{{tenure}} is lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    {{#tenure_caution}}
+                      <p>A caution against first registration protects land or property which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the property, and object to that request if it conflicts with their interest in the property.</p>
+                      <a rel="external" href="https://www.gov.uk/government/publications/caution-against-first-registration/practice-guide-3-cautions-against-first-registration">More about cautions against first registration</a>
+                    {{/tenure_caution}}
+
+                    {{#tenure_leasehold}}
+                      <p>You only own a leasehold property for a fixed period of time. A legal agreement with the person who owns the building and land it stands on (known as the ‘freeholder’) will tell you how many years you’ll own the property. Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme. The leasehold and freehold are each registered separately with the Land Registry and have their own title documents. <b class="bold-xsmall">You are buying the summary for the current leaseholder, not the freeholder.</b></p>
+                      <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
+                    {{/tenure_leasehold}}
+
+                    {{#tenure_freehold}}
+                      <p>You own a freehold building and the land it stands on outright. It is yours until you sell it or give it away. Most houses are freehold. Most flats are leasehold and someone else owns the freehold for the building the flat is in. <b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme. </p>
+                    {{/tenure_freehold}}
                   </details>
 
                   <br>
@@ -99,8 +112,8 @@
 
               <h2 class="heading-medium">You will need</h2>
 
-              <ul class="list-plain">
-                <li><img style="vertical-align:middle" src="/public/images/cc_icon.png" alt="" />&nbsp;&nbsp;&nbsp;a credit or debit card</li>
+              <ul class="list-plain collapse-bottom">
+                <li class="expand-bottom-half"><img style="vertical-align:middle" src="/public/images/cc_icon.png" alt="" />&nbsp;&nbsp;&nbsp;a credit or debit card</li>
                 <li><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;&nbsp;a printer, if you want to print the summary to refer to later</li>
               </ul>
 
@@ -115,16 +128,23 @@
 
               <!-- <div style="border: 1px solid #454a4c;padding:25px"> -->
                 <div class="form-group expand-bottom-half" id="right_to_cancel_group">
-                  <h2 class="heading-medium collapse-top">Your right to cancel</h2>
+                  <h2 class="heading-medium collapse-top">Cancellation policy</h2>
+
+
+                  <p>Title summary purchases are non refundable once you have viewed them</p>
+
+                  <p>OR</p>
+
+                  <p>Once you have viewed the title summary, you will not be eligible for a refund</p>
 
                   <label class="block-label block-label-transparent" for="right_to_cancel">
                     <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
-                    I agree to your providing the Register View requested available to me immediately and agree that I will lose my right to cancel the contract once Register View has begun.
+                    I accept that I lose my right to cancel beyond this point
                   </label>
                 </div>
 
-                <a style="margin-left: 40px;margin-bottom:10px" href="../worldpay_1?id={{id}}" class="button" onclick="return checkRightToCancel()">Buy title summary</a>
-                <p style="margin-left: 40px" class="collapse-bottom font-xsmall">for <b>&pound;2</b> <small>(incl. VAT)</small></p>
+                <a style="margin-bottom:10px" href="../worldpay_1?id={{id}}" class="button" onclick="return checkRightToCancel()">Buy title summary</a>
+                <p style="" class="collapse-bottom font-xsmall">for <b>&pound;2</b> <small>(incl. VAT)</small></p>
               <!-- </div> -->
 
               <script>

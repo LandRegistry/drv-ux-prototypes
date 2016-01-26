@@ -39,22 +39,29 @@ for(var i=1; i<=numResults; i++) {
     'empty': rand <= 0.1  // Inverted boolean of the above, because mustache does not have logic so we have to use "guarded ifs"
   };
 
-  if(result.tenure === 'Caution against first registration') {
-    result.title_number_prefix = 'Caution ';
-    result.title_prefix = 'Land at';
-    result.title = address.join(',');
-  }
+  switch(result.tenure) {
+    case 'Caution against first registration':
+      result.title_number_prefix = 'Caution ';
+      result.title_prefix = 'Land at';
+      result.title = address.join(',');
+      result.tenure_caution = true;
 
-  // "Owner" label varies depending on tenure type
-  if(result.tenure === 'Leasehold') {
-    result.owner_label = 'leaseholder';
-  } else {
-    result.owner_label = 'owner';
-  }
+      break;
 
-  // Lease term if it's *not* freehold
-  if(result.tenure === 'Leasehold') {
-    result.lease_term = 50 + Math.floor(rand * 50);
+    case 'Leasehold':
+      result.owner_label = 'leaseholder';
+      result.lease_term = 50 + Math.floor(rand * 50);
+      result.tenure_leasehold = true;
+
+      break;
+
+    case 'Freehold':
+      result.tenure_freehold = true;
+
+      break;
+
+    default:
+      result.owner_label = 'owner';
   }
 
   // Some don't have lenders
