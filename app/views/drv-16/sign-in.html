@@ -18,7 +18,7 @@
           <h1 class="heading-large">Digital Register Sign In</h1>
           <p>To use this service you will need to use your current Find a Property user account.</p>
 
-          <form method="get" action="search" onSubmit="return checkTerms()" id="login-form">
+          <form method="get" action="eligibility_2a" onSubmit="return checkTerms()" id="login-form">
             <!-- Username -->
             <div class="form-group">
               <label class="form-label-bold" for="full-name">Username</label>
@@ -61,13 +61,14 @@
                 termsGroup.classList.remove('error');
               }
 
-              if(!document.getElementById('terms').checked) {
-
+              if(document.getElementById('terms').checked) {
+                window.location = 'eligibility_2a';
+              } else {
                 termsGroup.classList.add('error');
                 termsGroup.appendChild(msg);
-
-                return false;
               }
+
+              return false;
             }
           </script>
 
