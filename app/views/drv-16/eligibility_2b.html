@@ -46,8 +46,8 @@
                 Length of the lease on a leasehold property
               </label>
 
-              <label class="block-label" for="eligibility-5">
-                <input id="eligibility-5" type="checkbox" name="eligibility" value="ineligible">
+              <label class="block-label" for="eligibility-prove">
+                <input id="eligibility-prove" type="checkbox" name="eligibility" value="prove">
                 To prove ownership, eg for a court case
               </label>
 
@@ -98,6 +98,11 @@
                 eligibiltyGroup.classList.add('error');
                 eligibiltyGroup.appendChild(msg);
 
+                return false;
+              }
+
+              if(document.getElementById('eligibility-prove').checked) {
+                window.location = 'ineligible_proveownership';
                 return false;
               }
 
