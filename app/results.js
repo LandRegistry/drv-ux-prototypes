@@ -5,11 +5,13 @@ var fs = require('fs');
 
 var results = yaml.parse(fs.readFileSync('app/results.yaml', 'utf8'));
 
-results.forEach(function(result) {
+results.forEach(function(result, index) {
 
   if(!result.has_data) {
     result.empty = true;
   }
+
+  result.id = index + 1;
 
   switch(result.tenure) {
     case 'Caution against first registration':

@@ -3,7 +3,6 @@
     - 1 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 1
   has_data: true
   tenure: Freehold
   title_number: FAKE177634
@@ -15,7 +14,6 @@
     - 2 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 2
   has_data: true
   tenure: Freehold
   title_number: FAKE371184
@@ -32,7 +30,6 @@
     - 3 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 3
   tenure: Leasehold
   empty: false
   title_number: FAKE756853
@@ -46,12 +43,13 @@
     - MK9 1AA
   price: 327
 
+
+
 -
   address:
     - 4 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 4
   has_data: true
   tenure: Freehold
   title_number: FAKE375276
@@ -68,7 +66,6 @@
     - 5 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 5
   tenure: Leasehold
   empty: false
   title_number: FAKE897514
@@ -82,12 +79,13 @@
     - MK9 1AA
   price: 369
 
+
+
 -
   address:
     - 6 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 6
   has_data: false
   tenure: Freehold
   title_number: FAKE86811
@@ -99,7 +97,6 @@
     - 7 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 7
   tenure: Leasehold
   empty: false
   title_number: FAKE501492
@@ -112,12 +109,12 @@
     - Milton Keynes
     - MK9 1AA
 
+
 -
   address:
     - Land at Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 8
   tenure: Caution against first registration
   empty: false
   title_number: FAKE943389
@@ -128,7 +125,6 @@
     - Land at Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 9
   tenure: Caution against first registration
   empty: false
   title_number: FAKE969593
@@ -139,7 +135,6 @@
     - Land at Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 10
   tenure: Caution against first registration
   empty: false
   title_number: FAKE969385
@@ -150,7 +145,6 @@
     - 11 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 11
   has_data: true
   tenure: Freehold
   title_number: FAKE257352
@@ -162,7 +156,6 @@
     - 12 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 12
   has_data: true
   tenure: Freehold
   title_number: FAKE161233
@@ -174,7 +167,6 @@
     - Land at Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 13
   tenure: Caution against first registration
   empty: false
   title_number: FAKE972258
@@ -185,7 +177,6 @@
     - 14 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 14
   has_data: true
   tenure: Freehold
   title_number: FAKE365237
@@ -202,7 +193,6 @@
     - 15 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 15
   has_data: false
   tenure: Freehold
   title_number: FAKE67607
@@ -214,7 +204,6 @@
     - 16 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 16
   tenure: Leasehold
   empty: false
   title_number: FAKE663604
@@ -228,12 +217,13 @@
     - MK9 1AA
   price: 299
 
+
+
 -
   address:
     - 17 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 17
   tenure: Leasehold
   empty: false
   title_number: FAKE664449
@@ -247,12 +237,13 @@
     - MK9 1AA
   price: 299
 
+
+
 -
   address:
     - 18 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 18
   has_data: true
   tenure: Freehold
   title_number: FAKE450563
@@ -269,7 +260,6 @@
     - 19 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 19
   has_data: false
   tenure: Freehold
   title_number: FAKE11185
@@ -281,7 +271,6 @@
     - 20 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 20
   tenure: Leasehold
   empty: false
   title_number: FAKE849144
@@ -295,12 +284,13 @@
     - MK9 1AA
   price: 354
 
+
+
 -
   address:
     - 21 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 21
   tenure: Leasehold
   empty: false
   title_number: FAKE845223
@@ -314,12 +304,13 @@
     - MK9 1AA
   price: 353
 
+
+
 -
   address:
     - 22 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 22
   has_data: true
   tenure: Freehold
   title_number: FAKE218334
@@ -331,7 +322,6 @@
     - 23 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 23
   tenure: Leasehold
   empty: false
   title_number: FAKE855168
@@ -345,12 +335,13 @@
     - MK9 1AA
   price: 356
 
+
+
 -
   address:
     - 24 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 24
   tenure: Leasehold
   empty: false
   title_number: FAKE694117
@@ -364,12 +355,13 @@
     - MK9 1AA
   price: 308
 
+
+
 -
   address:
     - 25 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 25
   has_data: true
   tenure: Freehold
   title_number: FAKE207211
@@ -381,7 +373,6 @@
     - 26 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 26
   has_data: false
   tenure: Freehold
   title_number: FAKE42083
@@ -393,7 +384,6 @@
     - 27 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 27
   tenure: Leasehold
   empty: false
   title_number: FAKE568838
@@ -411,7 +401,6 @@
     - 28 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 28
   tenure: Leasehold
   empty: false
   title_number: FAKE621451
@@ -425,12 +414,13 @@
     - MK9 1AA
   price: 286
 
+
+
 -
   address:
     - 29 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 29
   has_data: true
   tenure: Freehold
   title_number: FAKE157999
@@ -442,7 +432,6 @@
     - 30 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 30
   has_data: false
   tenure: Freehold
   title_number: FAKE93063
@@ -454,7 +443,6 @@
     - 31 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 31
   has_data: true
   tenure: Freehold
   title_number: FAKE257844
@@ -466,7 +454,6 @@
     - 32 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 32
   tenure: Leasehold
   empty: false
   title_number: FAKE518832
@@ -484,7 +471,6 @@
     - 33 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 33
   tenure: Leasehold
   empty: false
   title_number: FAKE855366
@@ -498,12 +484,13 @@
     - MK9 1AA
   price: 356
 
+
+
 -
   address:
     - 34 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 34
   tenure: Leasehold
   empty: false
   title_number: FAKE550384
@@ -516,12 +503,12 @@
     - Milton Keynes
     - MK9 1AA
 
+
 -
   address:
     - 35 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 35
   has_data: false
   tenure: Freehold
   title_number: FAKE41355
@@ -533,7 +520,6 @@
     - 36 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 36
   has_data: true
   tenure: Freehold
   title_number: FAKE262967
@@ -545,7 +531,6 @@
     - 37 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 37
   has_data: true
   tenure: Freehold
   title_number: FAKE260674
@@ -557,7 +542,6 @@
     - 38 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 38
   tenure: Leasehold
   empty: false
   title_number: FAKE888159
@@ -571,12 +555,13 @@
     - MK9 1AA
   price: 366
 
+
+
 -
   address:
     - 39 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 39
   tenure: Leasehold
   empty: false
   title_number: FAKE612124
@@ -590,12 +575,13 @@
     - MK9 1AA
   price: 283
 
+
+
 -
   address:
     - Land at Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 40
   tenure: Caution against first registration
   empty: false
   title_number: FAKE967630
@@ -606,7 +592,6 @@
     - 41 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 41
   has_data: true
   tenure: Freehold
   title_number: FAKE381404
@@ -623,7 +608,6 @@
     - 42 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 42
   has_data: false
   tenure: Freehold
   title_number: FAKE1634
@@ -635,7 +619,6 @@
     - 43 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 43
   tenure: Leasehold
   empty: false
   title_number: FAKE560862
@@ -653,7 +636,6 @@
     - 44 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 44
   tenure: Leasehold
   empty: false
   title_number: FAKE813589
@@ -667,12 +649,13 @@
     - MK9 1AA
   price: 344
 
+
+
 -
   address:
     - 45 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 45
   has_data: false
   tenure: Freehold
   title_number: FAKE82283
@@ -684,7 +667,6 @@
     - 46 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 46
   has_data: true
   tenure: Freehold
   title_number: FAKE125918
@@ -696,7 +678,6 @@
     - 47 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 47
   has_data: true
   tenure: Freehold
   title_number: FAKE432485
@@ -713,7 +694,6 @@
     - 48 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 48
   has_data: true
   tenure: Freehold
   title_number: FAKE161195
@@ -725,7 +705,6 @@
     - 49 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 49
   has_data: false
   tenure: Freehold
   title_number: FAKE58516
@@ -737,7 +716,6 @@
     - 50 Pretend Street
     - Trumpton
     - TR15 5RZ
-  id: 50
   has_data: true
   tenure: Freehold
   title_number: FAKE118102
