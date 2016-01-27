@@ -17,11 +17,14 @@
       <div class="grid-row">
         <div class="column-two-thirds">
           <h1 class="heading-large" id="groupLabel">What information do you need?</h1>
-          <p>Select as many as you need</p>
           <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group" aria-labelledby="groupLabel">
 
+              <label class="block-label" for="eligibility-1a">
+                <input id="eligibility-1a" type="checkbox" name="eligibility" value="eligible">
+                Title number
+              </label>
               <label class="block-label" for="eligibility-1">
                 <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
                 Current owner’s name and address
