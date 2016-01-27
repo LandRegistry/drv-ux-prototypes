@@ -14,6 +14,9 @@
       </div>
       <!-- -->
 
+      <br>
+      <a href="#" onClick="history.go(-1); return false;">◀ Back</a>
+
       <div class="grid-row">
         <div class="column-two-thirds">
           <h1 class="heading-large" id="groupLabel">What information do you need?</h1>
@@ -43,8 +46,8 @@
                 Length of the lease on a leasehold property
               </label>
 
-              <label class="block-label" for="eligibility-5">
-                <input id="eligibility-5" type="checkbox" name="eligibility" value="ineligible">
+              <label class="block-label" for="eligibility-prove">
+                <input id="eligibility-prove" type="checkbox" name="eligibility" value="prove">
                 To prove ownership, eg for a court case
               </label>
 
@@ -98,6 +101,11 @@
                 return false;
               }
 
+              if(document.getElementById('eligibility-prove').checked) {
+                window.location = 'ineligible_proveownership';
+                return false;
+              }
+
               if(eligible) {
                 window.location = 'search';
               } else {
@@ -119,7 +127,7 @@
     <ul>
       <li><a href="/drv-16/terms">Terms &amp; Conditions</a></li>
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
-      <li>If you need help using the service you can call Land Registry on 0300 006 0411 (England) or 0300 006 0422 (Wales).</li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
     </ul>
   {{/footerSupportLinks}}
 
