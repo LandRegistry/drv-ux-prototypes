@@ -409,3 +409,18 @@ dl {
     left: 0;
   }
 }
+
+.back-link {
+  text-decoration: none;
+  font-size: 14px;
+
+  &,
+  &:link,
+  &:visited {
+    color: $black;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
