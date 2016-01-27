@@ -29,17 +29,17 @@
 
               <p class="collapse-bottom">You'll need the username and password you used to access the current Land Registry service (shown in the screenshot) to use the ‘beta’.</p>
               <label class="block-label expand-top" for="eligibility-1">
-                <input id="eligibility-1" type="radio" name="eligibility" value="eligible">
+                <input id="eligibility-1" type="radio" name="eligibility" value="sign-in">
                 Yes
               </label>
 
               <label class="block-label" for="eligibility-2">
-                <input id="eligibility-2" type="radio" name="eligibility" value="ineligible">
+                <input id="eligibility-2" type="radio" name="eligibility" value="ineligible_account_no">
                 No
               </label>
 
               <label class="block-label" for="eligibility-3">
-                <input id="eligibility-3" type="radio" name="eligibility" value="ineligible">
+                <input id="eligibility-3" type="radio" name="eligibility" value="ineligible_account_not_sure">
                 Not sure
               </label>
 
@@ -95,11 +95,7 @@
             return false;
           }
 
-          if(eligible) {
-            window.location = 'sign-in';
-          } else {
-            window.location = 'ineligible_account';
-          }
+          window.location = document.querySelector('input[name="eligibility"]:checked').value;
 
           return false;
         }
