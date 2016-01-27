@@ -34,8 +34,10 @@ for(var i=1; i<=numResults; i++) {
     'tenure': tenures[Math.floor(rand * tenures.length)],
     'title_number': 'FAKE' + Math.floor(rand * 1000000),
     'owner': firstNames[Math.floor(rand * firstNames.length)] + ' ' + lastNames[Math.floor(rand * lastNames.length)],
+    'owner_label': 'owner',
     'date': date.format('D MMMM YYYY'),
     'has_data': rand > 0.1,
+
     'empty': rand <= 0.1  // Inverted boolean of the above, because mustache does not have logic so we have to use "guarded ifs"
   };
 
@@ -60,8 +62,6 @@ for(var i=1; i<=numResults; i++) {
 
       break;
 
-    default:
-      result.owner_label = 'owner';
   }
 
   // Some don't have lenders
