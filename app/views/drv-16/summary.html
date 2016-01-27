@@ -35,74 +35,55 @@
       <!-- end Breadcrumbs-->
 
       <!-- start main summary content-->
-      <div class="grid-row">
+      {{#result}}
+        <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
+        <p class="font-xsmall collapse-bottom">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+        <p class="font-xsmall"><a href="#">Ar gael yn y Gymraeg</a></p>
 
-        <script>
-          function toggle(obj) {
 
-          var el = document.getElementById(obj);
+        <div style="width:66%;float:left;">
+          <hr class="collapse-top">
 
-          if ( el.style.display != 'none' ) {
+          <dl class="definition-tabular collapse-top">
+            <dt>Address</dt>
+            <dd><span class="heading-medium">
+              {{title_prefix}}
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </span></dd>
+            <dt style="text-transform: capitalize">{{owner_label}}</dt>
+            <dd><span class="heading-small">{{owner}}</span><br>
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </dd>
 
-          el.style.display = 'none';
-
-          }
-
-          else {
-
-          el.style.display = '';
-
-          }
-
-          }
-        </script>
-
-        <div class="column-two-thirds">
-          {{#result}}
-            <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
-              <p class="font-xsmall collapse-bottom">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
-              <p class="font-xsmall"><a href="#">Ar gael yn y Gymraeg</a></p>
-            <hr>
-            <dl class="definition-tabular expand-top-half">
-              <dt>Address</dt>
-              <dd><span class="heading-medium">
-                {{title_prefix}}
-                {{#address}}
+            {{#lender_name}}
+              <dt>Lender</dt>
+              <dd>
+                <span class="heading-small">{{lender_name}}</span><br>
+                {{#lender_address}}
                   {{.}}<br>
-                {{/address}}
-              </span></dd>
-              <dt style="text-transform: capitalize">{{owner_label}}</dt>
-              <dd><span class="heading-small">{{owner}}</span><br>
-                {{#address}}
-                  {{.}}<br>
-                {{/address}}
+                {{/lender_address}}
               </dd>
+            {{/lender_name}}
 
-              {{#lender_name}}
-                <dt>Lender</dt>
-                <dd>
-                  <span class="heading-small">{{lender_name}}</span><br>
-                  {{#lender_address}}
-                    {{.}}<br>
-                  {{/lender_address}}
-                </dd>
-              {{/lender_name}}
+            <dt>Tenure type</dt>
+            <dd><span class="heading-small">{{tenure}}</span></dd>
 
-              <dt>Tenure type</dt>
-              <dd><span class="heading-small">{{tenure}}</span></dd>
+            {{#lease_term}}
+              <dt>Lease term</dt>
+              <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
+            {{/lease_term}}
 
-              {{#lease_term}}
-                <dt>Lease term</dt>
-                <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
-              {{/lease_term}}
+            {{#price}}
+              <dt>Price paid</dt>
+              <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
+            {{/price}}
+          </dl>
 
-              {{#price}}
-                <dt>Price paid</dt>
-                <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
-              {{/price}}
-            </dl>
-
-          <div class="govuk-box-highlight printhidden">
+          <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
             <p>
               <b class="bold-small">You'll only be able to view this information once</b><br>
               If you want to keep a copy, you'll need to print it out or take a screen shot.
@@ -112,8 +93,10 @@
 
           </div>
 
-          <h2 class="heading-medium">What did you think of this service?</h2>
-          <p>This service is in private beta. Please give us your <a rel="external" href="/drv-16/feedback">feedback</a>. This will only take 30 seconds and will help us improve the service.</p>
+          <div class="printhidden">
+            <h2 class="heading-medium">What did you think of this service?</h2>
+            <p>This service is in private beta. Please give us your <a rel="external" href="/drv-16/feedback">feedback</a>. This will only take 30 seconds and will help us improve the service.</p>
+          </div>
 
           <hr>
 
@@ -135,7 +118,6 @@
             <dd class="expand-bottom-half">£2</dd>
           </dl>
 
-          {{/result}}
           <div class="panel-indent">
             <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
             <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
@@ -150,10 +132,9 @@
               <li><a href="https://gov.uk">Return to GOV.UK</a></li>
             </ul>
           </div>
-
         </div>
 
-        <div class="column-third">
+        <div style="width:30%;float:right;">
           <div id="map">
             <div class="panel-simple">
               <p>The map relies on JavaScript being enabled in your browser.</p>
@@ -162,7 +143,7 @@
           <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
         </div>
 
-      </div>
+      {{/result}}
 
       <script type='text/javascript'>
         var indexData = {"crs": {"properties": {"name": "urn:ogc:def:crs:EPSG::27700"}, "type": "name"}, "geometry": {"coordinates": [[[441187.5, 112344.0], [441186.0, 112354.0], [441193.0, 112356.5], [441194.5, 112346.5]]], "type": "Polygon"}, "properties": {"colour": 25, "feature_id": 4019, "graphic_type": "Bordered Polygon", "render_attributes": {"border_colour": 25, "border_width": 0, "exterior_edge_colour": 1, "exterior_edge_thickness": 2, "exterior_edge_thickness_units": "Pixels", "fill_colour": 25, "fill_style": 9, "render_level": "0"}, "width": 0}, "type": "Feature"}
