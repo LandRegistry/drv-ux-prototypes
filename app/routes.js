@@ -12,14 +12,14 @@ router.get('/examples/template-data', function (req, res) {
 /**
  * Worldpay routes
  */
-router.get('/drv-16/worldpay_:stage', function (req, res) {
-  res.render('drv-16/worldpay_' + req.params.stage, { 'id': parseInt(req.query.id) });
+router.get('/drv-15/worldpay_:stage', function (req, res) {
+  res.render('drv-15/worldpay_' + req.params.stage, { 'id': parseInt(req.query.id) });
 });
 
 /**
  * Listing page route
  */
-router.get('/drv-16/search/:page', function (req, res) {
+router.get('/drv-15/search/:page', function (req, res) {
   var rpp = 25;
 
   var start = (req.params.page - 1) * rpp;
@@ -27,7 +27,7 @@ router.get('/drv-16/search/:page', function (req, res) {
 
   var page = parseInt(req.params.page);
 
-  res.render('drv-16/search_results', {
+  res.render('drv-15/search_results', {
     'results' : results.slice(start, start + rpp),
     'page': page,
     'next': page + 1,
@@ -39,12 +39,12 @@ router.get('/drv-16/search/:page', function (req, res) {
 /**
  * Individual item route
  */
-router.get('/drv-16/result/:id', function (req, res) {
+router.get('/drv-15/result/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
   var results = require('./results')();
 
-  res.render('drv-16/result', {
+  res.render('drv-15/result', {
     'id': id,
     'result': results[id - 1]
   });
@@ -53,12 +53,12 @@ router.get('/drv-16/result/:id', function (req, res) {
 /**
  * Summary route
  */
-router.get('/drv-16/summary/:id', function (req, res) {
+router.get('/drv-15/summary/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
   var results = require('./results')();
 
-  res.render('drv-16/summary', {
+  res.render('drv-15/summary', {
     'id': id,
     'result': results[id - 1]
   });
