@@ -62,7 +62,11 @@
               }
 
               if(document.getElementById('terms').checked) {
-                window.location = 'eligibility_2a';
+                if(window.location.search.indexOf('skip-questions') !== -1) {
+                  window.location = 'search';
+                } else {
+                  window.location = 'eligibility_2a';
+                }
               } else {
                 termsGroup.classList.add('error');
                 termsGroup.appendChild(msg);
