@@ -14,9 +14,9 @@
       </div>
       <!-- -->
 
+      <h1 class="heading-large">Do you know which documents do you need?</h1>
       <div class="grid-row">
         <div class="column-two-thirds">
-          <h1 class="heading-large">What documents do you need?</h1>
           <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group">
@@ -27,38 +27,40 @@
               </label>
 
               <div class="clear" style="margin-bottom: 5px">
-                <details class="font-xsmall">
-                  <summary>What is in the summary view?</summary>
+                <details>
+                  <summary  class="font-xsmall">What is in the summary?</summary>
 
-                  <p>The <strong>summary view</strong> contains reduced information of the full register. It consists of the following information only:</p>
+                  <p>The <strong class="bold-small">title summary</strong> contains reduced information from the full register. It only includes:</p>
                   <ul class="list-bullet">
-                    <li>address and title number</li>
-                    <li>owner name and address details</li>
-                    <li>any lender name and address details</li>
-                    <li>tenure and price paid details</li>
+                    <li>property address and title number</li>
+                    <li>current owner’s name and address</li>
+                    <li>what they paid for the property</li>
+                    <li>whether the property is freehold or leasehold (known as ‘tenure’)</li>
+                    <li>the length of the lease if it's leasehold</li>
+                    <li>if there is a mortgage on the property, the lender’s name and address</li>
                   </ul>
                 </details>
               </div>
 
               <label class="block-label" for="eligibility-2">
                 <input id="eligibility-2" type="checkbox" name="eligibility" value="ineligible">
-                Full title documents - £3 each<br>
+                Complete title documents - £3 each<br>
                 <p class="font-xsmall collapse-bottom">The title register and title plan</p>
               </label>
 
               <div class="clear" style="margin-bottom: 5px">
-                <details class="font-xsmall">
-                  <summary>What are title documents?</summary>
+                <details >
+                  <summary class="font-xsmall">What are title documents?</summary>
                   <p>Title documents are available in PDF format to download and keep.</p>
-                  <p>The <b>title register</b> has details about the property or land, including:</p>
+                  <p>The <strong class="bold-small">title register</strong> has details about the property or land, including:</p>
                   <ul class="list-bullet">
                     <li>title number</li>
                     <li>who owns it</li>
                     <li>what they paid for it (properties only, if available)</li>
-                    <li>any rights of way</li>
+                    <li>any rights of way, restrictions and covenants</li>
                     <li>whether a mortgage on it has been ‘discharged’, eg paid off</li>
                   </ul>
-                  <p>The <b>title plan</b> is a map showing:</p>
+                  <p>The <strong class="bold-small">title plan</strong> is a map showing:</p>
                   <ul class="list-bullet">
                     <li>the property’s location</li>
                     <li>the general boundaries</li>
@@ -73,7 +75,7 @@
 
               <label class="block-label" for="eligibility-4">
                 <input id="eligibility-4" type="checkbox" name="eligibility" value="dont_know">
-                Not sure<br> <p class="font-xsmall collapse-bottom">We'll ask you a few questions to help you decide.</p>
+                Not sure<br> <p class="font-xsmall collapse-bottom">We'll ask you a few questions to help you decide</p>
               </label>
 
             </fieldset>
