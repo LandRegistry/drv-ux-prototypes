@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var results = require('./results');
 
 router.get('/', function (req, res) {
   res.render('index');
@@ -24,6 +23,7 @@ router.get('/drv-16/search/:page', function (req, res) {
   var rpp = 25;
 
   var start = (req.params.page - 1) * rpp;
+  var results = require('./results')();
 
   var page = parseInt(req.params.page);
 
@@ -32,6 +32,7 @@ router.get('/drv-16/search/:page', function (req, res) {
     'page': page,
     'next': page + 1,
     'prev': (page > 1) ? page - 1 : false,
+    'results_count': results.length
   });
 });
 
@@ -41,6 +42,7 @@ router.get('/drv-16/search/:page', function (req, res) {
 router.get('/drv-16/result/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
+  var results = require('./results')();
 
   res.render('drv-16/result', {
     'id': id,
@@ -54,6 +56,7 @@ router.get('/drv-16/result/:id', function (req, res) {
 router.get('/drv-16/summary/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
+  var results = require('./results')();
 
   res.render('drv-16/summary', {
     'id': id,

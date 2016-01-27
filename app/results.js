@@ -3,36 +3,43 @@ var moment = require('moment');
 var yaml = require('yamljs');
 var fs = require('fs');
 
-var results = yaml.parse(fs.readFileSync('app/results.yaml', 'utf8'));
+module.exports = function() {
+  var results = yaml.parse(fs.readFileSync('app/results.yaml', 'utf8'));
 
-results.forEach(function(result, index) {
+  results.forEach(function(result, index) {
 
-  if(!result.has_data) {
-    result.empty = true;
-  }
+    if(!result.has_data) {
+      result.empty = true;
+    }
 
-  result.id = index + 1;
+    if(!result.owner_address) {
+      result.owner_address = result.address;
+    }
 
-  switch(result.tenure) {
-    case 'Caution against first registration':
-      result.tenure_caution = true;
+    result.id = index + 1;
 
-      break;
+    switch(result.tenure) {
+      case 'Caution against first registration':
+        result.tenure_caution = true;
 
-    case 'Leasehold':
-      result.owner_label = 'leaseholder';
-      result.tenure_leasehold = true;
+        break;
 
-      break;
+      case 'Leasehold':
+        result.owner_label = 'leaseholder';
+        result.tenure_leasehold = true;
 
-    case 'Freehold':
-      result.owner_label = 'owner';
-      result.tenure_freehold = true;
+        break;
 
-      break;
+      case 'Freehold':
+        result.owner_label = 'owner';
+        result.tenure_freehold = true;
 
-  }
+        break;
 
-});
+    }
 
-module.exports = results;
+  });
+
+  return results;
+}
+
