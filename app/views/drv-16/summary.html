@@ -47,17 +47,28 @@
           <dl class="definition-tabular collapse-top">
             <dt>Address</dt>
             <dd><span class="heading-medium">
-              {{title_prefix}}
               {{#address}}
                 {{.}}<br>
               {{/address}}
             </span></dd>
-            <dt style="text-transform: capitalize">{{owner_label}}</dt>
-            <dd><span class="heading-small">{{owner}}</span><br>
-              {{#address}}
-                {{.}}<br>
-              {{/address}}
-            </dd>
+
+            {{#owner}}
+              <dt style="text-transform: capitalize">Owner</dt>
+              <dd><span class="heading-small">{{owner}}</span><br>
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </dd>
+            {{/owner}}
+
+            {{#leaseholder}}
+              <dt style="text-transform: capitalize">Leaseholder</dt>
+              <dd><span class="heading-small">{{leaseholder}}</span><br>
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </dd>
+            {{/leaseholder}}
 
             {{#lender_name}}
               <dt>Lender</dt>

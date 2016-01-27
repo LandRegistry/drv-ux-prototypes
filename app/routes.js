@@ -1,11 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var yaml = require('yamljs');
-var fs = require('fs');
-// var results = require('./results');
-
-
-var results = yaml.parse(fs.readFileSync('app/results.yaml', 'utf8'));
+var results = require('./results');
 
 router.get('/', function (req, res) {
   res.render('index');
