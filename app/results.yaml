@@ -1,0 +1,936 @@
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 1
+  title_prefix: 1
+  tenure: Freehold
+  title_number: FAKE177634
+  owner: Bob Smith
+  owner_label: owner
+  date: 20 March 1986
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 2
+  title_prefix: 2
+  tenure: Freehold
+  title_number: FAKE371184
+  owner: George Jones
+  owner_label: owner
+  date: 28 December 1992
+  has_data: true
+  empty: false
+  tenure_freehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 3
+  title_prefix: 3
+  tenure: Leasehold
+  title_number: FAKE756853
+  owner: Andy McDonald
+  owner_label: leaseholder
+  date: 28 June 2006
+  has_data: true
+  empty: false
+  lease_term: 87
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 327
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 4
+  title_prefix: 4
+  tenure: Freehold
+  title_number: FAKE375276
+  owner: Julia Jones
+  owner_label: owner
+  date: 18 February 1993
+  has_data: true
+  empty: false
+  tenure_freehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 5
+  title_prefix: 5
+  tenure: Leasehold
+  title_number: FAKE897514
+  owner: Heather McDonald
+  owner_label: leaseholder
+  date: 31 May 2011
+  has_data: true
+  empty: false
+  lease_term: 94
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 369
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 6
+  title_prefix: 6
+  tenure: Freehold
+  title_number: FAKE86811
+  owner: Fred Smith
+  owner_label: owner
+  date: 14 January 1983
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 7
+  title_prefix: 7
+  tenure: Leasehold
+  title_number: FAKE501492
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 21 July 1997
+  has_data: true
+  empty: false
+  lease_term: 75
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 8
+  title_prefix: Land at
+  tenure: Caution against first registration
+  title_number: FAKE943389
+  owner: Heather McDonald
+  owner_label: owner
+  date: 7 January 2013
+  has_data: true
+  empty: false
+  title_number_prefix: 'Caution '
+  tenure_caution: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 383
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 9
+  title_prefix: Land at
+  tenure: Caution against first registration
+  title_number: FAKE969593
+  owner: Heather McDonald
+  owner_label: owner
+  date: 8 December 2013
+  has_data: true
+  empty: false
+  title_number_prefix: 'Caution '
+  tenure_caution: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 390
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 10
+  title_prefix: Land at
+  tenure: Caution against first registration
+  title_number: FAKE969385
+  owner: Heather McDonald
+  owner_label: owner
+  date: 5 December 2013
+  has_data: true
+  empty: false
+  title_number_prefix: 'Caution '
+  tenure_caution: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 390
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 11
+  title_prefix: 11
+  tenure: Freehold
+  title_number: FAKE257352
+  owner: George Smith
+  owner_label: owner
+  date: 2 January 1989
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 12
+  title_prefix: 12
+  tenure: Freehold
+  title_number: FAKE161233
+  owner: Bob Smith
+  owner_label: owner
+  date: 23 August 1985
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 13
+  title_prefix: Land at
+  tenure: Caution against first registration
+  title_number: FAKE972258
+  owner: Heather McDonald
+  owner_label: owner
+  date: 11 January 2014
+  has_data: true
+  empty: false
+  title_number_prefix: 'Caution '
+  tenure_caution: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 391
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 14
+  title_prefix: 14
+  tenure: Freehold
+  title_number: FAKE365237
+  owner: George Jones
+  owner_label: owner
+  date: 13 October 1992
+  has_data: true
+  empty: false
+  tenure_freehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 15
+  title_prefix: 15
+  tenure: Freehold
+  title_number: FAKE67607
+  owner: Fred Smith
+  owner_label: owner
+  date: 14 May 1982
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 16
+  title_prefix: 16
+  tenure: Leasehold
+  title_number: FAKE663604
+  owner: David Jones
+  owner_label: leaseholder
+  date: 24 March 2003
+  has_data: true
+  empty: false
+  lease_term: 83
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 299
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 17
+  title_prefix: 17
+  tenure: Leasehold
+  title_number: FAKE664449
+  owner: David Jones
+  owner_label: leaseholder
+  date: 4 April 2003
+  has_data: true
+  empty: false
+  lease_term: 83
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 299
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 18
+  title_prefix: 18
+  tenure: Freehold
+  title_number: FAKE450563
+  owner: Julia Jones
+  owner_label: owner
+  date: 9 October 1995
+  has_data: true
+  empty: false
+  tenure_freehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 19
+  title_prefix: 19
+  tenure: Freehold
+  title_number: FAKE11185
+  owner: Fred Smith
+  owner_label: owner
+  date: 22 May 1980
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 20
+  title_prefix: 20
+  tenure: Leasehold
+  title_number: FAKE849144
+  owner: Andy McDonald
+  owner_label: leaseholder
+  date: 20 September 2009
+  has_data: true
+  empty: false
+  lease_term: 92
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 354
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 21
+  title_prefix: 21
+  tenure: Leasehold
+  title_number: FAKE845223
+  owner: Andy McDonald
+  owner_label: leaseholder
+  date: 1 August 2009
+  has_data: true
+  empty: false
+  lease_term: 92
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 353
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 22
+  title_prefix: 22
+  tenure: Freehold
+  title_number: FAKE218334
+  owner: Bob Smith
+  owner_label: owner
+  date: 23 August 1987
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 23
+  title_prefix: 23
+  tenure: Leasehold
+  title_number: FAKE855168
+  owner: Andy McDonald
+  owner_label: leaseholder
+  date: 6 December 2009
+  has_data: true
+  empty: false
+  lease_term: 92
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 356
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 24
+  title_prefix: 24
+  tenure: Leasehold
+  title_number: FAKE694117
+  owner: David McDonald
+  owner_label: leaseholder
+  date: 17 April 2004
+  has_data: true
+  empty: false
+  lease_term: 84
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 308
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 25
+  title_prefix: 25
+  tenure: Freehold
+  title_number: FAKE207211
+  owner: Bob Smith
+  owner_label: owner
+  date: 2 April 1987
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 26
+  title_prefix: 26
+  tenure: Freehold
+  title_number: FAKE42083
+  owner: Fred Smith
+  owner_label: owner
+  date: 22 June 1981
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 27
+  title_prefix: 27
+  tenure: Leasehold
+  title_number: FAKE568838
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 29 November 1999
+  has_data: true
+  empty: false
+  lease_term: 78
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 28
+  title_prefix: 28
+  tenure: Leasehold
+  title_number: FAKE621451
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 1 October 2001
+  has_data: true
+  empty: false
+  lease_term: 81
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 286
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 29
+  title_prefix: 29
+  tenure: Freehold
+  title_number: FAKE157999
+  owner: Bob Smith
+  owner_label: owner
+  date: 12 July 1985
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 30
+  title_prefix: 30
+  tenure: Freehold
+  title_number: FAKE93063
+  owner: Fred Smith
+  owner_label: owner
+  date: 4 April 1983
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 31
+  title_prefix: 31
+  tenure: Freehold
+  title_number: FAKE257844
+  owner: George Smith
+  owner_label: owner
+  date: 9 January 1989
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 32
+  title_prefix: 32
+  tenure: Leasehold
+  title_number: FAKE518832
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 27 February 1998
+  has_data: true
+  empty: false
+  lease_term: 75
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 33
+  title_prefix: 33
+  tenure: Leasehold
+  title_number: FAKE855366
+  owner: Andy McDonald
+  owner_label: leaseholder
+  date: 9 December 2009
+  has_data: true
+  empty: false
+  lease_term: 92
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 356
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 34
+  title_prefix: 34
+  tenure: Leasehold
+  title_number: FAKE550384
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 7 April 1999
+  has_data: true
+  empty: false
+  lease_term: 77
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 35
+  title_prefix: 35
+  tenure: Freehold
+  title_number: FAKE41355
+  owner: Fred Smith
+  owner_label: owner
+  date: 12 June 1981
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 36
+  title_prefix: 36
+  tenure: Freehold
+  title_number: FAKE262967
+  owner: George Smith
+  owner_label: owner
+  date: 15 March 1989
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 37
+  title_prefix: 37
+  tenure: Freehold
+  title_number: FAKE260674
+  owner: George Smith
+  owner_label: owner
+  date: 14 February 1989
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 38
+  title_prefix: 38
+  tenure: Leasehold
+  title_number: FAKE888159
+  owner: Heather McDonald
+  owner_label: leaseholder
+  date: 1 February 2011
+  has_data: true
+  empty: false
+  lease_term: 94
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 366
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 39
+  title_prefix: 39
+  tenure: Leasehold
+  title_number: FAKE612124
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 4 June 2001
+  has_data: true
+  empty: false
+  lease_term: 80
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 283
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 40
+  title_prefix: Land at
+  tenure: Caution against first registration
+  title_number: FAKE967630
+  owner: Heather McDonald
+  owner_label: owner
+  date: 13 November 2013
+  has_data: true
+  empty: false
+  title_number_prefix: 'Caution '
+  tenure_caution: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 390
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 41
+  title_prefix: 41
+  tenure: Freehold
+  title_number: FAKE381404
+  owner: Julia Jones
+  owner_label: owner
+  date: 7 May 1993
+  has_data: true
+  empty: false
+  tenure_freehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 42
+  title_prefix: 42
+  tenure: Freehold
+  title_number: FAKE1634
+  owner: Fred Smith
+  owner_label: owner
+  date: 21 January 1980
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 43
+  title_prefix: 43
+  tenure: Leasehold
+  title_number: FAKE560862
+  owner: Sophie Jones
+  owner_label: leaseholder
+  date: 19 August 1999
+  has_data: true
+  empty: false
+  lease_term: 78
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 44
+  title_prefix: 44
+  tenure: Leasehold
+  title_number: FAKE813589
+  owner: Andy McDonald
+  owner_label: leaseholder
+  date: 22 June 2008
+  has_data: true
+  empty: false
+  lease_term: 90
+  tenure_leasehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+  price: 344
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 45
+  title_prefix: 45
+  tenure: Freehold
+  title_number: FAKE82283
+  owner: Fred Smith
+  owner_label: owner
+  date: 17 November 1982
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 46
+  title_prefix: 46
+  tenure: Freehold
+  title_number: FAKE125918
+  owner: Bob Smith
+  owner_label: owner
+  date: 28 May 1984
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 47
+  title_prefix: 47
+  tenure: Freehold
+  title_number: FAKE432485
+  owner: Julia Jones
+  owner_label: owner
+  date: 19 February 1995
+  has_data: true
+  empty: false
+  tenure_freehold: true
+  lender_name: Abbey National PLC
+  lender_address:
+    - 101 Midsummer Boulevard
+    - Milton Keynes
+    - MK9 1AA
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 48
+  title_prefix: 48
+  tenure: Freehold
+  title_number: FAKE161195
+  owner: Bob Smith
+  owner_label: owner
+  date: 22 August 1985
+  has_data: true
+  empty: false
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 49
+  title_prefix: 49
+  tenure: Freehold
+  title_number: FAKE58516
+  owner: Fred Smith
+  owner_label: owner
+  date: 18 January 1982
+  has_data: false
+  empty: true
+  tenure_freehold: true
+- title: 'Pretend Street,Trumpton,TR15 5RZ'
+  address:
+    - Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  id: 50
+  title_prefix: 50
+  tenure: Freehold
+  title_number: FAKE118102
+  owner: Fred Smith
+  owner_label: owner
+  date: 18 February 1984
+  has_data: true
+  empty: false
+  tenure_freehold: true

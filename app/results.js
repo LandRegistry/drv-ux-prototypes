@@ -1,6 +1,11 @@
 var seedrandom = require('seedrandom');
 var moment = require('moment');
 
+/**
+ * NOTE:
+ * THIS FILE IS DEPRECATED IN FAVOUR OF results.yaml
+ */
+
 var results = [];
 var numResults = 50;
 
@@ -81,5 +86,8 @@ for(var i=1; i<=numResults; i++) {
 
   results.push(result);
 }
+
+// var yaml = require('write-yaml');
+// yaml.sync('app/results.yaml', results);
 
 module.exports = results;
