@@ -16,18 +16,18 @@
 
       <div class="grid-row">
         <div class="column-two-thirds">
-          <p class="font-xsmall">If you've used the ‘beta’ service before you can <a href="sign-in?skip-questions">skip these questions and start searching right away</a></p>
           <h1 class="heading-large collapse-top" id="groupLabel">In the last year, have you used the Land Registry website to find property information?</h1>
         </div>
       </div>
 
       <div class="grid-row">
         <div class="column-half">
+          <p>You'll need the username and password you used to access the current Land Registry service (shown in the screenshot) to use this trial ‘beta’ service.</p>
+          <p class="font-xsmall collapse-bottom">If you've used the beta service before you can <a href="sign-in?skip-questions">skip these questions and start searching right away</a></p>
           <form method="get" action="search" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group"  aria-labelledby="groupLabel">
 
-              <p class="collapse-bottom">You'll need the username and password you used to access the current Land Registry service (shown in the screenshot) to use the ‘beta’.</p>
               <label class="block-label expand-top" for="eligibility-1">
                 <input id="eligibility-1" type="radio" name="eligibility" value="sign-in">
                 Yes
