@@ -31,7 +31,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Freehold
-  empty: false
   title_number: FAKE756853
   owner: Donald Dennis
   owner_address:
@@ -53,7 +52,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Leasehold
-  empty: false
   title_number: FAKE756853
   leaseholder: Andy McDonald
   date: 28 June 2006
@@ -65,7 +63,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Leasehold
-  empty: false
   title_number: FAKE756853
   leaseholder: Jane Smith
   date: 28 June 2006
@@ -94,7 +91,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Freehold
-  empty: false
   title_number: FAKE597519
   owner: Donald Dennis
   owner_address:
@@ -116,7 +112,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Leasehold
-  empty: false
   title_number: FAKE897514
   leaseholder: James Douglas
   date: 31 May 2011
@@ -128,7 +123,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Leasehold
-  empty: false
   title_number: FAKE897514
   leaseholder: Barry White
   date: 31 May 2010
@@ -151,7 +145,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Caution against first registration
-  empty: false
   title_number: FAKE943389
   has_data: true
 
@@ -198,7 +191,7 @@
     - 10 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE67607
   owner: Fred Smith
@@ -224,7 +217,7 @@
     - 12 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE11185
   owner: Fred Smith
@@ -279,7 +272,7 @@
     - 17 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE93063
   owner: Fred Smith
@@ -301,7 +294,7 @@
     - 19 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE41355
   owner: Fred Smith
@@ -335,7 +328,6 @@
     - Trumpton
     - TR15 5RZ
   tenure: Caution against first registration
-  empty: false
   title_number: FAKE967630
   has_data: true
 
@@ -360,7 +352,7 @@
     - 23 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE1634
   owner: Fred Smith
@@ -371,7 +363,7 @@
     - 24 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE82283
   owner: Fred Smith
@@ -420,7 +412,7 @@
     - 28 Pretend Street
     - Trumpton
     - TR15 5RZ
-  has_data: false
+  has_data: true
   tenure: Freehold
   title_number: FAKE58516
   owner: Fred Smith
