@@ -31,11 +31,18 @@
 
       <!-- start main summary content-->
       {{#result}}
-        <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
-        <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+      <div class="grid-row">
+        <div style="padding: 0 15px">
+          <p class="font-xsmall">English | <a href="summary_welsh">Cymraeg</a></p>
+          <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
+          <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+        </div>
+      </div>
 
 
-        <div style="width:66%;float:left;">
+        <!-- <div style="width:66%;float:left;"> -->
+      <div class="grid-row">
+        <div class="column-two-thirds">
           <hr class="collapse-top">
 
           <dl class="definition-tabular collapse-top">
@@ -97,10 +104,32 @@
             <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
 
           </div>
+        </div>
+
+        <div class="column-third">
+          <!-- <div style="width:30%;float:right;"> -->
+            <div id="map">
+              <div class="panel-simple">
+                <p>The map relies on JavaScript being enabled in your browser.</p>
+              </div>
+            </div>
+            <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
+
+            <!-- <hr> -->
+
+            <!-- <a href="#" class="font-xsmall">Mae’r dudalen hon ar gael yn Gymraeg hefyd</a> -->
+
+          </div>
+        </div>
+
+        </div>
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
 
           <div class="printhidden">
-            <h2 class="heading-medium">What did you think of this service?</h2>
-            <p><a rel="external" href="/drv-15/feedback">Please give us your feedback</a> (takes 30 seconds).</p>
+            <h2 class="heading-medium collapse-top">What did you think of this service?</h2>
+            <p><a rel="external" href="/drv-15/feedback">Please give us your feedback</a> (takes 30 seconds). <br>This is a trial service and your feedback will help us improve it.</p>
           </div>
 
           <hr>
@@ -146,19 +175,9 @@
           </div>
         </div>
 
-        <div style="width:30%;float:right;">
-          <div id="map">
-            <div class="panel-simple">
-              <p>The map relies on JavaScript being enabled in your browser.</p>
-            </div>
-          </div>
-          <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p>
+      </div>
+    </div>
 
-          <hr>
-
-          <a href="#" class="font-xsmall">Mae’r dudalen hon ar gael yn Gymraeg hefyd</a>
-
-        </div>
 
       {{/result}}
 
