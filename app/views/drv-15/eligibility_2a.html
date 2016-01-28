@@ -1,6 +1,6 @@
 {{<layout}}
 
-  {{$pageTitle}}What documents do you need? - search the land and property register{{/pageTitle}}
+  {{$pageTitle}}What documents do you want from Land Registry? - search the land and property register{{/pageTitle}}
 
   {{$content}}
 
@@ -14,23 +14,24 @@
       </div>
       <!-- -->
 
-      <h1 class="heading-large">Do you know which documents do you need?</h1>
+      <h1 class="heading-large">Which documents do you want from Land Registry?</h1>
       <div class="grid-row">
         <div class="column-two-thirds">
+          <p><a href="eligibility_2b">Not sure?</a> – answer a few short questions to help you decide
           <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group">
               <label class="block-label" for="eligibility-1">
                 <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
-                Title summary - £2 <span class="font-xsmall">(inc VAT)</span><br>
-                <p class="font-xsmall collapse-bottom">Brief facts from the register</p>
+                Title summary <span class="font-xsmall">– brief facts from the register</span><br>
+                <strong class="bold-small">£2</strong> <span class="font-xsmall">inc VAT</span><br>
               </label>
 
-              <div class="clear" style="margin-bottom: 1em">
+              <div class="clear" style="margin-bottom: 0.5em">
                 <details>
-                  <summary  class="font-xsmall">What’s in the summary?</summary>
+                  <summary  class="font-xsmall">What is the title summary?</summary>
 
-                  <p>The <strong class="bold-small">title summary</strong> contains reduced information from the full register. It only includes:</p>
+                  <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clear and simple format, including:</p>
                   <ul class="list-bullet">
                     <li>property address and title number</li>
                     <li>current owner’s name and address</li>
@@ -44,11 +45,11 @@
 
               <label class="block-label" for="eligibility-2">
                 <input id="eligibility-2" type="checkbox" name="eligibility" value="ineligible">
-                Complete title documents - £3 each<br>
-                <p class="font-xsmall collapse-bottom">The title register and title plan</p>
+                Full title documents – <span class="font-xsmall">the title register and title plan</span><br>
+                <strong class="bold-small">£3 each</strong>, <span class="font-xsmall">no VAT payable</span><br>
               </label>
 
-              <!--div class="clear" style="margin-bottom: 5px">
+              <div class="clear" style="margin-bottom: 0.5em">
                 <details >
                   <summary class="font-xsmall">What are title documents?</summary>
                   <p>Title documents are available in PDF format to download and keep.</p>
@@ -63,20 +64,23 @@
                   <p>The <strong class="bold-small">title plan</strong> is a map showing:</p>
                   <ul class="list-bullet">
                     <li>the property’s location</li>
-                    <li>the general boundaries</li>
+                    <li>the general boundaries – find out how to <a href="/your-property-boundaries">get exact boundary information</a></li>
                   </ul>
                 </details>
-              </div-->
+              </div>
 
               <label class="block-label" for="eligibility-3">
                 <input id="eligibility-3" type="checkbox" name="eligibility" value="ineligible">
-                Flood risk indicator - £10.80 <span class="font-xsmall">(inc VAT)</span>
+                Flood risk indicator <span class="font-xsmall">– likelihood the property is at risk from flooding</span><br>
+                <strong class="bold-small">£10.80</strong> <span class="font-xsmall">inc VAT</span>
               </label>
 
-              <label class="block-label" for="eligibility-4">
+              <div style="display:none">
+                <label class="block-label" for="eligibility-4">
                 <input id="eligibility-4" type="checkbox" name="eligibility" value="dont_know">
                 Not sure<br> <p class="font-xsmall collapse-bottom">We'll ask you a few questions to help you decide</p>
               </label>
+            </div>
 
             </fieldset>
 
