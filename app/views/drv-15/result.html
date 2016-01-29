@@ -36,7 +36,7 @@
         <div class="grid-row">
           <div class="column-two-thirds">
             {{#empty}}
-              <h1 class="heading-large collapse-top">Get a summary of title</h1>
+              <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
               <h2 class="heading-medium collapse-top">
                 {{title_prefix}}
                 {{#address}}
@@ -44,31 +44,31 @@
                 {{/address}}
               </h2>
 
-              <p class="collapse-top">There is no title information associated with this Property</p>
-
-              <hr>
-
               <h3 class="heading-medium">Why isn't there any information on this property?</h3>
               <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p>
             {{/empty}}
 
             {{#has_data}}
               <!-- 1. Start Title information (number, address and tenure information) -->
-              <h1 class="heading-large collapse-top">Get a summary of title {{title_number}}</h1>
+              <h1 class="heading-large collapse-top">Order the title summary</h1>
               <p class="lede">The summary is a reduced version of the information Land Registry holds. It costs &pound;2.</p>
-              <h2 class="heading-medium collapse-top">
-                {{title_prefix}}
-                {{#address}}
-                {{.}}<br>
-                {{/address}}
-              </h2>
+
               <dl class="definition-tabular expand-top-half">
+                <dt>Address</dt>
+                <dd><span class="heading-medium">
+                  {{title_prefix}}
+                  {{#address}}
+                  {{.}}<br>
+                  {{/address}}
+                </span></dd>
+                <dt>Title number</dt>
+                <dd class="bold-small">{{title_number}}</dd>
                 <dt>Tenure type</dt>
                 <dd>
-                  <b>{{tenure}}</b>
+                  <b class="bold-small">{{tenure}}</b>
 
                   <details class="font-xsmall">
-                    <summary>What's this?</summary>
+                    <summary>What does this mean?</summary>
 
                     {{#tenure_caution}}
                       <p>A caution against first registration protects an interest in land which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the land, and object to completion of the registration until their claim has been considered.</p>
@@ -91,34 +91,30 @@
                     {{/tenure_freehold}}
                   </details>
 
-                  <br>
-
                   <p class="font-xsmall">If you require other types of tenure for this property, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
                 </dd>
-
               </dl>
 
               <!-- <hr> -->
 
-              <h2 class="heading-medium">What you'll get</h2>
+              <h2 class="heading-medium collapse-top">The summary will tell you</h2>
               <!-- <p>The summary can tell you</p> -->
               <ul class="list-bullet">
                 {{#owner}}
-                  <li>current owners’s name and address</li>
+                  <li>current owner’s name and address</li>
                 {{/owner}}
 
                 {{#leaseholder}}
                   <li>current leaseholder’s name and address</li>
                 {{/leaseholder}}
 
-                <li>what they paid for the property – you won’t get this if it was bought before April 2000, if no money changed hands, or if the owner didn’t buy it outright</li>
+                <li>what they paid for the property – you won’t get this if it was bought before April 2000 or they didn’t pay full market value for it <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li>
                 {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
                 <li>if there is a mortgage on the property, the lender’s name and  address</li>
               </ul>
-
+<!--
               <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p>
 
-              <!-- <hr> -->
 
               <h2 class="heading-medium">You will need</h2>
 
@@ -128,10 +124,11 @@
               </ul>
 
               <br>
-
+-->
               <div class="notice" style="background-color:#fff2d3;padding: 25px">
                 <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
-                <p style="overflow:hidden;margin:0;">You'll be able to view the information on screen. <strong class="bold-medium">You'll only be able to view it once</strong>. If you want to keep a copy, you'll need to print it out.</p>
+                <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
+                  If you want to keep a copy you can print it out</p>
               </div>
 
               <br><br>
@@ -144,12 +141,12 @@
 
                   <label class="block-label block-label-transparent" for="right_to_cancel">
                     <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
-                    I agree that I lose my right to cancel this order once I’ve been shown the summary
+                    I agree that I lose my right to cancel this order once the summary has been displayed
                   </label>
                 </div>
 
                 <a style="margin:10px 0" href="../worldpay_1?id={{id}}" class="button" onclick="return checkRightToCancel()">Buy title summary</a>
-                <p style="" class="collapse-bottom font-xsmall">for <b>&pound;2</b> <small>(incl. VAT)</small></p>
+                <p style="" class="collapse-bottom font-xsmall">for <b>&pound;2</b> <small>inc VAT</small></p>
               <!-- </div> -->
 
               <script>
