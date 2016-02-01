@@ -31,7 +31,7 @@
           <div class="column-quarter column-flip">
           </div>
         </div>
-        <!-- -->
+        <!-- If no title information available-->
 
         <div class="grid-row">
           <div class="column-two-thirds">
@@ -51,11 +51,11 @@
             {{#has_data}}
               <!-- 1. Start Title information (number, address and tenure information) -->
               <h1 class="heading-large collapse-top">Confirm your order</h1>
-              <p class="">You’ll get a summary of the information Land Registry holds for the following property.</p>
+              <p class="">You’ll get a summary of the information Land Registry holds for the following property title.</p>
 
               <dl class="definition-tabular expand-top-half">
                 <dt>Address</dt>
-                <dd><span class="heading-medium">
+                <dd><span class="heading-small">
                   {{title_prefix}}
                   {{#address}}
                   {{.}}<br>
@@ -95,10 +95,7 @@
                 </dd>
               </dl>
 
-              <!-- <hr> -->
-
               <h2 class="heading-medium collapse-top">The summary will tell you</h2>
-              <!-- <p>The summary can tell you</p> -->
               <ul class="list-bullet">
                 {{#owner}}
                   <li>current owner’s name and address</li>
@@ -112,19 +109,7 @@
                 {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
                 <li>if there is a mortgage on the property, the lender’s name and  address</li>
               </ul>
-<!--
-              <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p>
-
-
-              <h2 class="heading-medium">You will need</h2>
-
-              <ul class="list-plain collapse-bottom">
-                <li class="expand-bottom-half"><img style="vertical-align:middle" src="/public/images/cc_icon.png" alt="" />&nbsp;&nbsp;&nbsp;a credit or debit card</li>
-                <li><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;&nbsp;a printer, if you want to print the summary to refer to later</li>
-              </ul>
-
-              <br>
--->
+              <!-- <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p> -->
               <div class="notice" style="background-color:#fff2d3;padding: 25px">
                 <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
                 <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
@@ -133,8 +118,8 @@
 
               <br>
 
-              <!-- <div style="border: 1px solid #454a4c;padding:25px"> -->
-                  <h2 class="heading-medium collapse-top">The summary costs £2</h2>
+                  <!-- <h2 class="heading-medium collapse-top">The summary costs £2</h2> -->
+                  <h3 class="heading-small collapse-top">The summary costs £2</h3>
                   <p>You can pay by credit or debit card.</p>
                   <p>You’ll get the summary as soon as you’ve paid. To do that you need to waive your right to cancel.</p>
                   <div class="form-group expand-bottom-half" id="right_to_cancel_group">
