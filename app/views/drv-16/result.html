@@ -51,7 +51,7 @@
             {{#has_data}}
               <!-- 1. Start Title information (number, address and tenure information) -->
               <h1 class="heading-large collapse-top">Confirm your order</h1>
-              <p class="">You’ll get a summary of the information Land Registry holds for the following property. The summary costs £2.</p>
+              <p class="">You’ll get a summary of the information Land Registry holds for the following property.</p>
 
               <dl class="definition-tabular expand-top-half">
                 <dt>Address</dt>
@@ -131,14 +131,14 @@
                   If you want to keep a copy you can print it out</p>
               </div>
 
-              <br><br>
+              <br>
 
               <!-- <div style="border: 1px solid #454a4c;padding:25px"> -->
-                  <h2 class="heading-medium collapse-top">You’ll get the summary right away</h2>
-
-                  <p>You need to waive your right to cancel before we can show you the summary.</p>
+                  <h2 class="heading-medium collapse-top">The summary costs £2</h2>
+                  <p>You can pay by credit or debit card.</p>
+                  <p>You’ll get the summary as soon as you’ve paid. To do that you need to waive your right to cancel.</p>
                   <div class="form-group expand-bottom-half" id="right_to_cancel_group">
-                    <label class="block-label block-label-transparent" for="right_to_cancel">
+                    <label class="block-label" for="right_to_cancel">
                     <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
                     I want to view the summary right away. I understand that means I won’t be able to cancel my order once I’ve paid for it.
                   </label>
@@ -151,7 +151,7 @@
               <script>
                 var msg = document.createElement('span');
                 msg.classList.add('error-message');
-                msg.textContent = 'You must agree to receive the summary right away and that you understand that means you’ll lose your right to cancel';
+                msg.textContent = 'You need to agree to receive the summary right away and that you’ll lose your right to cancel';
 
                 var rightToCancelGroup = document.getElementById('right_to_cancel_group');
 
