@@ -1,0 +1,115 @@
+{{<layout}}
+
+  {{$pageTitle}}Do you have a Land Registry account? - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner expand-bottom">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-15/feedback">Feedback</a>.</span>
+        </p>
+      </div>
+      <!-- -->
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-large collapse-top" id="groupLabel">In the last year, have you used the Land Registry website to find property information?</h1>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-half">
+          <p>You'll need the username and password you used to access the current Land Registry service (shown in the screenshot) to use this trial ‘beta’ service.</p>
+          <p class="font-xsmall collapse-bottom">If you've used the beta service before you can <a href="sign-in?skip-questions">skip these questions and start searching right away</a></p>
+          <form method="get" action="search" id="eligibility-form" onsubmit="return checkEligibility()">
+
+            <fieldset class="form-group" id="eligibility_group"  aria-labelledby="groupLabel">
+
+              <label class="block-label expand-top" for="eligibility-1">
+                <input id="eligibility-1" type="radio" name="eligibility" value="sign-in">
+                Yes
+              </label>
+
+              <label class="block-label" for="eligibility-2">
+                <input id="eligibility-2" type="radio" name="eligibility" value="ineligible_account_no">
+                No
+              </label>
+
+              <label class="block-label" for="eligibility-3">
+                <input id="eligibility-3" type="radio" name="eligibility" value="ineligible_account_not_sure">
+                Not sure
+              </label>
+
+            </fieldset>
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Continue">
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="column-half">
+          <img src="/public/images/find-a-property.png" alt="Find a Property website" />
+        </div>
+      </div>
+
+      <script>
+        var msg = document.createElement('span');
+        msg.classList.add('error-message');
+        msg.textContent = 'Please choose an option';
+
+        var eligibiltyGroup = document.getElementById('eligibility_group');
+
+        function checkEligibility() {
+          var questions = document.querySelectorAll('input[name="eligibility"]');
+          var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+          var eligible = true;
+          var empty = true;
+
+          if(msg.parentNode) {
+            msg.parentNode.removeChild(msg);
+            eligibiltyGroup.classList.remove('error');
+          }
+
+          [].forEach.call(questions, function(item, index) {
+            if(item.checked) {
+              empty = false;
+            }
+          });
+
+          [].forEach.call(inEligibleQuestions, function(item, index) {
+            if(item.checked) {
+              eligible = false;
+            }
+          });
+
+          if(empty) {
+            eligibiltyGroup.classList.add('error');
+            eligibiltyGroup.appendChild(msg);
+
+            return false;
+          }
+
+          window.location = document.querySelector('input[name="eligibility"]:checked').value;
+
+          return false;
+        }
+      </script>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-15/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

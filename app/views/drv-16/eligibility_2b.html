@@ -1,0 +1,133 @@
+{{<layout}}
+
+  {{$pageTitle}}What information are you looking for? - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-15/feedback">Feedback</a>.</span>
+        </p>
+      </div>
+      <!-- -->
+
+      <a href="#" onClick="history.go(-1); return false;" class="back-link expand-top-half" style="display:inline-block">◀ Back</a>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-large" id="groupLabel">What information are you looking for?</h1>
+          <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
+
+            <fieldset class="form-group" id="eligibility_group" aria-labelledby="groupLabel">
+
+              <label class="block-label" for="eligibility-1a">
+                <input id="eligibility-1a" type="checkbox" name="eligibility" value="eligible">
+                Title number
+              </label>
+              <label class="block-label" for="eligibility-1">
+                <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
+                Current owner’s name and address
+              </label>
+              <label class="block-label" for="eligibility-2">
+                <input id="eligibility-2" type="checkbox" name="eligibility" value="eligible">
+                What they paid for it
+              </label>
+              <label class="block-label" for="eligibility-3">
+                <input id="eligibility-3" type="checkbox" name="eligibility" value="eligible">
+                If there’s a mortgage and who it’s with
+              </label>
+
+              <label class="block-label" for="eligibility-4">
+                <input id="eligibility-4" type="checkbox" name="eligibility" value="eligible">
+                Length of the lease on a leasehold property
+              </label>
+
+              <label class="block-label" for="eligibility-prove">
+                <input id="eligibility-prove" type="checkbox" name="eligibility" value="prove">
+                To prove ownership, eg for a court case
+              </label>
+
+              <label class="block-label" for="eligibility-6">
+                <input id="eligibility-6" type="checkbox" name="eligibility" value="ineligible">
+                Something else
+              </label>
+
+            </fieldset>
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Continue">
+            </div>
+
+          </form>
+
+          <script>
+            var msg = document.createElement('span');
+            msg.classList.add('error-message');
+            msg.textContent = 'Please choose an option';
+
+            var eligibiltyGroup = document.getElementById('eligibility_group');
+
+            function checkEligibility() {
+              var questions = document.querySelectorAll('input[name="eligibility"]');
+              var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+              var eligible = true;
+              var empty = true;
+
+              if(msg.parentNode) {
+                msg.parentNode.removeChild(msg);
+                eligibiltyGroup.classList.remove('error');
+              }
+
+              [].forEach.call(questions, function(item, index) {
+                if(item.checked) {
+                  empty = false;
+                }
+              });
+
+              [].forEach.call(inEligibleQuestions, function(item, index) {
+                if(item.checked) {
+                  eligible = false;
+                }
+              });
+
+              if(empty) {
+                eligibiltyGroup.classList.add('error');
+                eligibiltyGroup.appendChild(msg);
+
+                return false;
+              }
+
+              if(document.getElementById('eligibility-prove').checked) {
+                window.location = 'ineligible_proveownership';
+                return false;
+              }
+
+              if(eligible) {
+                window.location = 'search';
+              } else {
+                window.location = 'ineligible_requirements';
+              }
+
+              return false;
+            }
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-15/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}
