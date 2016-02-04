@@ -1,6 +1,6 @@
 {{<layout}}
 
-  {{$pageTitle}}Which documents do you want from Land Registry? - search the land and property register{{/pageTitle}}
+  {{$pageTitle}}What information are you looking for? - search the land and property register{{/pageTitle}}
 
   {{$content}}
 
@@ -14,13 +14,15 @@
       </div>
       <!-- -->
 
-      <h1 class="heading-large">Which documents do you want from Land Registry?</h1>
+      <h1 class="heading-large">What information are you looking for?</h1>
       <div class="grid-row">
         <div class="column-two-thirds">
           <p><a href="eligibility_2b">Not sure?</a> – answer a few short questions to help you decide
           <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group">
+              <h3 class="heading-small collapse-top">Available from GOV.UK</h3>
+
               <label class="block-label" for="eligibility-1">
                 <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
                 Title summary <span class="font-xsmall">– brief facts from the register</span><br>
@@ -29,7 +31,7 @@
 
               <div class="clear" style="margin-bottom: 0.5em">
                 <details>
-                  <summary  class="font-xsmall">What is the title summary?</summary>
+                  <summary class="font-xsmall">What is the title summary?</summary>
 
                   <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clearer, simpler format. It includes:</p>
                   <ul class="list-bullet">
@@ -43,6 +45,7 @@
                 </details>
               </div>
 
+              <h3 class="heading-small">Available from Land Registry ‘Find a Property’</h3>
               <label class="block-label" for="eligibility-2">
                 <input id="eligibility-2" type="checkbox" name="eligibility" value="ineligible">
                 Full title documents – <span class="font-xsmall">the title register and title plan</span><br>
@@ -50,7 +53,7 @@
               </label>
 
               <div class="clear" style="margin-bottom: 0.5em">
-                <details >
+                <details>
                   <summary class="font-xsmall">What are title documents?</summary>
                   <p>Title documents are available in PDF format to download and keep.</p>
                   <p>The <strong class="bold-small">title register</strong> has details about the property or land, including:</p>
@@ -69,10 +72,11 @@
                 </details>
               </div>
 
+              <h3 class="heading-small">Available by post</h3>
               <label class="block-label" for="eligibility-3">
                 <input id="eligibility-3" type="checkbox" name="eligibility" value="ineligible">
-                Flood risk indicator <span class="font-xsmall">– likelihood the property is at risk from flooding</span><br>
-                <strong class="bold-small">£10.80</strong> <span class="font-xsmall">inc VAT</span>
+                 Official copies <span class="font-xsmall">– prove ownership, eg for a court case or visa application</span><br>
+                <strong class="bold-small">£7 per copy</strong> <span class="font-xsmall">no VAT payable</span>
               </label>
 
               <div style="display:none">
@@ -83,6 +87,7 @@
             </div>
 
             </fieldset>
+
 
             <div class="form-group">
               <input type="submit" class="button" value="Continue">
