@@ -1,3 +1,4 @@
+var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var router = express.Router();
@@ -6,12 +7,18 @@ var router = express.Router();
 router.use(bodyParser.urlencoded({ extended: true }));
 
 router.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', {
+    'query': req.query
+  });
 });
 
-router.get('/examples/template-data', function (req, res) {
-  res.render('examples/template-data', { 'name' : 'Foo' });
+// Override all the page routes so we can expose the query string
+router.get('/drv-:version/*/:page', function (req, res) {
+  res.render(path.join('drv-' + req.params.version, req.params[0], req.params.page), {
+    'query': req.query
+  });
 });
+
 
 /**
  * Worldpay routes
@@ -27,7 +34,10 @@ router.all('/drv-:version/worldpay_:stage', function (req, res) {
     id = req.query.id;
   }
 
-  res.render('drv-' + req.params.version + '/worldpay_' + req.params.stage, { 'id': id });
+  res.render('drv-' + req.params.version + '/worldpay_' + req.params.stage, {
+    'id': id,
+    'query': req.query
+  });
 });
 
 /**
@@ -46,7 +56,8 @@ router.get('/drv-:version/search/:page', function (req, res) {
     'page': page,
     'next': page + 1,
     'prev': (page > 1) ? page - 1 : false,
-    'results_count': results.length
+    'results_count': results.length,
+    'query': req.query
   });
 });
 
@@ -60,7 +71,8 @@ router.get('/drv-:version/result/:id', function (req, res) {
 
   res.render('drv-' + req.params.version + '/result', {
     'id': id,
-    'result': results[id - 1]
+    'result': results[id - 1],
+    'query': req.query
   });
 });
 
@@ -74,7 +86,8 @@ router.get('/drv-:version/summary/:id', function (req, res) {
 
   res.render('drv-' + req.params.version + '/summary', {
     'id': id,
-    'result': results[id - 1]
+    'result': results[id - 1],
+    'query': req.query
   });
 });
 
