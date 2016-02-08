@@ -12,14 +12,6 @@ router.get('/', function (req, res) {
   });
 });
 
-// Override all the page routes so we can expose the query string
-router.get('/drv-:version/*/:page', function (req, res) {
-  res.render(path.join('drv-' + req.params.version, req.params[0], req.params.page), {
-    'query': req.query
-  });
-});
-
-
 /**
  * Worldpay routes
  */
@@ -90,5 +82,14 @@ router.get('/drv-:version/summary/:id', function (req, res) {
     'query': req.query
   });
 });
+
+
+// Override all the page routes so we can expose the query string
+router.get('/drv-:version/*/:page', function (req, res) {
+  res.render(path.join('drv-' + req.params.version, req.params[0], req.params.page), {
+    'query': req.query
+  });
+});
+
 
 module.exports = router;
