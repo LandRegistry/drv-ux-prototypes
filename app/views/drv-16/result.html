@@ -33,139 +33,137 @@
         </div>
         <!-- If no title information available-->
 
-        <div class="grid-row">
-          <div style="width:66%;float:left;">
-            {{#empty}}
-              <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
-              <h2 class="heading-medium collapse-top">
+        <div style="width:66%;float:left;">
+          {{#empty}}
+            <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
+            <h2 class="heading-medium collapse-top">
+              {{title_prefix}}
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </h2>
+
+            <h3 class="heading-medium">Why isn't there any information on this property?</h3>
+            <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p>
+          {{/empty}}
+
+          {{#has_data}}
+            <!-- 1. Start Title information (number, address and tenure information) -->
+            <h1 class="heading-large collapse-top">Confirm your order</h1>
+            <p class="">You’ll get a summary of the information Land Registry holds for the following property title.</p>
+
+            <dl class="definition-tabular expand-top-half">
+              <dt>Address</dt>
+              <dd><span class="heading-small">
                 {{title_prefix}}
                 {{#address}}
-                  {{.}}<br>
+                {{.}}<br>
                 {{/address}}
-              </h2>
+              </span></dd>
+              <dt>Title number</dt>
+              <dd class="bold-small">{{title_number}}</dd>
+              <dt>Tenure type</dt>
+              <dd>
+                <details class="font-xsmall">
+                  <summary class="bold-small">{{tenure}}</summary>
 
-              <h3 class="heading-medium">Why isn't there any information on this property?</h3>
-              <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p>
-            {{/empty}}
+                  {{#tenure_caution}}
+                    <p>A caution against first registration protects an interest in land which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the land, and object to completion of the registration until their claim has been considered.</p>
+                    <a rel="external" href="https://www.gov.uk/government/publications/caution-against-first-registration/practice-guide-3-cautions-against-first-registration">More about cautions against first registration</a>
+                  {{/tenure_caution}}
 
-            {{#has_data}}
-              <!-- 1. Start Title information (number, address and tenure information) -->
-              <h1 class="heading-large collapse-top">Confirm your order</h1>
-              <p class="">You’ll get a summary of the information Land Registry holds for the following property title.</p>
+                  {{#tenure_leasehold}}
+                    <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
+                    <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
+                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents. <b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
 
-              <dl class="definition-tabular expand-top-half">
-                <dt>Address</dt>
-                <dd><span class="heading-small">
-                  {{title_prefix}}
-                  {{#address}}
-                  {{.}}<br>
-                  {{/address}}
-                </span></dd>
-                <dt>Title number</dt>
-                <dd class="bold-small">{{title_number}}</dd>
-                <dt>Tenure type</dt>
-                <dd>
-                  <details class="font-xsmall">
-                    <summary class="bold-small">{{tenure}}</summary>
+                    <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
+                  {{/tenure_leasehold}}
 
-                    {{#tenure_caution}}
-                      <p>A caution against first registration protects an interest in land which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the land, and object to completion of the registration until their claim has been considered.</p>
-                      <a rel="external" href="https://www.gov.uk/government/publications/caution-against-first-registration/practice-guide-3-cautions-against-first-registration">More about cautions against first registration</a>
-                    {{/tenure_caution}}
+                  {{#tenure_freehold}}
+                    <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
+                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in. <b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold.</b></p>
+                    <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
 
-                    {{#tenure_leasehold}}
-                      <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
-                      <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
-                      <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents. <b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+                  {{/tenure_freehold}}
+                </details>
 
-                      <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
-                    {{/tenure_leasehold}}
+                <p class="font-xsmall">If you require other types of tenure for this property, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
+              </dd>
+            </dl>
 
-                    {{#tenure_freehold}}
-                      <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
-                      <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in. <b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold.</b></p>
-                      <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+            <h2 class="heading-medium collapse-top">The summary will tell you</h2>
+            <ul class="list-bullet">
+              {{#owner}}
+                <li>current owner’s name and address</li>
+              {{/owner}}
 
-                    {{/tenure_freehold}}
-                  </details>
+              {{#leaseholder}}
+                <li>current leaseholder’s name and address</li>
+              {{/leaseholder}}
 
-                  <p class="font-xsmall">If you require other types of tenure for this property, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
-                </dd>
-              </dl>
-
-              <h2 class="heading-medium collapse-top">The summary will tell you</h2>
-              <ul class="list-bullet">
-                {{#owner}}
-                  <li>current owner’s name and address</li>
-                {{/owner}}
-
-                {{#leaseholder}}
-                  <li>current leaseholder’s name and address</li>
-                {{/leaseholder}}
-
-                <li>what they paid for the property – you won’t get this if it was bought before April 2000 or they didn’t pay full market value for it <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li>
-                {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
-                <li>if there is a mortgage on the property, the lender’s name and  address</li>
-              </ul>
-              <!-- <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p> -->
-              <div class="notice" style="background-color:#fff2d3;padding: 25px">
-                <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
-                <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
-                  If you want to keep a copy you can print it out</p>
-              </div>
-
-                <h2 class="heading-medium">The summary costs £2</h2>
-                <p>You can pay by credit or debit card.</p>
-                <p>You’ll get the summary as soon as you’ve paid. To do that you need to waive your right to cancel.</p>
-                <div class="form-group expand-bottom-half" id="right_to_cancel_group">
-                  <label class="block-label" for="right_to_cancel">
-                  <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
-                  I want to view the summary right away. I understand that means I won’t be able to cancel my order once I’ve paid for it.
-                  </label>
-                </div>
-
-                <form action="../worldpay_1" method="POST" onsubmit="return checkRightToCancel()">
-                  <input name="id" value="{{id}}" type="hidden" />
-                  <input type="submit" style="margin:10px 0" class="button" value="Buy title summary">
-                </form>
-                <br><span class="collapse-bottom font-xsmall"><small>for &pound;2 inc VAT</small></small></p>
-              <!-- </div> -->
-
-              <script>
-                var msg = document.createElement('span');
-                msg.classList.add('error-message');
-                msg.textContent = 'You need to agree to receive the summary right away and that you’ll lose your right to cancel';
-
-                var rightToCancelGroup = document.getElementById('right_to_cancel_group');
-
-                function checkRightToCancel() {
-
-                  if(msg.parentNode) {
-                    msg.parentNode.removeChild(msg);
-                    rightToCancelGroup.classList.remove('error');
-                  }
-
-                  if(!document.getElementById('right_to_cancel').checked) {
-
-                    rightToCancelGroup.classList.add('error');
-                    rightToCancelGroup.appendChild(msg);
-
-                    return false;
-                  }
-                }
-              </script>
-            {{/has_data}}
-          </div>
-
-
-          <div style="width:30%;float:right;">
-            <div id="map">
-              <div class="panel-simple">
-                <p>The map relies on JavaScript being enabled in your browser.</p>
-              </div>
+              <li>what they paid for the property – you won’t get this if it was bought before April 2000 or they didn’t pay full market value for it <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li>
+              {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
+              <li>if there is a mortgage on the property, the lender’s name and  address</li>
+            </ul>
+            <!-- <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p> -->
+            <div class="notice" style="background-color:#fff2d3;padding: 25px">
+              <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
+              <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
+                If you want to keep a copy you can print it out</p>
             </div>
-            <!-- <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p> -->
+
+              <h2 class="heading-medium">The summary costs £2</h2>
+              <p>You can pay by credit or debit card.</p>
+              <p>You’ll get the summary as soon as you’ve paid. To do that you need to waive your right to cancel.</p>
+              <div class="form-group expand-bottom-half" id="right_to_cancel_group">
+                <label class="block-label" for="right_to_cancel">
+                <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
+                I want to view the summary right away. I understand that means I won’t be able to cancel my order once I’ve paid for it.
+                </label>
+              </div>
+
+              <form action="../worldpay_1" method="POST" onsubmit="return checkRightToCancel()">
+                <input name="id" value="{{id}}" type="hidden" />
+                <input type="submit" style="margin:10px 0" class="button" value="Buy title summary">
+              </form>
+              <br><span class="collapse-bottom font-xsmall"><small>for &pound;2 inc VAT</small></small></p>
+            <!-- </div> -->
+
+            <script>
+              var msg = document.createElement('span');
+              msg.classList.add('error-message');
+              msg.textContent = 'You need to agree to receive the summary right away and that you’ll lose your right to cancel';
+
+              var rightToCancelGroup = document.getElementById('right_to_cancel_group');
+
+              function checkRightToCancel() {
+
+                if(msg.parentNode) {
+                  msg.parentNode.removeChild(msg);
+                  rightToCancelGroup.classList.remove('error');
+                }
+
+                if(!document.getElementById('right_to_cancel').checked) {
+
+                  rightToCancelGroup.classList.add('error');
+                  rightToCancelGroup.appendChild(msg);
+
+                  return false;
+                }
+              }
+            </script>
+          {{/has_data}}
+        </div>
+
+
+        <div style="width:30%;float:right;">
+          <div id="map">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
+            </div>
           </div>
+          <!-- <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p> -->
         </div>
 
         <br/>
