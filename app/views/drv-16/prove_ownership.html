@@ -28,7 +28,7 @@
             <fieldset class="form-group inline" id="prove-ownership"  aria-labelledby="groupLabel">
 
               <label class="block-label" for="prove-ownership-1">
-                <input id="prove-ownership-1" type="radio" name="prove-ownership" value="prove-ownership">
+                <input id="prove-ownership-1" type="radio" name="prove-ownership" value="ineligible_proveownership">
                 Yes
               </label>
 
@@ -59,11 +59,11 @@
         msg.classList.add('error-message');
         msg.textContent = 'Please choose an option';
 
-        var eligibiltyGroup = document.getElementById('eligibility_group');
+        var eligibiltyGroup = document.getElementById('prove-ownership');
 
         function checkEligibility() {
-          var questions = document.querySelectorAll('input[name="eligibility"]');
-          var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+          var questions = document.querySelectorAll('input[name="prove-ownership"]');
+          var inEligibleQuestions = document.querySelectorAll('input[name="prove-ownership"][value="ineligible"]');
           var eligible = true;
           var empty = true;
 
@@ -91,7 +91,7 @@
             return false;
           }
 
-          window.location = document.querySelector('input[name="eligibility"]:checked').value;
+          window.location = document.querySelector('input[name="prove-ownership"]:checked').value;
 
           return false;
         }

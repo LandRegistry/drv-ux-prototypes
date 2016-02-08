@@ -27,8 +27,8 @@
                 <input id="eligibility-1a" type="checkbox" name="eligibility" value="eligible">
                 Title number
               </label>
-              <label class="block-label" for="eligibility-1">
-                <input id="eligibility-1" type="checkbox" name="eligibility" value="eligible">
+              <label class="block-label" for="eligibility-need-proof">
+                <input id="eligibility-need-proof" type="checkbox" name="eligibility" value="ineligible">
                 Current owner’s name and address
               </label>
               <label class="block-label" for="eligibility-2">
@@ -40,15 +40,15 @@
                 If there’s a mortgage and who it’s with
               </label>
 
-              <label class="block-label" for="eligibility-4">
+<!--               <label class="block-label" for="eligibility-4">
                 <input id="eligibility-4" type="checkbox" name="eligibility" value="eligible">
                 Length of the lease on a leasehold property
-              </label>
+              </label> -->
 
-              <label class="block-label" for="eligibility-prove">
+<!--               <label class="block-label" for="eligibility-prove">
                 <input id="eligibility-prove" type="checkbox" name="eligibility" value="prove">
                 To prove ownership, eg for a court case
-              </label>
+              </label> -->
 
               <label class="block-label" for="eligibility-6">
                 <input id="eligibility-6" type="checkbox" name="eligibility" value="ineligible">
@@ -100,15 +100,20 @@
                 return false;
               }
 
-              if(document.getElementById('eligibility-prove').checked) {
-                window.location = 'ineligible_proveownership';
+              if(document.getElementById('eligibility-6').checked) {
+                window.location = 'https://eservices.landregistry.gov.uk/wps/portal/Property_Search';
+                return false;
+              }
+
+              if(document.getElementById('eligibility-need-proof').checked) {
+                window.location = 'prove_ownership';
                 return false;
               }
 
               if(eligible) {
-                window.location = 'search';
+                window.location = 'sign-in';
               } else {
-                window.location = 'ineligible_requirements';
+                window.location = 'https://eservices.landregistry.gov.uk/wps/portal/Property_Search';
               }
 
               return false;

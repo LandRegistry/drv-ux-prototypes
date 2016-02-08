@@ -20,7 +20,7 @@
           <!-- 1. Start Title information (number, address and tenure information) -->
           <p>If you don't have one <a rel="external" href="https://eservices.landregistry.gov.uk/wps/portal/Property_Search">use the existing Land Registry service</a> instead.</p>
 
-          <form method="get" action="eligibility_2a" onSubmit="return checkTerms()" id="login-form">
+          <form method="get" action="search" onSubmit="return checkTerms()" id="login-form">
             <!-- Username -->
             <div class="form-group">
               <label class="form-label-bold" for="full-name">Username</label>
@@ -64,11 +64,7 @@
               }
 
               if(document.getElementById('terms').checked) {
-                if(window.location.search.indexOf('skip-questions') !== -1) {
-                  window.location = 'search';
-                } else {
-                  window.location = 'eligibility_2a';
-                }
+                window.location = 'search';
               } else {
                 termsGroup.classList.add('error');
                 termsGroup.appendChild(msg);

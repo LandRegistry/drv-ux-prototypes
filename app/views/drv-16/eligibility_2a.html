@@ -17,7 +17,7 @@
       <h1 class="heading-large">What information are you looking for?</h1>
       <div class="grid-row">
         <div class="column-two-thirds">
-          <p><a href="eligibility_2b">Not sure?</a> – answer a few short questions to help you decide
+          <!-- <p><a href="eligibility_2b">Not sure?</a> – answer a few short questions to help you decide -->
           <form method="get" action="" id="eligibility-form" onsubmit="return checkEligibility()">
 
             <fieldset class="form-group" id="eligibility_group">
@@ -137,11 +137,13 @@
                 if(dont_know.checked) {
                   window.location = 'eligibility_2b';
                 } else {
-                  window.location = 'search';
+                  window.location = 'sign-in';
                 }
 
+              } else if(document.getElementById('eligibility-3').checked) {
+                window.location = 'ineligible_proveownership';
               } else {
-                window.location = 'ineligible_info';
+                window.location = 'https://eservices.landregistry.gov.uk/wps/portal/Property_Search';
               }
 
               return false;
