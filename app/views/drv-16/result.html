@@ -124,7 +124,10 @@
                   </label>
                 </div>
 
-                <p><a style="margin:10px 0" href="../worldpay_1?id={{id}}" class="button" onclick="return checkRightToCancel()">Buy title summary</a>
+                <form action="../worldpay_1" method="POST" onsubmit="return checkRightToCancel()">
+                  <input name="id" value="{{id}}" type="hidden" />
+                  <input type="submit" style="margin:10px 0" class="button" value="Buy title summary">
+                </form>
                 <br><span class="collapse-bottom font-xsmall"><small>for &pound;2 inc VAT</small></small></p>
               <!-- </div> -->
 

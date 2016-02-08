@@ -1,5 +1,9 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var router = express.Router();
+
+// Needed for the worldpay routes which throw POST data around
+router.use(bodyParser.urlencoded({ extended: true }));
 
 router.get('/', function (req, res) {
   res.render('index');
@@ -12,8 +16,18 @@ router.get('/examples/template-data', function (req, res) {
 /**
  * Worldpay routes
  */
-router.get('/drv-:version/worldpay_:stage', function (req, res) {
-  res.render('drv-' + req.params.version + '/worldpay_' + req.params.stage, { 'id': parseInt(req.query.id) });
+router.all('/drv-:version/worldpay_:stage', function (req, res) {
+  var id;
+
+  if(req.body.id) {
+    id = parseInt(req.body.id);
+  }
+
+  if(req.query.id) {
+    id = req.query.id;
+  }
+
+  res.render('drv-' + req.params.version + '/worldpay_' + req.params.stage, { 'id': id });
 });
 
 /**
