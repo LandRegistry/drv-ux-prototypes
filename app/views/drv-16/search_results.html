@@ -52,12 +52,19 @@
 
                   <div class="font-xsmall">
                     {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
-                    <b class="bold-xsmall">{{tenure}}</b>
+
+                    {{#tenure_leasehold}}
+                      <b class="bold-xsmall">{{tenure}}</b>
+                    {{/tenure_leasehold}}
+
+                    {{#tenure_freehold}}
+                      <b class="bold-xsmall">{{tenure}}</b>
+                    {{/tenure_freehold}}
                   </div>
 
                   {{#tenure_caution}}
                     <details class="font-xsmall">
-                      <summary>What's this?</summary>
+                      <summary>{{tenure}}</summary>
                       <p>A caution against first registration protects an interest in land which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the land, and object to completion of the registration until their claim has been considered.</p>
                       <a rel="external" href="https://www.gov.uk/government/publications/caution-against-first-registration/practice-guide-3-cautions-against-first-registration">More about cautions against first registration</a>
                     </details>
@@ -69,10 +76,8 @@
                     {{address}}
                   </h2>
                   <div class="font-xsmall">
-                    <p class="collapse-bottom">No title information found</p>
-
                     <details>
-                      <summary>Why not?</summary>
+                      <summary>No title information found</summary>
                       <div class="panel-indent">
                         <img style="vertical-align: middle;margin-bottom:10px" src="/public/images/beta.png" alt="" />
                         <p>There could be many reasons why we cannot provide you a title number at this time. Try the <a href="https://eservices.landregistry.gov.uk/www/wps/portal/!ut/p/b1/04_SjzS0MDc3NjeyNDDSj9CPykssy0xPLMnMz0vMAfGjzOKNjSxMDA1NjDwsjM3MDTxN3dyNDUNMjQ1MjPWDU_P0c6McFQGRbYf3/">existing Land Registry service</a> instead</p>
