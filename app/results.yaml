@@ -340,12 +340,13 @@
   tenure: Freehold
   title_number: FAKE381404
   owner: Julia Jones
-  date: 7 May 1993
+  date: 7 May 2002
   lender_name: Abbey National PLC
   lender_address:
     - 101 Midsummer Boulevard
     - Milton Keynes
     - MK9 1AA
+  price: 290
 
 -
   address:
