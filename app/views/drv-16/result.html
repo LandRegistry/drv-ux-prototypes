@@ -66,7 +66,7 @@
               <dd>
                 <details class="font-xsmall">
                   <summary class="bold-small">{{tenure}}</summary>
-
+                  <div class="panel" style="margin-bottom:2em;">
                   {{#tenure_caution}}
                     <p>A caution against first registration protects an interest in land which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the land, and object to completion of the registration until their claim has been considered.</p>
                     <a rel="external" href="https://www.gov.uk/government/publications/caution-against-first-registration/practice-guide-3-cautions-against-first-registration">More about cautions against first registration</a>
@@ -86,6 +86,7 @@
                     <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
 
                   {{/tenure_freehold}}
+                  </div>
                 </details>
 
                 <p class="font-xsmall">If you require other types of tenure for this property, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
@@ -116,11 +117,12 @@
 
               <h2 class="heading-medium">The summary costs £2</h2>
               <p>You can pay by credit or debit card.</p>
-              <p>You’ll get the summary as soon as you’ve paid. To do that you need to waive your right to cancel.</p>
+              <p>You'll get the summary as soon as you've paid. But to do so you must agree to lose your right to cancel.</p>
               <div class="form-group expand-bottom-half" id="right_to_cancel_group">
                 <label class="block-label" for="right_to_cancel">
                 <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
-                I want to view the summary right away. I understand that means I won’t be able to cancel my order once I’ve paid for it.
+                I agree that you will provide the summary as soon as I've paid.<br>
+                I accept that I will lose my right to cancel the contract as soon as the summary is displayed.
                 </label>
               </div>
 
