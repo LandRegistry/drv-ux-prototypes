@@ -56,7 +56,7 @@ window.onload = function() {
     //Index stlye
     var indexStyle = {
       fillcolor: 'blue',
-      fillOpacity: 0,
+      fillOpacity: document.getElementById('map').classList.contains('polygon') ? 0.5 : 0,
       opacity: 0
     };
 
@@ -70,7 +70,9 @@ window.onload = function() {
     //Center map view on geojson polygon
     var bounds = indexGeoJson.getBounds();
 
-    L.marker(bounds.getCenter()).addTo(map);
+    if(!document.getElementById('map').classList.contains('polygon')) {
+      L.marker(bounds.getCenter()).addTo(map);
+    }
 
     map.fitBounds(bounds, {maxZoom: 18, animate: false});
 
