@@ -33,9 +33,9 @@
         </div>
         <!-- If no title information available-->
 
-        <div style="width:66%;float:left;">
           {{#empty}}
             <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
+            <div style="width:66%;float:left;">
             <h2 class="heading-medium collapse-top">
               {{#address}}
                 {{.}}<br>
@@ -49,7 +49,8 @@
           {{#has_data}}
             <!-- 1. Start Title information (number, address and tenure information) -->
             <h1 class="heading-large collapse-top">Confirm your order</h1>
-            <p class="">You’ll get a summary of the information Land Registry holds for the following property title.</p>
+            <div style="width:66%;float:left;">
+            <p class="">You’ll get a summary of the information Land Registry holds for this property title:</p>
 
             <dl class="definition-tabular expand-top-half">
               <dt>Address</dt>
