@@ -33,9 +33,9 @@
         </div>
         <!-- If no title information available-->
 
-        <div style="width:66%;float:left;">
           {{#empty}}
             <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
+            <div style="width:66%;float:left;">
             <h2 class="heading-medium collapse-top">
               {{#address}}
                 {{.}}<br>
@@ -49,7 +49,8 @@
           {{#has_data}}
             <!-- 1. Start Title information (number, address and tenure information) -->
             <h1 class="heading-large collapse-top">Confirm your order</h1>
-            <p class="">You’ll get a summary of the information Land Registry holds for the following property title.</p>
+            <div style="width:66%;float:left;">
+            <p class="">You’ll get a summary of the information Land Registry holds for this property title:</p>
 
             <dl class="definition-tabular expand-top-half">
               <dt>Address</dt>
@@ -66,8 +67,11 @@
                   <summary class="bold-small">{{tenure}}</summary>
                   <div class="panel" style="margin-bottom:2em;">
                   {{#tenure_caution}}
-                    <p>A caution against first registration protects an interest in land which hasn’t yet been registered with the Land Registry. It entitles the person who registered the caution to be told if someone tries to register the land, and object to completion of the registration until their claim has been considered.</p>
-                    <a rel="external" href="https://www.gov.uk/government/publications/caution-against-first-registration/practice-guide-3-cautions-against-first-registration">More about cautions against first registration</a>
+                    <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                    <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                    <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
                   {{/tenure_caution}}
 
                   {{#tenure_leasehold}}
@@ -89,7 +93,7 @@
                   </div>
                 </details>
 
-                <p class="font-xsmall">If you require other types of tenure for this property, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
+                <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
               </dd>
             </dl>
 
