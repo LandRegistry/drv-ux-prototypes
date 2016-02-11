@@ -73,14 +73,16 @@
                   {{#tenure_leasehold}}
                     <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
                     <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
-                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents. <b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
+                    <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
 
                     <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
                   {{/tenure_leasehold}}
 
                   {{#tenure_freehold}}
                     <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
-                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in. <b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold.</b></p>
+                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                    <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
                     <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
 
                   {{/tenure_freehold}}
@@ -101,8 +103,8 @@
                 <li>current leaseholder’s name and address</li>
               {{/leaseholder}}
 
-<!--               <li>what they paid for the property – you won’t get this if it was bought before April 2000 or they didn’t pay full market value for it <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li> -->
-              <li>what they paid for the property – If the whole property was sold on the open market, after April 2000. <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li>
+              <li>what they paid for the property – you won’t get this if it was bought before April 2000, if no money changed hands, or if the owner didn’t buy it outright</li>
+              <!-- <li>what they paid for the property – If the whole property was sold on the open market, after April 2000. <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li> -->
               {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
               <li>if there is a mortgage on the property, the lender’s name and  address</li>
             </ul>
@@ -113,13 +115,13 @@
                 If you want to keep a copy you can print it out</p>
             </div>
 
-              <h2 class="heading-medium">The summary costs £2</h2>
+              <h2 class="heading-medium">The summary costs £3 <span class="font-small">— £2.50+VAT</span></h2>
               <p>You can pay by credit or debit card.</p>
-              <p>You'll get the summary as soon as you've paid. But to do so you must agree to lose your right to cancel.</p>
+              <p>You need to accept the following terms  to continue.</p>
               <div class="form-group expand-bottom-half" id="right_to_cancel_group">
                 <label class="block-label" for="right_to_cancel">
                 <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
-                I agree that you will provide the summary straight away.<br>
+                I agree that you will provide the summary as soon as I’ve paid.<br>
                 I accept that I will lose my right to cancel the contract once the summary is displayed.
                 </label>
               </div>
@@ -128,13 +130,13 @@
                 <input name="id" value="{{id}}" type="hidden" />
                 <input type="submit" style="margin:10px 0" class="button" value="Buy title summary">
               </form>
-              <br><span class="collapse-bottom font-xsmall"><small>for &pound;2 inc VAT</small></small></p>
+              <p><span class="collapse-bottom font-xsmall"><small>for &pound;3 inc VAT</small></small></p>
             <!-- </div> -->
 
             <script>
               var msg = document.createElement('span');
               msg.classList.add('error-message');
-              msg.textContent = 'You need to agree to receive the summary right away and that you’ll lose your right to cancel';
+              msg.textContent = 'You need to agree to receive the summary straight away and that you’ll lose your right to cancel';
 
               var rightToCancelGroup = document.getElementById('right_to_cancel_group');
 
