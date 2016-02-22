@@ -20,7 +20,7 @@
           <!-- 1. Start Title information (number, address and tenure information) -->
           <p>If you don't have one <a rel="external" href="https://eservices.landregistry.gov.uk/wps/portal/Property_Search">use the Land Registry 'Find a Property' service</a> instead.</p>
 
-          <form action="confirm/{{id}}" method="get" id="login-form">
+          <form method="get" action="search" onSubmit="return checkTerms()" id="login-form">
             <!-- Username -->
             <div class="form-group">
               <label class="form-label-bold" for="full-name">Username</label>
@@ -35,8 +35,16 @@
               <input type="password" class="form-control" id="password">
             </div>
 
+            <!-- T&Cs -->
+            <div class="form-group" id="terms_group">
+              <label class="block-label" for="terms">
+                <input id="terms" name="terms" type="checkbox" value="terms">
+                I have read and agree to the <a href="terms">Terms and Conditions</a>
+              </label>
+            </div>
+
             <div class="form-group">
-              <input type="submit" class="button" value="Sign-in">
+              <input type="submit" class="button" value="Sign in">
             </div>
 
           </form>
@@ -55,22 +63,14 @@
                 termsGroup.classList.remove('error');
               }
 
-              // if(document.getElementById('terms').checked) {
-              //   window.location = 'search';
-              // } else {
-              //   termsGroup.classList.add('error');
-              //   termsGroup.appendChild(msg);
-              // }
-
-              if(!document.getElementById('terms').checked) {
-
+              if(document.getElementById('terms').checked) {
+                window.location = 'search';
+              } else {
                 termsGroup.classList.add('error');
                 termsGroup.appendChild(msg);
-
-                return false;
               }
 
-              // return false;
+              return false;
             }
           </script>
 
