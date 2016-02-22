@@ -8,7 +8,7 @@
       <div class="phase-banner">
         <p>
           <strong class="phase-tag">BETA</strong>
-          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-17/feedback">Feedback</a>.</span>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-17-b/feedback">Feedback</a>.</span>
         </p>
       </div>
 
@@ -20,7 +20,7 @@
           <!-- 1. Start Title information (number, address and tenure information) -->
           <p>If you don't have one <a rel="external" href="https://eservices.landregistry.gov.uk/wps/portal/Property_Search">use the Land Registry 'Find a Property' service</a> instead.</p>
 
-          <form method="get" action="search" onSubmit="return checkTerms()" id="login-form">
+          <form action="confirm/{{id}}" method="get" id="login-form">
             <!-- Username -->
             <div class="form-group">
               <label class="form-label-bold" for="full-name">Username</label>
@@ -35,16 +35,8 @@
               <input type="password" class="form-control" id="password">
             </div>
 
-            <!-- T&Cs -->
-            <div class="form-group" id="terms_group">
-              <label class="block-label" for="terms">
-                <input id="terms" name="terms" type="checkbox" value="terms">
-                I have read and agree to the <a href="terms">Terms and Conditions</a>
-              </label>
-            </div>
-
             <div class="form-group">
-              <input type="submit" class="button" value="Sign in">
+              <input type="submit" class="button" value="Sign-in">
             </div>
 
           </form>
@@ -63,14 +55,22 @@
                 termsGroup.classList.remove('error');
               }
 
-              if(document.getElementById('terms').checked) {
-                window.location = 'search';
-              } else {
+              // if(document.getElementById('terms').checked) {
+              //   window.location = 'search';
+              // } else {
+              //   termsGroup.classList.add('error');
+              //   termsGroup.appendChild(msg);
+              // }
+
+              if(!document.getElementById('terms').checked) {
+
                 termsGroup.classList.add('error');
                 termsGroup.appendChild(msg);
+
+                return false;
               }
 
-              return false;
+              // return false;
             }
           </script>
 
@@ -97,7 +97,7 @@
 
   {{$footerSupportLinks}}
     <ul>
-      <li><a href="/drv-17/terms">Terms &amp; Conditions</a></li>
+      <li><a href="/drv-17-b/terms">Terms &amp; Conditions</a></li>
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
       <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
     </ul>

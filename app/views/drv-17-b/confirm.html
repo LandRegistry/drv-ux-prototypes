@@ -10,7 +10,7 @@
         <div class="phase-banner">
           <p>
             <strong class="phase-tag">BETA</strong>
-            <span>This service is in private beta. Please give us your <a rel="external" href="/drv-16/feedback">Feedback</a>.</span>
+            <span>This service is in private beta. Please give us your <a rel="external" href="/drv-17-b/feedback">Feedback</a>.</span>
           </p>
         </div>
         <!-- -->
@@ -97,7 +97,7 @@
               </dd>
             </dl>
 
-            <h2 class="heading-medium collapse-top">The summary will tell you</h2>
+            <h2 class="heading-medium collapse-top">The register &amp; summary will tell you</h2>
             <ul class="list-bullet">
               {{#owner}}
                 <li>current owner’s name and address</li>
@@ -107,24 +107,27 @@
                 <li>current leaseholder’s name and address</li>
               {{/leaseholder}}
 
-              <li>what they paid for the property – you won’t get this if it was bought before April 2000, if no money changed hands, or if the owner didn’t buy it outright</li>
-              <!-- <li>what they paid for the property – If the whole property was sold on the open market, after April 2000. <span class="font-xsmall">(<a href="https://www.gov.uk/guidance/about-the-price-paid-data#data-excluded-from-the-house-price-index-and-price-paid-data" class="font-xsmall">what does this mean?</a>)</span></li> -->
+              <!-- <li>what they paid for the property – you won’t get this if it was bought before April 2000, if no money changed hands, or if the owner didn’t buy it outright</li> -->
+              <li>what they paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
+
               {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
               <li>if there is a mortgage on the property, the lender’s name and  address</li>
+              <li>a full copy of the text from the register as a PDF</li>
             </ul>
             <!-- <p>You'll need to <a target="_blank" href="https://www.gov.uk/get-information-about-property-and-land">use a different Land Registry service</a> if you need more detailed information or to prove ownership in court.</p> -->
             <div class="notice" style="background-color:#fff2d3;padding: 25px">
               <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
               <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
-                If you want to keep a copy you can print it out</p>
+                If you want to keep a copy you can print it out or download the PDF</p>
             </div>
 
-              <h2 class="heading-medium">The summary costs £3 <span class="font-small">(£2.50+VAT)</span></h2>
+              <h2 class="heading-medium">The register &amp; summary costs £3 <span class="font-small">(£2.50+VAT)</span></h2>
               <p>You can pay by credit or debit card.</p>
-              <p>You need to accept the following terms  to continue.</p>
+              <p>You need to accept the terms &amp; conditions to continue.</p>
               <div class="form-group expand-bottom-half" id="right_to_cancel_group">
                 <label class="block-label" for="right_to_cancel">
                 <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
+                I have read and agree to the <a href="terms">Terms and Conditions</a>.<br>
                 I agree that you will provide the summary as soon as I’ve paid.<br>
                 I accept that I will lose my right to cancel the contract once the summary is displayed.
                 </label>
@@ -231,7 +234,7 @@
 
   {{$footerSupportLinks}}
     <ul>
-      <li><a href="/drv-16/terms">Terms &amp; Conditions</a></li>
+      <li><a href="/drv-17-b/terms">Terms &amp; Conditions</a></li>
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
       <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
     </ul>

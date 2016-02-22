@@ -1,0 +1,338 @@
+{{<layout}}
+
+  {{$pageTitle}}Order a title summary - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      {{#result}}
+        <!-- private beta banner -->
+        <div class="phase-banner">
+          <p>
+            <strong class="phase-tag">BETA</strong>
+            <span>This service is in private beta. Please give us your <a rel="external" href="/drv-17-b/feedback">Feedback</a>.</span>
+          </p>
+        </div>
+        <!-- -->
+
+        <!-- breadcrumb & sign out row -->
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <div id="global-breadcrumb">
+              <nav role="navigation">
+                <ol>
+                  <li><a href="../search">Search the land and property register</a></li>
+                  <li><a href="../search/1">Search results</a></li>
+                  <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="column-quarter column-flip">
+          </div>
+        </div>
+        <!-- If no title information available-->
+
+          {{#empty}}
+            <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
+            <div style="width:66%;float:left;">
+            <h2 class="heading-medium collapse-top">
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </h2>
+
+            <h3 class="heading-medium">Why isn't there any information on this property?</h3>
+            <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p>
+          {{/empty}}
+
+          {{#has_data}}
+            <!-- 1. Start Title information (number, address and tenure information) -->
+            <h1 class="heading-large collapse-top">What information do you want about this property</h1>
+            <div style="width:66%;float:left;">
+            <p class="">You’ll get a summary of the information Land Registry holds for this property title:</p>
+
+            <dl class="definition-tabular expand-top-half">
+              <dt>Address</dt>
+              <dd><span class="heading-small">
+                {{#address}}
+                {{.}}<br>
+                {{/address}}
+              </span></dd>
+              <dt>Title number</dt>
+              <dd class="bold-small">{{title_number}}</dd>
+              <dt>Tenure type</dt>
+              <dd>
+                <details class="font-xsmall">
+                  <summary class="bold-small">{{tenure}}</summary>
+                  <div class="panel" style="margin-bottom:2em;">
+                  {{#tenure_caution}}
+                    <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                    <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                    <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                  {{/tenure_caution}}
+
+                  {{#tenure_leasehold}}
+                    <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
+                    <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
+                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
+                    <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+
+                    <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
+                  {{/tenure_leasehold}}
+
+                  {{#tenure_freehold}}
+                    <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
+                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                    <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
+                    <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+
+                  {{/tenure_freehold}}
+                  </div>
+                </details>
+
+                <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
+              </dd>
+            </dl>
+
+            <form action="../sign-in" method="POST" id="eligibility-form" onsubmit="return checkEligibility()">
+              <input name="id" value="{{id}}" type="hidden" />
+
+              <fieldset class="form-group" id="eligibility_group">
+                <h3 class="heading-small">Available from this service</h3>
+
+                <label class="block-label" for="eligibility-1">
+                  <input id="eligibility-1" type="radio" name="eligibility" value="eligible">
+                  Title register &amp; summary<br>
+                  <strong class="bold-small">£3</strong> <span class="font-xsmall">inc VAT</span><br>
+                </label>
+
+                <div class="clear">
+<!--                   <details>
+                    <summary class="font-xsmall">What is the title register &amp; summary?</summary>
+                    <div class="panel" style="margin-bottom: 2.5em">
+                      <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clearer, simpler format. It includes:</p>
+                      <ul class="list-bullet">
+                        <li>property address and title number</li>
+                        <li>current owner’s name and address</li>
+                        <li>what they paid for the property</li>
+                        <li>whether the property is freehold or leasehold (known as ‘tenure’)</li>
+                        <li>if there is a mortgage on the property, the lender’s name and address</li>
+                      </ul>
+                    </div>
+                  </details> -->
+                  <details>
+                    <summary class="font-xsmall">What is the title register &amp; summary?</summary>
+                    <div class="panel" style="margin-bottom: 2.5em">
+
+                      <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clearer, simpler format. It includes:</p>
+                      <ul class="list-bullet">
+                        {{#owner}}
+                          <li>current owner’s name and address</li>
+                        {{/owner}}
+
+                        {{#leaseholder}}
+                          <li>current leaseholder’s name and address</li>
+                        {{/leaseholder}}
+
+                        <li>what they paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
+  
+                        {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
+                        <li>if there is a mortgage on the property, the lender’s name and  address</li>
+                      </ul>
+
+                      <p>The <strong class="bold-small">title register</strong> is available to download and keep. It has the full text from the register, including:</p>
+                      <ul class="list-bullet">
+                        <li>any rights of way, restrictions and covenants</li>
+                        <li>whether a mortgage on it has been 'dischrged', eg paid off</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+
+
+                <h3 class="heading-small">Available from Land Registry ‘Find a Property’</h3>
+                <label class="block-label" for="eligibility-2">
+                  <input id="eligibility-2" type="radio" name="eligibility" value="ineligible">
+                  Full title documents – <span class="font-xsmall">the title register and title plan</span><br>
+                  <strong class="bold-small">£3 each</strong> or <strong class="bold-small">£6 for both</strong>, <span class="font-xsmall">no VAT payable</span><br>
+                </label>
+
+                <div class="clear">
+                  <details>
+                    <summary class="font-xsmall">What are title documents?</span></summary>
+                    <div class="panel" style="margin-bottom: 2.5em">
+                      <p>Title documents are available in PDF format to download and keep.</p>
+                      <p>The <strong class="bold-small">title register</strong> has details about the property or land, including:</p>
+                      <ul class="list-bullet">
+                        <li>title number</li>
+                        <li>who owns it</li>
+                        <li>what they paid for it (properties only, if available)</li>
+                        <li>any rights of way, restrictions and covenants</li>
+                        <li>whether a mortgage on it has been ‘discharged’, eg paid off</li>
+                      </ul>
+                      <p>The <strong class="bold-small">title plan</strong> is a map showing:</p>
+                      <ul class="list-bullet">
+                        <li>the property’s location</li>
+                        <li>the general boundaries – find out how to <a href="/your-property-boundaries">get exact boundary information</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+
+                <h3 class="heading-small">Available by post</h3>
+                <label class="block-label" for="eligibility-3">
+                  <input id="eligibility-3" type="radio" name="eligibility" value="ineligible">
+                   Official copies <span class="font-xsmall">– prove ownership, eg for a court case or visa application</span><br>
+                  <strong class="bold-small">£7 per copy</strong> <span class="font-xsmall">no VAT payable</span>
+                </label>
+
+                <div style="display:none">
+                  <label class="block-label" for="eligibility-4">
+                  <input id="eligibility-4" type="radio" name="eligibility" value="dont_know">
+                  Not sure<br> <p class="font-xsmall collapse-bottom">We'll ask you a few questions to help you decide</p>
+                </label>
+                </div>
+
+              </fieldset>
+
+
+              <input type="submit" class="button" value="Continue">
+            </form>
+
+          {{/has_data}}
+        </div>
+
+
+        <div style="width:30%;float:right;">
+          <div id="map">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
+            </div>
+          </div>
+          <!-- <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p> -->
+        </div>
+
+        <br/>
+
+        <!-- Offer user a link back to the Search Results -->
+        <div style="clear:both;">
+          <a href="" onClick="history.go(-1); return false;">Back to search results</a>
+        </div>
+      {{/result}}
+
+      <script>
+        var msg = document.createElement('span');
+        msg.classList.add('error-message');
+        msg.textContent = 'Please choose an option';
+
+        var eligibiltyGroup = document.getElementById('eligibility_group');
+
+        function checkEligibility() {
+          var questions = document.querySelectorAll('input[name="eligibility"]');
+          var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+          var eligible = true;
+          var empty = true;
+
+          if(msg.parentNode) {
+            msg.parentNode.removeChild(msg);
+            eligibiltyGroup.classList.remove('error');
+          }
+
+          [].forEach.call(questions, function(item, index) {
+            if(item.checked) {
+              empty = false;
+            }
+          });
+
+          [].forEach.call(inEligibleQuestions, function(item, index) {
+            if(item.checked) {
+              eligible = false;
+            }
+          });
+
+          if(empty) {
+            eligibiltyGroup.classList.add('error');
+            eligibiltyGroup.appendChild(msg);
+
+            return false;
+          }
+
+          if(eligible) {
+            var dont_know = document.getElementById('eligibility-4');
+            if(dont_know.checked) {
+              window.location = 'eligibility_2b';
+            } else {
+              // window.location = '../sign-in';
+              return true;
+            }
+
+          } else if(document.getElementById('eligibility-3').checked) {
+            window.location = '../ineligible_proveownership';
+          } else {
+            window.location = 'https://eservices.landregistry.gov.uk/wps/portal/Property_Search';
+          }
+
+          return false;
+        }
+      </script>
+
+      <script type='text/javascript'>
+        var indexData = {
+          "crs": {
+            "properties": {
+              "name": "urn:ogc:def:crs:EPSG::27700"
+            },
+            "type": "name"
+          },
+          "geometry": {
+            "coordinates": [
+              [
+                [441187.5, 112344.0],
+                [441186.0, 112354.0],
+                [441193.0, 112356.5],
+                [441194.5, 112346.5]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "colour": 25,
+            "feature_id": 4019,
+            "graphic_type": "Bordered Polygon",
+            "render_attributes": {
+              "border_colour": 25,
+              "border_width": 0,
+              "exterior_edge_colour": 1,
+              "exterior_edge_thickness": 2,
+              "exterior_edge_thickness_units": "Pixels",
+              "fill_colour": 25,
+              "fill_style": 9,
+              "render_level": "0"
+            },
+            "width": 0
+          },
+          "type": "Feature"
+        }
+      </script>
+
+      <script src="/public/javascripts/map.js"></script>
+      <link rel="stylesheet" href="/public/vendor/leaflet-0.7.3/leaflet.css" />
+      <script src="/public/vendor/leaflet-0.7.3/leaflet.js"></script><!-- Leaflet -->
+      <script src="/public/javascripts/proj4.js"></script><!-- proj4js -->
+      <script src="/public/javascripts/proj4leaflet.js"></script><!-- proj4leaflet -->
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-17-b/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

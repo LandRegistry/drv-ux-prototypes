@@ -1,0 +1,265 @@
+{{<layout}}
+
+  {{$pageTitle}}Summary of title {{title_number}} - view the land and property register{{/pageTitle}}
+
+{{$head}}
+  {{>includes/head}}
+  <link href="/public/stylesheets/download-documents.css" media="screen" rel="stylesheet" type="text/css" />
+{{/head}}
+
+  {{$content}}
+
+
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-17-b/feedback">Feedback</a>.</span>
+        </p>
+      </div>
+
+      <!-- breadcrumb & sign out row . Hide for Print View -->
+      <div class="grid-row printhidden">
+        <div class="column-two-thirds">
+          <div id="global-breadcrumb">
+            <nav role="navigation">
+              <ol>
+                <li><a href="../search">Search the land and property register</a></li>
+                <li><a href="../search/1">Search results</a></li>
+                <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="column-third">
+          <div class="account">
+            <span class="font-xsmall">English | <a href="#">Cymraeg</a></span>
+          </div>
+        </div>
+      </div>
+      <!-- end Breadcrumbs-->
+
+      <!-- start main summary content-->
+      {{#result}}
+        <div>
+          <h1 class="heading-large collapse-top">Summary of title {{title_number}}</h1>
+          <p class="font-xsmall">This title was last changed on <b>20 October 2015</b> at <b>11:59:18</b></p>
+        </div>
+
+        <div style="width:66%;float:left;">
+          <hr class="collapse-top">
+
+          <dl class="definition-tabular collapse-top">
+            <dt>Address</dt>
+            <dd><span class="heading-medium">
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </span></dd>
+
+            {{#owner}}
+              <dt style="text-transform: capitalize">Owner</dt>
+              <dd><span class="heading-small">{{owner}}</span><br>
+                {{#owner_address}}
+                  {{.}}<br>
+                {{/owner_address}}
+              </dd>
+            {{/owner}}
+
+            {{#leaseholder}}
+              <dt style="text-transform: capitalize">Leaseholder</dt>
+              <dd><span class="heading-small">{{leaseholder}}</span><br>
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </dd>
+            {{/leaseholder}}
+
+            {{#lender_name}}
+              <dt>Lender</dt>
+              <dd>
+                <span class="heading-small">{{lender_name}}</span><br>
+                {{#lender_address}}
+                  {{.}}<br>
+                {{/lender_address}}
+              </dd>
+            {{/lender_name}}
+
+            <dt>Tenure type</dt>
+            <dd><span class="heading-small">{{tenure}}</span></dd>
+
+            {{#lease_term}}
+              <dt>Lease term</dt>
+              <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
+            {{/lease_term}}
+
+            {{#price}}
+              <dt>Price paid</dt>
+              <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
+            {{/price}}
+          </dl>
+
+          <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
+            <p>
+              <b class="bold-small">You'll only be able to view this information once</b><br>
+              If you want to keep a copy you can print it out
+            </p>
+
+            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
+
+          </div>
+
+
+          <!-- from http://property-register-prototype.herokuapp.com/digital-register/journeys/v6/complete-page?# -->
+          <div class="govspeak" style="margin-bottom:30px;">
+            <section class="attachment embedded">
+              <div class="document-link register">
+                <img src="/public/images/icon-register-document.png"> 
+                <!-- <a href="#" class="title">Title register</a> -->
+                <span class="title">Title register</span>
+                <span class="footnote">PDF document, 169kb</span>
+                <p class="actions">                  
+                    <a class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</a>               
+<!--                   <div class="accessibility-warning">This file may not be suitable for users of assistive technology. <a href="#">Request a different format.</a>
+                  </div> -->
+                </p>                
+              </div>
+            </section>
+          </div>
+
+
+        </div>
+
+        <div style="width:30%;float:right;">
+          <div id="map" class="polygon">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
+            </div>
+          </div>
+          <p class="font-xsmall">This map shows the property’s rough extent and location, <strong class="bold-xsmall">not legal boundaries</strong>.</p>
+        </div>
+
+        <div style="clear:both"></div>
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
+
+          <div class="printhidden">
+            <h2 class="heading-medium collapse-top">What did you think of this service?</h2>
+            <p><a rel="external" href="/drv-17-b/feedback">Please give us your feedback</a> (takes 30 seconds). <br>This is a trial service and your feedback will help us improve it.</p>
+          </div>
+
+          <hr>
+
+          <h2 class="heading-medium">VAT receipt</h2>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <dl class="definition-tabular-1-3">
+
+                <dt class="bold-xsmall">Date</dt>
+                <dd class="font-xsmall">25 Jan 2016</dd>
+
+                <dt class="bold-xsmall">Invoice number</dt>
+                <dd class="font-xsmall expand-bottom-half">ABC1234578</dd>
+
+                <dt class="bold-xsmall">Item</dt>
+                <dd class="font-xsmall expand-bottom-half">Summary of title {{title_number}}</dd>
+
+                <dt class="bold-xsmall">Net amount</dt>
+                <dd class="font-xsmall">£2.50</dd>
+
+                <dt class="bold-xsmall">VAT @ 20%</dt>
+                <dd class="font-xsmall">£0.50</dd>
+
+                <dt class="bold-xsmall">Total inc VAT</dt>
+                <dd class="font-xsmall">£3.00</dd>
+              </dl>
+            </div>
+            <div class="column-one-thirds">
+              <p class="font-xsmall">Land Registry<br>Trafalgar house<br>1 Bedford Park<br>Croydon<br>CR0 2AQ</p>
+              <p class="font-xsmall">VAT registration number:<br> GB 8888 181 53</p>
+            </div>
+
+          </div>
+
+
+
+          <div class="panel-indent">
+            <p>If you have any problems with your purchase, you can call Land Registry on <b>0300 006 0411</b>.</p>
+            <p>For more contact methods, visit <a href="https://www.gov.uk/government/organisations/land-registry">www.gov.uk/government/organisations/land-registry</a></p>
+          </div>
+
+          <hr>
+
+          <div class="text printhidden">
+            <h6 class="heading-medium">What next</h6>
+            <ul>
+              <li><a href="../search">Search for another title using this service</a></li>
+              <li><a href="https://gov.uk">Return to GOV.UK</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      {{/result}}
+
+      <script type='text/javascript'>
+        var indexData = {
+          "crs": {
+            "properties": {
+              "name": "urn:ogc:def:crs:EPSG::27700"
+            },
+            "type": "name"
+          },
+          "geometry": {
+            "coordinates": [
+              [
+                [441187.5, 112344.0],
+                [441186.0, 112354.0],
+                [441193.0, 112356.5],
+                [441194.5, 112346.5]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "colour": 25,
+            "feature_id": 4019,
+            "graphic_type": "Bordered Polygon",
+            "render_attributes": {
+              "border_colour": 25,
+              "border_width": 0,
+              "exterior_edge_colour": 1,
+              "exterior_edge_thickness": 2,
+              "exterior_edge_thickness_units": "Pixels",
+              "fill_colour": 25,
+              "fill_style": 9,
+              "render_level": "0"
+            },
+            "width": 0
+          },
+          "type": "Feature"
+        }
+      </script>
+
+      <script src="/public/javascripts/map.js"></script>
+      <link rel="stylesheet" href="/public/vendor/leaflet-0.7.3/leaflet.css" />
+      <script src="/public/vendor/leaflet-0.7.3/leaflet.js"></script><!-- Leaflet -->
+      <script src="/public/javascripts/proj4.js"></script><!-- proj4js -->
+      <script src="/public/javascripts/proj4leaflet.js"></script><!-- proj4leaflet -->
+
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-17-b/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}
