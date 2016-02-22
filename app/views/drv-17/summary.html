@@ -2,7 +2,13 @@
 
   {{$pageTitle}}Summary of title {{title_number}} - view the land and property register{{/pageTitle}}
 
+{{$head}}
+  {{>includes/head}}
+  <link href="/public/stylesheets/download-documents.css" media="screen" rel="stylesheet" type="text/css" />
+{{/head}}
+
   {{$content}}
+
 
     <main id="content" role="main">
       <!-- private beta banner -->
@@ -103,6 +109,26 @@
             <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
 
           </div>
+
+
+          <!-- from http://property-register-prototype.herokuapp.com/digital-register/journeys/v6/complete-page?# -->
+          <div class="govspeak" style="margin-bottom:30px;">
+            <section class="attachment embedded">
+              <div class="document-link register">
+                <img src="/public/images/icon-register-document.png"> 
+                <!-- <a href="#" class="title">Title register</a> -->
+                <span class="title">Title register</span>
+                <span class="footnote">PDF document, 169kb</span>
+                <p class="actions">                  
+                    <a class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</a>               
+<!--                   <div class="accessibility-warning">This file may not be suitable for users of assistive technology. <a href="#">Request a different format.</a>
+                  </div> -->
+                </p>                
+              </div>
+            </section>
+          </div>
+
+
         </div>
 
         <div style="width:30%;float:right;">
