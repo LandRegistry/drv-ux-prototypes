@@ -33,6 +33,27 @@ router.all('/drv-:version/worldpay_:stage', function (req, res) {
 });
 
 /**
+ * Sign-in - added for DRV-17 to POST result ID
+ * not needed for previous protos, but does not break 16 or earlier
+ */
+router.all('/drv-:version/sign-in', function (req, res) {
+  var id;
+
+  if(req.body.id) {
+    id = parseInt(req.body.id);
+  }
+
+  if(req.query.id) {
+    id = req.query.id;
+  }
+
+  res.render('drv-' + req.params.version + '/sign-in' , {
+    'id': id,
+    'query': req.query
+  });
+});
+
+/**
  * Listing page route
  */
 router.get('/drv-:version/search/:page', function (req, res) {
@@ -54,7 +75,7 @@ router.get('/drv-:version/search/:page', function (req, res) {
 });
 
 /**
- * Individual item route
+ * Individual item route - result
  */
 router.get('/drv-:version/result/:id', function (req, res) {
 
@@ -62,6 +83,21 @@ router.get('/drv-:version/result/:id', function (req, res) {
   var results = require('./results')();
 
   res.render('drv-' + req.params.version + '/result', {
+    'id': id,
+    'result': results[id - 1],
+    'query': req.query
+  });
+});
+
+/**
+ * Individual item route - confirm
+ */
+router.get('/drv-:version/confirm/:id', function (req, res) {
+
+  var id = parseInt(req.params.id);
+  var results = require('./results')();
+
+  res.render('drv-' + req.params.version + '/confirm', {
     'id': id,
     'result': results[id - 1],
     'query': req.query
