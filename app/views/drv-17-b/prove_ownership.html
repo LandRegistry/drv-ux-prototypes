@@ -1,0 +1,113 @@
+{{<layout}}
+
+  {{$pageTitle}}Do you need to prove ownership?{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-17/feedback">Feedback</a>.</span>
+        </p>
+      </div>
+      <!-- -->
+
+      <a href="#" onClick="history.go(-1); return false;" class="back-link expand-top-half" style="display:inline-block">◀ Back</a>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-large" id="groupLabel">Do you need to prove ownership?</h1>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <p>for example, for a court case or visa application</p>
+          <form method="get" action="search" id="prove-ownership-form" onsubmit="return checkEligibility()">
+
+            <fieldset class="form-group inline" id="prove-ownership"  aria-labelledby="groupLabel">
+
+              <label class="block-label" for="prove-ownership-1">
+                <input id="prove-ownership-1" type="radio" name="prove-ownership" value="ineligible_proveownership">
+                Yes
+              </label>
+
+              <label class="block-label" for="prove-ownership-2">
+                <input id="prove-ownership-2" type="radio" name="prove-ownership" value="sign-in">
+                No
+              </label>
+
+<!--               <label class="block-label" for="eligibility-3">
+                <input id="eligibility-3" type="radio" name="eligibility" value="ineligible_account_not_sure">
+                Not sure
+              </label> -->
+
+            </fieldset>
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Continue">
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <script>
+        var msg = document.createElement('span');
+        msg.classList.add('error-message');
+        msg.textContent = 'Please choose an option';
+
+        var eligibiltyGroup = document.getElementById('prove-ownership');
+
+        function checkEligibility() {
+          var questions = document.querySelectorAll('input[name="prove-ownership"]');
+          var inEligibleQuestions = document.querySelectorAll('input[name="prove-ownership"][value="ineligible"]');
+          var eligible = true;
+          var empty = true;
+
+          if(msg.parentNode) {
+            msg.parentNode.removeChild(msg);
+            eligibiltyGroup.classList.remove('error');
+          }
+
+          [].forEach.call(questions, function(item, index) {
+            if(item.checked) {
+              empty = false;
+            }
+          });
+
+          [].forEach.call(inEligibleQuestions, function(item, index) {
+            if(item.checked) {
+              eligible = false;
+            }
+          });
+
+          if(empty) {
+            eligibiltyGroup.classList.add('error');
+            eligibiltyGroup.appendChild(msg);
+
+            return false;
+          }
+
+          window.location = document.querySelector('input[name="prove-ownership"]:checked').value;
+
+          return false;
+        }
+      </script>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-17/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}
