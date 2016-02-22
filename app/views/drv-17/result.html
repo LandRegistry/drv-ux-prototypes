@@ -101,17 +101,17 @@
               <input name="id" value="{{id}}" type="hidden" />
 
               <fieldset class="form-group" id="eligibility_group">
-                <h3 class="heading-small">Available from GOV.UK</h3>
+                <h3 class="heading-small">Available from this service</h3>
 
                 <label class="block-label" for="eligibility-1">
                   <input id="eligibility-1" type="radio" name="eligibility" value="eligible">
-                  Title summary <span class="font-xsmall">– brief facts from the register</span><br>
+                  Title register &amp; summary<br>
                   <strong class="bold-small">£3</strong> <span class="font-xsmall">inc VAT</span><br>
                 </label>
 
                 <div class="clear">
-                  <details>
-                    <summary class="font-xsmall">What is the title summary?</summary>
+<!--                   <details>
+                    <summary class="font-xsmall">What is the title register &amp; summary?</summary>
                     <div class="panel" style="margin-bottom: 2.5em">
                       <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clearer, simpler format. It includes:</p>
                       <ul class="list-bullet">
@@ -120,6 +120,33 @@
                         <li>what they paid for the property</li>
                         <li>whether the property is freehold or leasehold (known as ‘tenure’)</li>
                         <li>if there is a mortgage on the property, the lender’s name and address</li>
+                      </ul>
+                    </div>
+                  </details> -->
+                  <details>
+                    <summary class="font-xsmall">What is the title register &amp; summary?</summary>
+                    <div class="panel" style="margin-bottom: 2.5em">
+
+                      <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clearer, simpler format. It includes:</p>
+                      <ul class="list-bullet">
+                        {{#owner}}
+                          <li>current owner’s name and address</li>
+                        {{/owner}}
+
+                        {{#leaseholder}}
+                          <li>current leaseholder’s name and address</li>
+                        {{/leaseholder}}
+
+                        <li>what they paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry agreed not to record the price</li>
+  
+                        {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
+                        <li>if there is a mortgage on the property, the lender’s name and  address</li>
+                      </ul>
+
+                      <p>The <strong class="bold-small">title register</strong> is available to download and keep. It has the full text form the register, including:</p>
+                      <ul class="list-bullet">
+                        <li>any rights of way, restrictions and covenants</li>
+                        <li>whether a mortgage on it has been 'dischrged', eg paid off</li>
                       </ul>
                     </div>
                   </details>
