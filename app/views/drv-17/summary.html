@@ -100,7 +100,7 @@
             {{/price}}
           </dl>
 
-          <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
+<!--           <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
             <p>
               <b class="bold-small">You'll only be able to view this information once</b><br>
               If you want to keep a copy you can print it out
@@ -108,11 +108,12 @@
 
             <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
 
-          </div>
+          </div> -->
 
-
+         
           <!-- from http://property-register-prototype.herokuapp.com/digital-register/journeys/v6/complete-page?# -->
-          <div class="govspeak" style="margin-bottom:30px;">
+          <div class="govspeak printhidden" style="margin-bottom:30px;">
+          <h2 class="heading-medium">Title register for {{title_number}}</h2>
             <section class="attachment embedded">
               <div class="document-link register">
                 <img src="/public/images/icon-register-document.png"> 
@@ -152,6 +153,8 @@
 
           <hr>
 
+              
+
           <h2 class="heading-medium">VAT receipt</h2>
 
           <div class="grid-row">
@@ -181,6 +184,14 @@
               <p class="font-xsmall">Land Registry<br>Trafalgar house<br>1 Bedford Park<br>Croydon<br>CR0 2AQ</p>
               <p class="font-xsmall">VAT registration number:<br> GB 8888 181 53</p>
             </div>
+
+            <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
+<!--             <p>
+              <b class="bold-small">You'll only be able to view this information once</b><br>
+              If you want to keep a copy you can print it out
+            </p> -->
+
+            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print VAT Receipt</a>
 
           </div>
 
