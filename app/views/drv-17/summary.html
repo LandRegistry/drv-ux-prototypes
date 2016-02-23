@@ -117,33 +117,26 @@
             {{/price}}
           </dl>
 
-<!--           <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
-            <p>
-              <b class="bold-small">You'll only be able to view this information once</b><br>
-              If you want to keep a copy you can print it out
-            </p>
+       
+          <h2 class="heading-large">Title register for {{title_number}}</h2>
+          <div class="panel-indent document-link printhidden" style="margin-bottom:30px;">
+            <a href="/public/downloads/pdf/register-new-transport.pdf">                
+              <img src="/public/images/icon-register-document.png">
+              <h3 class="title">Title register</h3>
+              <span class="footnote">PDF document, 169kb</span><br>
+              <span class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</span>
+            </a>
+          </div>
 
-            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
 
-          </div> -->
+          <div class="notice printhidden" style="background-color:#fff2d3;padding:25px;margin-bottom:30px;padding-bottom:5px;">
+            <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right:15px;" />
+            <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong></p>
 
-
-          <!-- from http://property-register-prototype.herokuapp.com/digital-register/journeys/v6/complete-page?# -->
-          <div class="govspeak printhidden" style="margin-bottom:30px;">
-          <h2 class="heading-medium">Title register for {{title_number}}</h2>
-            <section class="attachment embedded">
-              <div class="document-link register">
-                <img src="/public/images/icon-register-document.png">
-                <!-- <a href="#" class="title">Title register</a> -->
-                <span class="title">Title register</span>
-                <span class="footnote">PDF document, 169kb</span>
-                <p class="actions">
-                    <a class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</a>
-<!--                   <div class="accessibility-warning">This file may not be suitable for users of assistive technology. <a href="#">Request a different format.</a>
-                  </div> -->
-                </p>
-              </div>
-            </section>
+              <ul class="list-bullet" style="overflow:hidden;padding-top:5px;">
+                <li>If you want to keep a copy you should view &amp; save the PDF</li>
+                <li>If you need a VAT reciept you should print it out</li>
+              </ul>
           </div>
 
 
@@ -202,16 +195,14 @@
               <p class="font-xsmall">VAT registration number:<br> GB 8888 181 53</p>
             </div>
 
-            <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
-<!--             <p>
-              <b class="bold-small">You'll only be able to view this information once</b><br>
-              If you want to keep a copy you can print it out
-            </p> -->
+            <div class="column-two-thirds printhidden clear">
 
-            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print VAT Receipt</a>
+
+            <a class="button" style="background-color:#BFC1C3; color:black;" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print VAT receipt</a>
+            </div>
 
           </div>
-
+<br>
 
 
           <div class="panel-indent">
@@ -286,7 +277,7 @@
     <ul>
       <li><a href="/drv-17/terms">Terms &amp; Conditions</a></li>
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
-      <li>If you need help using the service you can call Land Registry on 0300 006 0411. If you need to speak to someone in Welsh call 0300 006 0422.</li>
+      
     </ul>
   {{/footerSupportLinks}}
 
