@@ -3,6 +3,9 @@
   "description": "GOVUK prototyping app in Express",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "node start.js"
+  },
   "engines": {
     "node": "4.x"
   },
