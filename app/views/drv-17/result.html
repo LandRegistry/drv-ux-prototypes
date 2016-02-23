@@ -53,8 +53,25 @@
             <p class="">You’ll get a summary &amp; title register of the information Land Registry holds for this property title:</p>
 
             <dl class="definition-tabular expand-top-half">
+              {{#caution}}
+                <dt class="bold-small">Caution</dt>
+                <dd>
+                  <details class="font-xsmall">
+                    <summary class="bold-small">Caution against first registration</summary>
+                    <div class="panel" style="margin-bottom:2em;">
+
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                    </div>
+                  </details>
+                </dd>
+              {{/caution}}
+
               <dt>Address</dt>
-              <dd><span class="heading-small">
+              <dd><span class="heading-medium">
                 {{#address}}
                 {{.}}<br>
                 {{/address}}
@@ -66,13 +83,6 @@
                 <details class="font-xsmall">
                   <summary class="bold-small">{{tenure}}</summary>
                   <div class="panel" style="margin-bottom:2em;">
-                  {{#tenure_caution}}
-                    <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
-
-                    <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
-
-                    <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
-                  {{/tenure_caution}}
 
                   {{#tenure_leasehold}}
                     <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
@@ -95,7 +105,12 @@
 
                 <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
               </dd>
+
             </dl>
+
+
+
+            <br>
 
             <h2 class="heading-medium collapse-top">The summary and title register include</h2>
 
@@ -122,7 +137,7 @@
             </ul>
 
 
-<!-- 
+<!--
 
             <ul class="list-bullet">
               {{#owner}}

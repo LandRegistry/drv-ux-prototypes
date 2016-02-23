@@ -2,9 +2,10 @@ var seedrandom = require('seedrandom');
 var moment = require('moment');
 var yaml = require('yamljs');
 var fs = require('fs');
+var path = require('path');
 
-module.exports = function() {
-  var results = yaml.parse(fs.readFileSync('app/results.yaml', 'utf8'));
+module.exports = function(version) {
+  var results = yaml.parse(fs.readFileSync(path.join(__dirname, 'results.yaml'), 'utf8'));
 
   results.forEach(function(result, index) {
 
@@ -19,11 +20,6 @@ module.exports = function() {
     result.id = index + 1;
 
     switch(result.tenure) {
-      case 'Caution against first registration':
-        result.tenure_caution = true;
-
-        break;
-
       case 'Leasehold':
         result.owner_label = 'leaseholder';
         result.tenure_leasehold = true;
