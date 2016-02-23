@@ -20,11 +20,6 @@ module.exports = function(version) {
     result.id = index + 1;
 
     switch(result.tenure) {
-      case 'Caution against first registration':
-        result.tenure_caution = true;
-
-        break;
-
       case 'Leasehold':
         result.owner_label = 'leaseholder';
         result.tenure_leasehold = true;

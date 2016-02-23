@@ -51,6 +51,23 @@
           <hr class="collapse-top">
 
           <dl class="definition-tabular collapse-top">
+            {{#caution}}
+              <dt class="bold-small">Caution</dt>
+              <dd>
+                <details class="font-xsmall">
+                  <summary class="bold-small">Caution against first registration</summary>
+                  <div class="panel" style="margin-bottom:2em;">
+
+                    <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                    <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                    <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                  </div>
+                </details>
+              </dd>
+            {{/caution}}
+
             <dt>Address</dt>
             <dd><span class="heading-medium">
               {{#address}}
@@ -110,21 +127,21 @@
 
           </div> -->
 
-         
+
           <!-- from http://property-register-prototype.herokuapp.com/digital-register/journeys/v6/complete-page?# -->
           <div class="govspeak printhidden" style="margin-bottom:30px;">
           <h2 class="heading-medium">Title register for {{title_number}}</h2>
             <section class="attachment embedded">
               <div class="document-link register">
-                <img src="/public/images/icon-register-document.png"> 
+                <img src="/public/images/icon-register-document.png">
                 <!-- <a href="#" class="title">Title register</a> -->
                 <span class="title">Title register</span>
                 <span class="footnote">PDF document, 169kb</span>
-                <p class="actions">                  
-                    <a class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</a>               
+                <p class="actions">
+                    <a class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</a>
 <!--                   <div class="accessibility-warning">This file may not be suitable for users of assistive technology. <a href="#">Request a different format.</a>
                   </div> -->
-                </p>                
+                </p>
               </div>
             </section>
           </div>
@@ -153,7 +170,7 @@
 
           <hr>
 
-              
+
 
           <h2 class="heading-medium">VAT receipt</h2>
 

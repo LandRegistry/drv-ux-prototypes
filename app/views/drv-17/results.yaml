@@ -144,7 +144,8 @@
     - Land east of 6 Pretend Street
     - Trumpton
     - TR15 5RZ
-  tenure: Caution against first registration
+  tenure: Freehold
+  caution: true
   title_number: FAKE943389
   has_data: true
 
@@ -327,7 +328,8 @@
     - Land east of 21 Pretend Street
     - Trumpton
     - TR15 5RZ
-  tenure: Caution against first registration
+  tenure: Leasehold
+  caution: true
   title_number: FAKE967630
   has_data: true
 
