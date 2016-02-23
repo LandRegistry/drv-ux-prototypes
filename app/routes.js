@@ -60,7 +60,7 @@ router.get('/drv-:version/search/:page', function (req, res) {
   var rpp = 25;
 
   var start = (req.params.page - 1) * rpp;
-  var results = require('./results')();
+  var results = require('./views/drv-' + req.params.version + '/results')();
 
   var page = parseInt(req.params.page);
 
@@ -80,7 +80,7 @@ router.get('/drv-:version/search/:page', function (req, res) {
 router.get('/drv-:version/result/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
-  var results = require('./results')();
+  var results = require('./views/drv-' + req.params.version + '/results')();
 
   res.render('drv-' + req.params.version + '/result', {
     'id': id,
@@ -95,7 +95,7 @@ router.get('/drv-:version/result/:id', function (req, res) {
 router.get('/drv-:version/confirm/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
-  var results = require('./results')();
+  var results = require('./views/drv-' + req.params.version + '/results')();
 
   res.render('drv-' + req.params.version + '/confirm', {
     'id': id,
@@ -110,7 +110,7 @@ router.get('/drv-:version/confirm/:id', function (req, res) {
 router.get('/drv-:version/summary/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
-  var results = require('./results')();
+  var results = require('./views/drv-' + req.params.version + '/results')();
 
   res.render('drv-' + req.params.version + '/summary', {
     'id': id,
