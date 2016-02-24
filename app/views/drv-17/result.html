@@ -78,6 +78,7 @@
               </span></dd>
               <dt>Title number</dt>
               <dd class="bold-small">{{title_number}}</dd>
+              {{^caution}}
               <dt>Tenure type</dt>
               <dd>
                 <details class="font-xsmall">
@@ -105,6 +106,7 @@
 
                 <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
               </dd>
+              {{/caution}}
 
             </dl>
 
@@ -114,34 +116,9 @@
 
             <h2 class="heading-medium collapse-top">The summary and title register include</h2>
 
-<!--             <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives information from the full register in a clearer, simpler format. It includes:</p> -->
             <ul class="list-bullet">
 
 <!--               <li>title number</li> -->
-              {{#owner}}
-              <li>current owner’s name and address</li>
-              {{/owner}}
-
-              {{#leaseholder}}
-                <li>current leaseholder’s name and address</li>
-              {{/leaseholder}}
-
-              <li>what was paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
-
-              {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
-              <li>if there is a mortgage on the property, the lender’s name and  address</li>
-<!--             </ul>
-
-            <p>The <strong class="bold-small">title register</strong> is available to download and keep. It has the full text from the register, including:</p>
-            <ul class="list-bullet"> -->
-              <li>any rights of way, restrictions and covenants</li>
-              <li>whether a mortgage on it has been 'discharged', eg paid off</li>
-            </ul>
-
-
-<!--
-
-            <ul class="list-bullet">
               {{#owner}}
                 <li>current owner’s name and address</li>
               {{/owner}}
@@ -150,11 +127,21 @@
                 <li>current leaseholder’s name and address</li>
               {{/leaseholder}}
 
-              <li>what they paid for the property – you won’t get this if it was bought before April 2000, if no money changed hands, or if the owner didn’t buy it outright</li>
-
               {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
-              <li>if there is a mortgage on the property, the lender’s name and  address</li>
-            </ul> -->
+
+              {{^caution}}
+                <li>what was paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
+                <li>if there is a mortgage on the property, the lender’s name and  address</li>
+                <li>any rights of way, restrictions and covenants</li>
+                <li>whether a mortgage on it has been 'discharged', eg paid off</li>
+              {{/caution}}
+              {{#caution}}
+                <li>the name of the cautioner and their address</li>
+                <li>information about the cautioner’s claim</li>
+              {{/caution}}
+            </ul>
+
+
             <div class="notice" style="background-color:#fff2d3;padding: 25px">
               <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
               <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
