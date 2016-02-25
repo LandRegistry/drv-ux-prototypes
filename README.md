@@ -42,6 +42,13 @@ This will install extra code that the govuk prototype kit needs.
 node start.js
 ```
 
+or
+
+
+```
+npm start
+```
+
 Go to [localhost:3000](http://localhost:3000) in your browser.
 
 If you want to view multiple prototypes at the same time you can give them unique port numbers, like this:
