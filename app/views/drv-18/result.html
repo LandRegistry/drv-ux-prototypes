@@ -45,18 +45,18 @@
               {{/address}}
             </h2>
 
-            <h3 class="heading-medium">Why isn't there any information on this property?</h3>
-            <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p>
+<!--             <h3 class="heading-medium">Why isn't there any information on this property?</h3>
+            <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p> -->
           {{/empty}}
 
           {{#has_data}}
             <!-- 1. Start Title information (number, address and tenure information) -->
             <h1 class="heading-large collapse-top">Confirm your order</h1>
             <div style="width:66%;float:left;">
-            <p class="">You’ll get a summary &amp; title register of the information Land Registry holds for this property title:</p>
+            <p class="">You will get a summary of the information Land Registry holds for this property title:</p>
 
             <dl class="definition-tabular expand-top-half">
-              {{#caution}}
+<!--               {{#caution}}
                 <dt class="bold-small">Caution</dt>
                 <dd>
                   <details class="font-xsmall">
@@ -71,7 +71,7 @@
                     </div>
                   </details>
                 </dd>
-              {{/caution}}
+              {{/caution}} -->
 
               <dt>Address</dt>
               <dd><span class="heading-medium">
@@ -80,36 +80,36 @@
                 {{/address}}
               </span></dd>
               <dt>Title number</dt>
-              <dd class="bold-small">{{title_number}}</dd>
-              {{^caution}}
-              <dt>Tenure type</dt>
-              <dd>
-                <details class="font-xsmall">
-                  <summary class="bold-small">{{tenure}}</summary>
-                  <div class="panel" style="margin-bottom:2em;">
+                <dd class="bold-small">{{title_number}}</dd>
+                <dt>Tenure type</dt>
+                <dd>
+                  <b class="bold-small">{{tenure}}</b>
 
-                  {{#tenure_leasehold}}
-                    <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
-                    <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
-                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
-                    <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+                  <details class="font-xsmall">
+                    <summary>What does this mean?</summary>
+                    <div class="panel" style="margin-bottom:2em;">
 
-                    <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
-                  {{/tenure_leasehold}}
+                    {{#tenure_leasehold}}
+                      <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
+                      <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
+                      <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
+                      <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
 
-                  {{#tenure_freehold}}
-                    <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
-                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
-                    <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
-                    <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                      <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
+                    {{/tenure_leasehold}}
 
-                  {{/tenure_freehold}}
-                  </div>
+                    {{#tenure_freehold}}
+                      <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
+                      <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                      <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
+                      <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+
+                    {{/tenure_freehold}}
+                    </div>
                 </details>
 
                 <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
               </dd>
-              {{/caution}}
 
             </dl>
 
@@ -117,7 +117,7 @@
 
             <br>
 
-            <h2 class="heading-medium collapse-top">The summary and title register include</h2>
+            <h2 class="heading-medium collapse-top">The summary will tell you</h2>
 
             <ul class="list-bullet">
 
@@ -152,7 +152,7 @@
             </div>
 
 
-              <h2 class="heading-medium">The summary and title register costs £3 <span class="font-small">(£2.50+VAT)</span></h2>
+              <h2 class="heading-medium">The summary costs £3 <span class="font-small">(£2.50+VAT)</span></h2>
               <p>You can pay by credit or debit card.</p>
               <p>You need to accept the following terms  to continue.</p>
               <div class="form-group expand-bottom-half" id="right_to_cancel_group">
@@ -165,7 +165,7 @@
 
               <form action="../worldpay_1" method="POST" onsubmit="return checkRightToCancel()">
                 <input name="id" value="{{id}}" type="hidden" />
-                <input type="submit" style="margin:10px 0" class="button" value="Buy summary and title register">
+                <input type="submit" style="margin:10px 0" class="button" value="Buy title summary">
               </form>
               <p><span class="collapse-bottom font-xsmall"><small>for &pound;3 inc VAT</small></small></p>
             <!-- </div> -->
