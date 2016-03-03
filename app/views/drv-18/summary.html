@@ -22,15 +22,9 @@
       <!-- breadcrumb & sign out row . Hide for Print View -->
       <div class="grid-row printhidden">
         <div class="column-two-thirds">
-          <div id="global-breadcrumb">
-            <nav role="navigation">
-              <ol>
-                <li><a href="../search">Search the land and property register</a></li>
-                <li><a href="../search/1">Search results</a></li>
-                <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
-              </ol>
-            </nav>
-          </div>
+          <p class="expand-top-half">
+            <span class="back-link">◀ </span><a href="../search/1">Back to search results</a>
+          </p>
         </div>
         <div class="column-third">
           <div class="account">
@@ -118,7 +112,7 @@
           </dl>
 
        
-          <h2 class="heading-large printhidden">Title register for {{title_number}}</h2>
+<!--           <h2 class="heading-large printhidden">Title register for {{title_number}}</h2>
           <div class="panel-indent document-link printhidden" style="margin-bottom:30px;">
             <a href="/public/downloads/pdf/register-new-transport.pdf">                
               <img src="/public/images/icon-register-document.png">
@@ -126,17 +120,17 @@
               <span class="footnote">PDF document, 169kb</span><br>
               <span class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</span>
             </a>
-          </div>
+          </div> -->
 
 
-          <div class="notice printhidden" style="background-color:#fff2d3;padding:25px;margin-bottom:30px;padding-bottom:5px;">
-            <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right:15px;" />
-            <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong></p>
+          <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
+            <p>
+              <b class="bold-small">You'll only be able to view this information once</b><br>
+              If you want to keep a copy you can print it out
+            </p>
 
-              <ul class="list-bullet" style="overflow:hidden;padding-top:5px;">
-                <li>If you want to keep a copy you should view &amp; save the PDF</li>
-                <li>If you need a VAT receipt you should print it out</li>
-              </ul>
+            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print this page</a>
+
           </div>
 
 
@@ -157,12 +151,11 @@
           <div class="column-two-thirds">
 
           <div class="printhidden">
-            <h2 class="heading-medium collapse-top">What did you think of this service?</h2>
+            <h2 class="heading-medium">What did you think of this service?</h2>
             <p><a rel="external" href="/drv-18/feedback">Please give us your feedback</a> (takes 30 seconds). <br>This is a trial service and your feedback will help us improve it.</p>
           </div>
 
           <hr>
-
 
 
           <h2 class="heading-medium">VAT receipt</h2>
@@ -193,12 +186,6 @@
             <div class="column-one-thirds">
               <p class="font-xsmall">Land Registry<br>Trafalgar house<br>1 Bedford Park<br>Croydon<br>CR0 2AQ</p>
               <p class="font-xsmall">VAT registration number:<br> GB 8888 181 53</p>
-            </div>
-
-            <div class="column-two-thirds printhidden clear">
-
-
-            <a class="button" style="background-color:#BFC1C3; color:black;" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Print VAT receipt</a>
             </div>
 
           </div>
