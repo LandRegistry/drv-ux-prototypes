@@ -1,0 +1,77 @@
+{{<layout}}
+
+  {{$pageTitle}}Send Feedback - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <!-- 1. Start Title information (number, address and tenure information) -->
+          <h1 class="heading-large">Send Feedback</h1>
+
+          <form method="get" action="search" id="feedback-form">
+
+            <fieldset class="form-group">
+              <legend class="bold-small">How would you rate your experience with this service?</legend>
+              <label for="radio-1">
+                <input id="radio-1" type="radio" name="radio-group" value="Very satisfied">
+                Very satisfied
+              </label><br>
+
+              <label for="radio-2">
+                <input id="radio-2" type="radio" name="radio-group" value="Satisfied">
+                Satisfied
+              </label><br>
+
+              <label for="radio-3">
+                <input id="radio-3" type="radio" name="radio-group" value="Neither satisfied nor dissastisfied">
+                Neither satisfied nor dissastisfied
+              </label><br>
+
+              <label for="radio-4">
+                <input id="radio-4" type="radio" name="radio-group" value="Dissatisfied">
+                Dissatisfied
+              </label><br>
+
+              <label for="radio-5">
+                <input id="radio-5" type="radio" name="radio-group" value="Very dissatisfied">
+                Very dissatisfied
+              </label><br>
+            </fieldset>
+
+            <div class="form-group">
+              <label class="form-label-bold" for="feedback">Please take a moment to tell us about your experience, what worked and what didn't.</label>
+              <textarea class="form-control" style="width: 100%" rows="10" id="feedback" name="feedback"></textarea>
+              <span class="form-hint">2000 characters max</span>
+            </div>
+
+            <p>We are always working to improve this service. If you are happy to be contacted to give further feedback, please leave your email address.</p>
+
+            <div class="form-group">
+              <label class="form-label-bold" for="full-name">Your email address (optional)</label>
+              <input type="text" class="form-control" id="email">
+            </div>
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Send">
+            </div>
+
+          </form>
+
+
+        </div>
+      </div>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-18/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

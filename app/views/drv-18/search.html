@@ -1,0 +1,66 @@
+{{<layout}}
+
+  {{$pageTitle}}Search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This service is in private beta. Please give us your <a rel="external" href="/drv-18/feedback">Feedback</a>.</span>
+        </p>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-large">Search the land and property register</h1>
+          <p>You’ll get a summary and title register. This costs £3 inc VAT. </p>
+          <p>The summary shows, in a clear format, who owns the property, what they paid for it and whether there’s a mortgage on it. The title register is the full text of the register, in PDF format.</p>
+          <p>If you also need a title plan, <a rel="external" href="https://eservices.landregistry.gov.uk/wps/portal/Property_Search">use the Land Registry 'Find a Property' service</a>.</p>
+
+
+          <!--ul class="bulleted-list">
+            <li>who owns the property</li>
+            <li>what they paid for it</li>
+            <li>if there’s a mortgage on it</li>
+          </ul-->
+          <!--p class="lede">You can get information about registered property or land in England and Wales, even if you don’t own it.</p-->
+
+          <label for="search_term" class="form-label-bold">Enter a postcode</label>
+          <input type="text" class="form-control" name="search_term" id="search_term" required autofocus="autofocus">
+        <br>
+          <details style="margin-top:0.5em">
+            <summary>Don't know the postcode?</summary>
+
+            <!-- pondering left marging like a panel-indent would have - text lining vertically -->
+            <!-- <div class="panel" style="margin-top:15px; margin-left:20px;"> -->
+            <div class="panel" style="margin-top:15px;">
+              <img style="vertical-align: middle;margin-bottom:10px" src="/public/images/beta.png" alt="This is a trial service" />
+                <p>This is a trial service. You can try searching by street name but it may not work properly.</p>
+                <h3 class="heading-small">Find a property without a postcode</h3>
+              <p>Use the Land Registry 'Find a Property' service to <a rel="external" href="https://eservices.landregistry.gov.uk/www/wps/portal/!ut/p/b1/hc7LCoJQEAbgZ_EBYuZcsmmphRqllpfSswlDiW4aIUU9fdquwprdwPf_M6AgZUNiJIgIIQFVZtfdNqt3VZkd213pa8FJMia5Q0If4KRv2YJFfYFSNCD9AWz2L7-CBOU63NPZvdfJ7DG6RvvHgnvjGL3IRXcT37w8mefLIDYN0-hZwwuERdnk1Ee1bxk4EaY_tcWCI-pf4P028T-g_f0FsGMMBM-pTgWkDRt09dBSwkkdZ_IQOLetpj0BA4XHmQ!!/dl4/d5/L0lDU0lKSmdwcGlRb0tVUW9LVVEhL29Gb2dBRUlRaGpFQ1VJZ0FJQUl5RkFNaHdVaFM0SldsYTRvIS80RzNhRDJnanZ5aERVd3BNaFFqVW81Q2pHcHhBL1o3XzMyODQxMTQySDgzNjcwSTVGRzMxVDUzOFY0LzAvMzE1MTU2MzkyMzA4L3NwZl9BY3Rpb25OYW1lL3NwZl9BY3Rpb25MaXN0ZW5lci9zcGZfc3RydXRzQWN0aW9uLyEyZkRldGFpbGVkRW5xdWlyeUluaXQuZG8!/">find a property by street address, title number, or using a map</a>.
+            </div>
+          </details>
+
+
+  <br/>
+
+          <div class="form-group">
+            <a class="button" href="search/1">Search</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/drv-18/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}
