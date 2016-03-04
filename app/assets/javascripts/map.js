@@ -28,7 +28,7 @@ window.onload = function() {
     options = {
       continuousWorld: true,
       worldCopyJump: false,
-      minZoom: 15,
+      minZoom: 5,
       maxZoom: 19,
       // controls
       dragging: false,
@@ -39,7 +39,7 @@ window.onload = function() {
       keyboard: false,
       tap: false,
       zoomControl: true,
-      attributionControl: false
+      attributionControl: true
     };
 
     // set up the map
@@ -47,7 +47,9 @@ window.onload = function() {
 
     // create the tile layer with correct attribution
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osm = new L.TileLayer(osmUrl);
+    var osm = new L.TileLayer(osmUrl, {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    });
     map.addLayer(osm);
 
     //Add a scale control to the map
