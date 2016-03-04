@@ -10,7 +10,7 @@
           <!-- 1. Start Title information (number, address and tenure information) -->
           <h1 class="heading-large">Send Feedback</h1>
 
-          <form method="get" action="search" id="feedback-form">
+          <form method="get" action="start" id="feedback-form">
 
             <fieldset class="form-group">
               <legend class="bold-small">How would you rate your experience with this service?</legend>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="form-group">
-              <input type="submit" class="button" value="Send">
+              <input onClick="history.go(-1); return false;" type="submit" class="button" value="Send">
             </div>
 
           </form>
