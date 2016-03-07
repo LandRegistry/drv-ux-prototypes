@@ -424,3 +424,8 @@ dl {
     text-decoration: underline;
   }
 }
+
+.open-government-licence {
+  // hide OGL licence in footer
+  display:none;
+}
