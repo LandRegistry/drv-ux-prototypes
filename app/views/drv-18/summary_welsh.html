@@ -20,29 +20,29 @@
       </div>
 
       <!-- breadcrumb & sign out row . Hide for Print View -->
-<!--       <div class="grid-row printhidden">
+      <div class="grid-row printhidden">
         <div class="column-two-thirds">
           <p class="expand-top-half">
-            <span class="back-link"></span><a href="../search">Search for another title using this service</a>
+            <span class="back-link">◀ </span><a class="back-link" href="../search">Search for another title</a>
           </p>
         </div>
         <div class="column-third">
           <div class="account">
-            <span class="font-xsmall">English | <a href="#">Cymraeg</a></span>
+            <span class="font-xsmall"><a href="../summary/{{id}}">English</a> | Cymraeg</span>
           </div>
         </div>
-      </div> -->
+      </div>
       <!-- end Breadcrumbs-->
 
       <!-- start main summary content-->
       {{#result}}
         <div>
-          <h1 class="heading-large">Crynodeb o deitl {{title_number}}</h1>
+          <h1 class="heading-large collapse-top">Crynodeb o deitl {{title_number}}</h1>
           <p class="font-xsmall">Newidiwyd y teitl hwn ddiwethaf ar <b>20 October 2015</b> am <b>11:59:18</b></p>
         </div>
 
         <div style="width:66%;float:left;">
-          <hr class="collapse-top">
+          <!-- <hr class="collapse-top"> -->
 
           <dl class="definition-tabular collapse-top">
             {{#caution}}
@@ -122,7 +122,7 @@
 
        
 <!--           <h2 class="heading-large printhidden">Title register for {{title_number}}</h2>
-          <div class="panel-indent document-link printhidden" style="margin-bottom:30px;">
+          <div class="panel document-link printhidden" style="margin-bottom:30px;">
             <a href="/public/downloads/pdf/register-new-transport.pdf">                
               <img src="/public/images/icon-register-document.png">
               <h3 class="title">Title register</h3>
@@ -270,12 +270,12 @@
   {{$footerSupportLinks}}
     <ul style="margin: 0.1em 0 0 0;">
       <li><a href="/drv-18/terms">Terms &amp; Conditions</a></li>
-      <li>
+<!--       <li>
         <a id="butEnglish" title="Click to view this page in English" href="../summary/{{id}}">English</a>
       </li>
       <li>
         <a id="butWelsh" title="Cliciwch i weld y dudalen hwn yn y Gymraeg" href="../summary_welsh/{{id}}">Welsh</a>
-      </li>
+      </li> -->
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
       
     </ul>

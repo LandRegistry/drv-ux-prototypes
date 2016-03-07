@@ -429,3 +429,7 @@ dl {
   // hide OGL licence in footer
   display:none;
 }
+
+.leaflet-container {
+  touch-action: auto;
+}
