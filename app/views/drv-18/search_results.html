@@ -112,25 +112,30 @@
 
           </ol>
 
-          <div class="pagination-prev-next">
+          <nav class="pagination-prev-next">
             <ul>
               {{#prev}}
-                <li class="previous-page">
+                <li class="previous-page" role="navigation" aria-label="Pagination">
                  <a href="{{prev}}">
-                   <span class="pagination-label">Previous <span class="visuallyhidden">page</span></span>
+                   <span class="pagination-label">Previous page</span>
+                   <span>{{prev}} of {{pages}}</span>
                  </a>
                </li>
               {{/prev}}
 
+              {{#next}}
               <li class="next-page">
                 <a href="{{next}}">
-                  <span class="pagination-label">Next <span class="visuallyhidden">page</span></span>
+                  <span class="pagination-label">Next page</span>
+                  <span>{{next}} of {{pages}}</span>
                 </a>
               </li>
+              {{/next}}
             </ul>
-          </div>
-          <div id="pagination" style="text-align: center">Page 1 of 2</div>
-        </div>
+          </nav>
+          <!-- <div id="pagination" style="text-align: center">Page 1 of 2</div> -->
+
+        </div> <!-- end column two thirds -->
 
         <div class="column-third">
           <h2 style="border-top: 10px solid #005ea5;padding-top:25px;" class="heading-medium">Help finding the right property</h2>
@@ -147,7 +152,7 @@
   {{/content}}
 
   {{$footerSupportLinks}}
-    <ul>
+    <ul style="margin: 0.1em 0 0 0;">
       <li><a href="/drv-18/terms">Terms &amp; Conditions</a></li>
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
       

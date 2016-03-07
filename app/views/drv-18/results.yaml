@@ -429,6 +429,66 @@
     - TR15 5RZ
   has_data: true
   tenure: Freehold
-  title_number: FAKE118102
+  title_number: FAKE128032
   owner: Fred Smith
   date: 18 February 1984
+
+-
+  address:
+    - 30 Pretend Arches
+    - Trumpton
+    - TR15 5RZ
+  address_notes:
+    - Only the airspace within this arch, excluding the structure of the arch and space above and below, is included in the title
+  has_data: true
+  tenure: Leasehold
+  title_number: FAKE118102
+  leaseholder: Alice Smith
+  lease_term: 125
+  date: 11 January 1993
+
+-
+  address:
+    - Advertising Hoarding at 31 Pretend Street
+    - Trumpton
+    - TR15 5RZ
+  has_data: true
+  tenure: Leasehold
+  title_number: FAKE200232
+  leaseholder: Colin Jones
+  lease_term: 999
+  date: 28 March 2001
+
+-
+  address:
+    - a gable wall
+    - 32 Pretend Arches
+    - Trumpton
+    - TR15 5RZ
+  has_data: true
+  tenure: Leasehold
+  title_number: FAKE216567
+  leaseholder: Maggie Mead
+  lease_term: 99
+  date: 30 October 1997
+
+-
+  address:
+    - foreshore and bed of the river Mersey
+    - on the west side of Princes Dock
+    - Liverpool
+  address_notes:
+    - The red line between points A and B (“the red line”) on the title plan is the landward boundary of the land in the title being the land between the red line and the centre of the River Mersey.
+    - Where the red line follows the line of “mean high water” and “mean low water”, as shown on the specific Ordnance Survey map which was made available to HM Land Registry when the title plan was created on first registration as indicated on the title plan, the red line is subject to change to accord with the fluctuations in the line of “Mean High Water” and “Mean Low Water” from time to time.
+    - The landing stage and supports coloured blue on the title plan are not included in the title
+  has_data: true
+  tenure: Freehold
+  title_number: FAKE118102
+  owner: Sam Brinton
+  owner_address:
+    - 14 Candlewick green
+    - London
+    - NW1 2BT
+  date: 3 July 1973
+
+
