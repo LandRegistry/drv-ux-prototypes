@@ -148,7 +148,7 @@
   tenure: Freehold
   caution: true
   title_number: FAKE943389
-  has_data: false
+  has_data: true
 
 -
   address:
@@ -332,7 +332,7 @@
   tenure: Leasehold
   caution: true
   title_number: FAKE967630
-  has_data: false
+  has_data: true
 
 -
   address:
