@@ -59,7 +59,7 @@
 
             <dl class="definition-tabular expand-top-half">
               {{#caution}}
-                <dt class="bold-small">Caution</dt>
+<!--                 <dt class="bold-small">Caution</dt>
                 <dd>
                   <details class="font-xsmall">
                     <summary class="bold-small">What does Caution mean?</summary>
@@ -72,7 +72,7 @@
                       <p>Registration has only been compulsory throughout England and Wales since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
                     </div>
                   </details>
-                </dd>
+                </dd> -->
               {{/caution}}
 
               <dt>Address</dt>
@@ -148,11 +148,39 @@
 
             <br>
 
-            <h2 class="heading-medium collapse-top">The summary will tell you</h2>
-
-<!--               <li>title number</li> -->
+            {{#caution}}
+            <!-- <h2 class="heading-medium collapse-top">Land Registry don't have a record of who owns this property</h2> -->
+            <h2 class="heading-medium collapse-top">Land Registry does not know the owner of this property</h2>
               
+              <ul class="list-bullet">
+                <li>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property.</li>
+                <li><b style="font-weight:600;">The summary will give you the cautioner's name and address</b>.</li>
+              </ul>
+
+              
+                <dt class="font-small">This is known as a caution against first registration</dt>
+                <dd>
+                <!-- <b class="bold-small">Caution against first registration</b>&nbsp; -->
+                <details class="font-xsmall">
+                    <summary class="font-xsmall">More about cautions against first registration</summary>
+                    <div class="panel-indent" style="margin-bottom:2em;">
+
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                    </div>
+                  </details>
+                </dd>
+              <br>
+              {{/caution}}
+
+
+
               {{^caution}}
+                <h2 class="heading-medium collapse-top">The summary will tell you</h2>
+              
                 <ul class="list-bullet">
                   {{#owner}}
                     <li>current owner’s name and address</li>
@@ -166,25 +194,21 @@
 
                   <li>what was paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
                   <li>if there is a mortgage on the property, the lender’s name and  address</li>
-                  <!-- <li>any rights of way, restrictions and covenants</li> -->
-                  <!-- <li>whether a mortgage on it has been 'discharged', eg paid off</li> -->
                 </ul>
               {{/caution}}
 
-              {{#caution}}
+<!--               {{#caution}}
                 <ul class="list-bullet">
                   <li>the name and address of the person who has registered a right or interest in the property (&lsquo;the cautioner&rsquo;)</li>
                   <li>a description of the land it applies to</li>
                 </ul>
                 <h3 class="heading-small collapse-top">Because this property or land is unregistered, the summary will not tell you</h3>
-                <!-- <h3 class="heading-small collapse-top">Because we don&rsquo;t have a record of the owner, the summary will not tell you</h3> -->
-                <!-- <h3 class="heading-small collapse-top">Because this property hasn’t been registered yet, the summary will not tell you</h3> -->
                 <ul class="list-bullet">
                   <li>who the owner is</li>
                   <li>what they paid for it</li>
                   <li>whether there is a mortgage on it</li>
                 </ul>
-              {{/caution}}
+              {{/caution}} -->
             
 
 
@@ -307,6 +331,7 @@
 
   {{$footerSupportLinks}}
     <ul style="margin: 0.1em 0 0 0;">
+      <li><a href="/drv-18/cookies">Cookies</a></li>
       <li><a href="/drv-18/terms">Terms &amp; Conditions</a></li>
       <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
       
