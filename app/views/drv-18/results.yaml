@@ -148,7 +148,12 @@
   tenure: Freehold
   caution: true
   title_number: FAKE943389
-  has_data: false
+  has_data: true
+  cautioner: Sam Brinton
+  cautioner_address:
+    - 14 Candlewick green
+    - London
+    - NW1 2BT
 
 -
   address:
@@ -332,7 +337,12 @@
   tenure: Leasehold
   caution: true
   title_number: FAKE967630
-  has_data: false
+  has_data: true
+  cautioner: Sam Brinton
+  cautioner_address:
+    - 14 Candlewick green
+    - London
+    - NW1 2BT
 
 -
   address:

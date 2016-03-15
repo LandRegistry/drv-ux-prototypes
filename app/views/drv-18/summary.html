@@ -50,7 +50,7 @@
               <dd>
                 <details class="font-xsmall">
                   <summary class="bold-small">Caution against first registration</summary>
-                  <div class="panel" style="margin-bottom:2em;">
+                  <div class="panel-indent" style="margin-bottom:2em;">
 
                     <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
 
@@ -86,6 +86,14 @@
                 {{/owner_address}}
               </dd>
             {{/owner}}
+            {{#caution}}
+              <dt style="text-transform: capitalize">Cautioner</dt>
+              <dd><span class="heading-small">{{cautioner}}</span><br>
+                {{#cautioner_address}}
+                  {{.}}<br>
+                {{/cautioner_address}}
+              </dd>
+            {{/caution}}
 
             {{#leaseholder}}
               <dt style="text-transform: capitalize">Leaseholder</dt>

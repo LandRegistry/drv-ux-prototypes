@@ -58,22 +58,22 @@
             
 
             <dl class="definition-tabular expand-top-half">
-<!--               {{#caution}}
+              {{#caution}}
                 <dt class="bold-small">Caution</dt>
                 <dd>
                   <details class="font-xsmall">
                     <summary class="bold-small">What does Caution mean?</summary>
-                    <div class="panel" style="margin-bottom:2em;">
+                    <div class="panel-indent" style="margin-bottom:2em;">
 
                       <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
 
-                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+                      <p>Someone other than the owner (known as the &lsquo;cautioner&rsquo;) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get the cautioner&rsquo;s name and address from this service.</p>
 
-                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                      <p>Registration has only been compulsory throughout England and Wales since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
                     </div>
                   </details>
                 </dd>
-              {{/caution}} -->
+              {{/caution}}
 
               <dt>Address</dt>
               <dd>
@@ -91,32 +91,52 @@
                 </span>
               </dd>
               <dt>Title number</dt>
-                <dd class="bold-small">{{title_number}}</dd>
-                <dt>Tenure type</dt>
-                <dd>
-                  <b class="bold-small">{{tenure}}</b>&nbsp;
+              <dd class="bold-small">{{title_number}}</dd>
 
-                  <details class="font-xsmall" style="display:inline;">
-                    <summary>What does this mean?</summary>
+<!--               {{#caution}}
+                <dt class="bold-small">Caution</dt>
+                <dd>
+                <b class="bold-small">Caution against first registration</b>&nbsp;
+                <details class="font-xsmall">
+                    <summary class="font-xsmall">What does this mean?</summary>
                     <div class="panel-indent" style="margin-bottom:2em;">
 
-                    {{#tenure_leasehold}}
-                      <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
-                      <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
-                      <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
-                      <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
 
-                      <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
-                    {{/tenure_leasehold}}
+                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
 
-                    {{#tenure_freehold}}
-                      <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
-                      <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
-                      <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
-                      <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
-
-                    {{/tenure_freehold}}
+                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
                     </div>
+                  </details>
+                </dd>
+              {{/caution}} -->
+
+
+              <dt>Tenure type</dt>
+              <dd>
+                <b class="bold-small">{{tenure}}</b>&nbsp;
+
+                <details class="font-xsmall">
+                  <summary>What does this mean?</summary>
+                  <div class="panel-indent" style="margin-bottom:2em;">
+
+                  {{#tenure_leasehold}}
+                    <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
+                    <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
+                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
+                    <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+
+                    <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
+                  {{/tenure_leasehold}}
+
+                  {{#tenure_freehold}}
+                    <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
+                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                    <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
+                    <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+
+                  {{/tenure_freehold}}
+                  </div>
                 </details>
 
                 <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
@@ -130,30 +150,42 @@
 
             <h2 class="heading-medium collapse-top">The summary will tell you</h2>
 
-            <ul class="list-bullet">
-
 <!--               <li>title number</li> -->
-              {{#owner}}
-                <li>current owner’s name and address</li>
-              {{/owner}}
-
-              {{#leaseholder}}
-                <li>current leaseholder’s name and address</li>
-              {{/leaseholder}}
-
-              {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
-
+              
               {{^caution}}
-                <li>what was paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
-                <li>if there is a mortgage on the property, the lender’s name and  address</li>
-                <!-- <li>any rights of way, restrictions and covenants</li> -->
-                <!-- <li>whether a mortgage on it has been 'discharged', eg paid off</li> -->
+                <ul class="list-bullet">
+                  {{#owner}}
+                    <li>current owner’s name and address</li>
+                  {{/owner}}
+
+                  {{#leaseholder}}
+                    <li>current leaseholder’s name and address</li>
+                  {{/leaseholder}}
+
+                  {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
+
+                  <li>what was paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
+                  <li>if there is a mortgage on the property, the lender’s name and  address</li>
+                  <!-- <li>any rights of way, restrictions and covenants</li> -->
+                  <!-- <li>whether a mortgage on it has been 'discharged', eg paid off</li> -->
+                </ul>
               {{/caution}}
+
               {{#caution}}
-                <li>the name of the cautioner and their address</li>
-                <li>information about the cautioner’s claim</li>
+                <ul class="list-bullet">
+                  <li>the name and address of the person who has registered a right or interest in the property (&lsquo;the cautioner&rsquo;)</li>
+                  <li>a description of the land it applies to</li>
+                </ul>
+                <h3 class="heading-small collapse-top">Because this property or land is unregistered, the summary will not tell you</h3>
+                <!-- <h3 class="heading-small collapse-top">Because we don&rsquo;t have a record of the owner, the summary will not tell you</h3> -->
+                <!-- <h3 class="heading-small collapse-top">Because this property hasn’t been registered yet, the summary will not tell you</h3> -->
+                <ul class="list-bullet">
+                  <li>who the owner is</li>
+                  <li>what they paid for it</li>
+                  <li>whether there is a mortgage on it</li>
+                </ul>
               {{/caution}}
-            </ul>
+            
 
 
             <div class="notice" style="background-color:#fff2d3;padding: 25px">

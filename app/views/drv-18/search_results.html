@@ -56,6 +56,7 @@
                     <a href="/drv-18/result/{{id}}">{{address}}</a>
                   </h2>
 
+                  {{^caution}}
                   <div class="font-xsmall">
                     {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
 
@@ -67,19 +68,31 @@
                       <b class="bold-xsmall">{{tenure}}</b>
                     {{/tenure_freehold}}
                   </div>
+                  {{/caution}}
 
-<!--                   {{#caution}}
+                  {{#caution}}
+                    <div class="font-xsmall">
+                      {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
+
+                      {{#tenure_leasehold}}
+                        <b class="bold-xsmall">Caution against first registration - {{tenure}}</b>
+                      {{/tenure_leasehold}}
+
+                      {{#tenure_freehold}}
+                        <b class="bold-xsmall">Caution against first registration - {{tenure}}</b>
+                      {{/tenure_freehold}}
+                    </div>
                     <details class="font-xsmall">
-                      <summary>Caution against first registration</summary>
-                      <div class="panel" style="margin-bottom:2em;">
+                      <summary>What&rsquo;s this?</summary>
+                      <div class="panel-indent" style="margin-bottom:2em;">
                       <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
 
-                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+                      <p>Someone other than the owner (known as the &lsquo;cautioner&rsquo;) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get the cautioner&rsquo;s name and address from this service.</p>
 
-                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                      <p>Registration has only been compulsory throughout England and Wales since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
                       </div>
                     </details>
-                  {{/caution}} -->
+                  {{/caution}}
                 {{/has_data}}
 
                 {{#empty}}
@@ -88,7 +101,7 @@
                   </h2>
                   <div class="font-xsmall">
                     <span class="collapse-bottom">No title information found&nbsp;</span>
-                    <details style="display:inline;">
+                    <details>
                     <summary>Why not?</summary>
                     <div class="panel-indent" style="margin-bottom:2em;">
                       <p>This may be because:</p>
