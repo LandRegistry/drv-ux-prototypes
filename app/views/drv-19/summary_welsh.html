@@ -1,0 +1,285 @@
+{{<layout}}
+
+  {{$pageTitle}}Crynodeb o deitl {{title_number}} - view the land and property register{{/pageTitle}}
+
+{{$head}}
+  {{>includes/head}}
+  <!-- <link href="/public/stylesheets/download-documents.css" media="screen" rel="stylesheet" type="text/css" /> -->
+{{/head}}
+
+  {{$content}}
+
+
+    <main id="content" role="main">
+      <!-- beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This is a new service – your <a href="/drv-19/feedback">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+
+      <!-- breadcrumb & sign out row . Hide for Print View -->
+      <div class="grid-row printhidden">
+        <div class="column-two-thirds">
+          <p class="expand-top-half">
+            <span class="back-link">◀ </span><a class="back-link" href="../search">Search for another title</a>
+          </p>
+        </div>
+        <div class="column-third">
+          <div class="account">
+            <span class="font-xsmall"><a href="../summary/{{id}}">English</a> | Cymraeg</span>
+          </div>
+        </div>
+      </div>
+      <!-- end Breadcrumbs-->
+
+      <!-- start main summary content-->
+      {{#result}}
+        <div>
+          <h1 class="heading-large collapse-top">Crynodeb o deitl {{title_number}}</h1>
+          <p class="font-xsmall">Newidiwyd y teitl hwn ddiwethaf ar <b>20 October 2015</b> am <b>11:59:18</b></p>
+        </div>
+
+        <div style="width:66%;float:left;">
+          <!-- <hr class="collapse-top"> -->
+
+          <dl class="definition-tabular collapse-top">
+            {{#caution}}
+              <dt class="bold-small">Caution</dt>
+              <dd>
+                <details class="font-xsmall">
+                  <summary class="bold-small">Caution against first registration</summary>
+                  <div class="panel" style="margin-bottom:2em;">
+
+                    <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                    <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                    <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                  </div>
+                </details>
+              </dd>
+            {{/caution}}
+
+            <dt>Address</dt>
+            <dd>
+              <span class="heading-medium">
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </span>
+              <span class="address-notes">
+                {{#address_notes}}
+                <p>
+                {{.}}
+                </p>
+                {{/address_notes}}
+              </span>
+            </dd>
+
+            {{#owner}}
+              <dt style="text-transform: capitalize">Perchennog</dt>
+              <dd><span class="heading-small">{{owner}}</span><br>
+                {{#owner_address}}
+                  {{.}}<br>
+                {{/owner_address}}
+              </dd>
+            {{/owner}}
+
+            {{#leaseholder}}
+              <dt style="text-transform: capitalize">Leaseholder</dt>
+              <dd><span class="heading-small">{{leaseholder}}</span><br>
+                {{#address}}
+                  {{.}}<br>
+                {{/address}}
+              </dd>
+            {{/leaseholder}}
+
+            {{#lender_name}}
+              <dt>Benthyciwr</dt>
+              <dd>
+                <span class="heading-small">{{lender_name}}</span><br>
+                {{#lender_address}}
+                  {{.}}<br>
+                {{/lender_address}}
+              </dd>
+            {{/lender_name}}
+
+            <dt>Math o ddaliadaeth</dt>
+            <dd><span class="heading-small">{{tenure}}</span></dd>
+
+            {{#lease_term}}
+              <dt>Cyfnod y brydles</dt>
+              <dd><span class="heading-small">{{lease_term}} years</span><br>from {{date}}</dd>
+            {{/lease_term}}
+
+            {{#price}}
+              <dt>Pris a dalwyd</dt>
+              <dd><span class="heading-small">£{{price}},000</span><br>the price stated to have been paid on {{date}}</dd>
+            {{/price}}
+          </dl>
+
+       
+<!--           <h2 class="heading-large printhidden">Title register for {{title_number}}</h2>
+          <div class="panel document-link printhidden" style="margin-bottom:30px;">
+            <a href="/public/downloads/pdf/register-new-transport.pdf">                
+              <img src="/public/images/icon-register-document.png">
+              <h3 class="title">Title register</h3>
+              <span class="footnote">PDF document, 169kb</span><br>
+              <span class="button" href="/public/downloads/pdf/register-new-transport.pdf">View</span>
+            </a>
+          </div> -->
+
+
+          <div class="govuk-box-highlight printhidden clear" style="padding-left:20px;padding-right: 20px">
+            <p>
+              <b class="bold-small">Byddwch ond yn gallu gweld y wybodaeth hon unwaith</b><br>
+              s ydych chi am gadw copi, bydd angen i chi ei hargraffu neu gymryd ergyd sgrin.
+            </p>
+
+            <a class="button-print" href="javascript:window.print();"><img style="vertical-align:middle" src="/public/images/printer.png" alt="" />&nbsp;&nbsp;Argraffu'r dudalen</a>
+          </div>
+
+        </div>
+
+        <div style="width:30%;float:right;">
+          <div id="map" class="polygon">
+            <div class="panel-simple">
+              <p>Mae'r map yn dibynnu ar JavaScript yn cael ei alluogi yn eich porwr.</p>
+            </div>
+          </div>
+          <p class="font-xsmall">Mae'r map hwn yn dangos maint yr eiddo garw a lleoliad, <strong class="bold-xsmall">nid yw ffiniau cyfreithiol.</strong></p>
+        </div>
+
+        <div style="clear:both"></div>
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
+
+          <div class="printhidden">
+            <h2 class="heading-medium">What did you think of this service?</h2>
+            <p><a rel="external" href="/drv-19/feedback">Please give us your feedback</a> (takes 30 seconds). <br>This is a trial service and your feedback will help us improve it.</p>
+          </div>
+
+          <hr>
+
+
+          <h2 class="heading-medium">VAT receipt</h2>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <dl class="definition-tabular-1-3">
+
+                <dt class="bold-xsmall">Date</dt>
+                <dd class="font-xsmall">25 Jan 2016</dd>
+
+                <dt class="bold-xsmall">Invoice number</dt>
+                <dd class="font-xsmall expand-bottom-half">ABC1234578</dd>
+
+                <dt class="bold-xsmall">Item</dt>
+                <dd class="font-xsmall expand-bottom-half">Summary of title {{title_number}}</dd>
+
+                <dt class="bold-xsmall">Net amount</dt>
+                <dd class="font-xsmall">£2.50</dd>
+
+                <dt class="bold-xsmall">VAT @ 20%</dt>
+                <dd class="font-xsmall">£0.50</dd>
+
+                <dt class="bold-xsmall">Total inc VAT</dt>
+                <dd class="font-xsmall">£3.00</dd>
+              </dl>
+            </div>
+            <div class="column-one-thirds">
+              <p class="font-xsmall"><b class="bold-xsmall">Land Registry</b><br>Trafalgar house<br>1 Bedford Park<br>Croydon<br>CR0 2AQ</p>
+              <p class="font-xsmall"><b class="bold-xsmall">VAT registration number:</b><br> GB 8888 181 53</p>
+            </div>
+
+          </div>
+<br>
+
+
+          <div class="panel-indent">
+            <p>If you have any problems with your purchase, you can contact Land Registry using the <a href="http://landregistry.custhelp.com/app/contactus_general/">general enquiry contact form</a> or call <b style="font-weight: 600;">0300 006 0411</b>.</p>
+          </div>
+
+
+          <hr>
+
+          <div class="text printhidden">
+            <h6 class="heading-medium">Beth nesaf</h6>
+            <ul>
+              <li><a href="../search">Chwilio am deitl arall gan ddefnyddio’r gwasanaeth hwn</a></li>
+              <li><a href="https://gov.uk">Yn ôl i GOV.UK</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      {{/result}}
+
+      <script type='text/javascript'>
+        var indexData = {
+          "crs": {
+            "properties": {
+              "name": "urn:ogc:def:crs:EPSG::27700"
+            },
+            "type": "name"
+          },
+          "geometry": {
+            "coordinates": [
+              [
+                [441187.5, 112344.0],
+                [441186.0, 112354.0],
+                [441193.0, 112356.5],
+                [441194.5, 112346.5]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "colour": 25,
+            "feature_id": 4019,
+            "graphic_type": "Bordered Polygon",
+            "render_attributes": {
+              "border_colour": 25,
+              "border_width": 0,
+              "exterior_edge_colour": 1,
+              "exterior_edge_thickness": 2,
+              "exterior_edge_thickness_units": "Pixels",
+              "fill_colour": 25,
+              "fill_style": 9,
+              "render_level": "0"
+            },
+            "width": 0
+          },
+          "type": "Feature"
+        }
+      </script>
+
+      <script src="/public/javascripts/map.js"></script>
+      <link rel="stylesheet" href="/public/vendor/leaflet-0.7.3/leaflet.css" />
+      <script src="/public/vendor/leaflet-0.7.3/leaflet.js"></script><!-- Leaflet -->
+      <script src="/public/javascripts/proj4.js"></script><!-- proj4js -->
+      <script src="/public/javascripts/proj4leaflet.js"></script><!-- proj4leaflet -->
+
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul style="margin: 0.1em 0 0 0;">
+      <li><a href="/drv-19/cookies">Cookies</a></li>
+      <li><a href="/drv-19/terms">Terms &amp; Conditions</a></li>
+<!--       <li>
+        <a id="butEnglish" title="Click to view this page in English" href="../summary/{{id}}">English</a>
+      </li>
+      <li>
+        <a id="butWelsh" title="Cliciwch i weld y dudalen hwn yn y Gymraeg" href="../summary_welsh/{{id}}">Welsh</a>
+      </li> -->
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

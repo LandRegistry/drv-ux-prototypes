@@ -1,0 +1,170 @@
+{{<layout}}
+
+  {{$pageTitle}}What information are you looking for? - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This is a new service – your <a href="/drv-19/feedback">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+      <!-- -->
+
+      <h1 class="heading-large">What information are you looking for?</h1>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+
+          <form action="../sign-in" method="POST" id="eligibility-form" onsubmit="return checkEligibility()">
+              <input name="id" value="{{id}}" type="hidden" />
+
+              <fieldset class="form-group" id="eligibility_group">
+                <h3 class="heading-small">Available from this service</h3>
+
+                <label class="block-label" for="eligibility-1">
+                  <input id="eligibility-1" type="radio" name="eligibility" value="eligible">
+                  Title summary <span class="font-xsmall">– brief facts from the register</span><br>
+                  <strong class="bold-small">£3</strong> <span class="font-xsmall">inc VAT</span><br>
+                </label>
+
+                <div class="clear">
+                  <details>
+                    <summary class="font-xsmall">What is the title summary?</summary>
+                    <div class="panel-indent" style="margin-bottom: 2.5em">
+                      <p>The <strong class="bold-small">title summary</strong> is available to view online. It gives reduced information from the full register in a clearer, simpler format. It includes:</p>
+                      <ul class="list-bullet">
+                        <li>property address and title number</li>
+                        <li>current owner’s name and address</li>
+                        <li>what they paid for the property</li>
+                        <li>whether the property is freehold or leasehold (known as ‘tenure’)</li>
+                        <li>if there is a mortgage on the property, the lender’s name and address</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+
+
+                <h3 class="heading-small">Available from Land Registry ‘Find a Property’</h3>
+                <label class="block-label" for="eligibility-2">
+                  <input id="eligibility-2" type="radio" name="eligibility" value="ineligible">
+                  Full title documents – <span class="font-xsmall">the title register and title plan</span><br>
+                  <strong class="bold-small">£3 each</strong> or <strong class="bold-small">£6 for both</strong>, <span class="font-xsmall">no VAT payable</span><br>
+                </label>
+
+                <div class="clear">
+                  <details>
+                    <summary class="font-xsmall">What are title documents?</span></summary>
+                    <div class="panel-indent" style="margin-bottom: 2.5em">
+                      <p>Title documents are available in PDF format to download and keep.</p>
+                      <p>The <strong class="bold-small">title register</strong> has details about the property or land, including:</p>
+                      <ul class="list-bullet">
+                        <li>title number</li>
+                        <li>who owns it</li>
+                        <li>what they paid for it (properties only, if available)</li>
+                        <li>any rights of way, restrictions and covenants</li>
+                        <li>whether a mortgage on it has been ‘discharged’, eg paid off</li>
+                      </ul>
+                      <p>The <strong class="bold-small">title plan</strong> is a map showing:</p>
+                      <ul class="list-bullet">
+                        <li>the property’s location</li>
+                        <li>the general boundaries – find out how to <a href="https://www.gov.uk/your-property-boundaries">get exact boundary information</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+
+                <h3 class="heading-small">Available by post</h3>
+                <label class="block-label" for="eligibility-3">
+                  <input id="eligibility-3" type="radio" name="eligibility" value="ineligible">
+                   Official copies <span class="font-xsmall">– prove ownership, eg for a court case or visa application</span><br>
+                  <strong class="bold-small">£7 per copy</strong> <span class="font-xsmall">no VAT payable</span>
+                </label>
+
+                <div style="display:none">
+                  <label class="block-label" for="eligibility-4">
+                  <input id="eligibility-4" type="radio" name="eligibility" value="dont_know">
+                  Not sure<br> <p class="font-xsmall collapse-bottom">We'll ask you a few questions to help you decide</p>
+                </label>
+                </div>
+
+              </fieldset>
+
+
+              <input type="submit" class="button" value="Continue">
+            </form>
+
+          <script>
+            var msg = document.createElement('span');
+            msg.classList.add('error-message');
+            msg.textContent = 'Please choose an option';
+
+            var eligibiltyGroup = document.getElementById('eligibility_group');
+
+            function checkEligibility() {
+              var questions = document.querySelectorAll('input[name="eligibility"]');
+              var inEligibleQuestions = document.querySelectorAll('input[name="eligibility"][value="ineligible"]');
+              var eligible = true;
+              var empty = true;
+
+              if(msg.parentNode) {
+                msg.parentNode.removeChild(msg);
+                eligibiltyGroup.classList.remove('error');
+              }
+
+              [].forEach.call(questions, function(item, index) {
+                if(item.checked) {
+                  empty = false;
+                }
+              });
+
+              [].forEach.call(inEligibleQuestions, function(item, index) {
+                if(item.checked) {
+                  eligible = false;
+                }
+              });
+
+              if(empty) {
+                eligibiltyGroup.classList.add('error');
+                eligibiltyGroup.appendChild(msg);
+
+                return false;
+              }
+
+              if(eligible) {
+                var dont_know = document.getElementById('eligibility-4');
+                if(dont_know.checked) {
+                  window.location = 'eligibility_2b';
+                } else {
+                  window.location = 'search';
+                }
+
+              } else if(document.getElementById('eligibility-3').checked) {
+                window.location = 'https://www.gov.uk/government/publications/official-copies-of-register-or-plan-registration-oc1';
+              } else {
+                window.location = 'https://eservices.landregistry.gov.uk/wps/portal/Property_Search';
+              }
+
+              return false;
+            }
+          </script>
+
+
+        </div>
+      </div>
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul style="margin: 0.1em 0 0 0;">
+      <li><a href="/drv-19/cookies">Cookies</a></li>
+      <li><a href="/drv-19/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

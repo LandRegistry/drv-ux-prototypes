@@ -1,0 +1,341 @@
+{{<layout}}
+
+  {{$pageTitle}}Order a title summary - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      {{#result}}
+        <!-- private beta banner -->
+        <div class="phase-banner">
+          <p>
+            <strong class="phase-tag">BETA</strong>
+            <span>This is a new service – your <a href="/drv-19-guest-1/feedback">feedback</a> will help us to improve it.</span>
+          </p>
+        </div>
+        <!-- -->
+        <!-- <a href="../search/1" class="back-link expand-top-half" style="display:inline-block">◀ Back to search results</a> -->
+        <p class="expand-top-half">
+          <span class="back-link">◀ </span><a class="back-link" href="" onClick="history.go(-1); return false;">Back to search results</a>
+        </p>
+
+
+        <!-- breadcrumb & sign out row -->
+<!--         <div class="grid-row">
+          <div class="column-two-thirds">
+            <div id="global-breadcrumb">
+              <nav role="navigation">
+                <ol>
+                  <li><a href="../search">Search the land and property register</a></li>
+                  <li><a href="../search/1">Search results</a></li>
+                  <li>Viewing {{#result}}{{title_number}}{{/result}}</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="column-quarter column-flip">
+          </div>
+        </div> -->
+
+          {{#empty}}
+            <h1 class="heading-large collapse-top">No title information is avaiable for this property</h1>
+            <div style="width:66%;float:left;">
+            <h2 class="heading-medium collapse-top">
+              {{#address}}
+                {{.}}<br>
+              {{/address}}
+            </h2>
+
+<!--             <h3 class="heading-medium">Why isn't there any information on this property?</h3>
+            <p>There could be many reasons why we cannot provide you a title number at this time. If you need additional help, please call Land Registry on <b>0300 006 0411</b>.</p> -->
+          {{/empty}}
+
+          {{#has_data}}
+            <!-- 1. Start Title information (number, address and tenure information) -->
+            <h1 class="heading-large collapse-top">Confirm your order</h1>
+            <p class="">You'll get a summary of the information Land Registry holds for this property title.</p>
+            <div style="width:66%;float:left;">
+            
+
+            <dl class="definition-tabular expand-top-half">
+              {{#caution}}
+<!--                 <dt class="bold-small">Caution</dt>
+                <dd>
+                  <details class="font-xsmall">
+                    <summary class="bold-small">What does Caution mean?</summary>
+                    <div class="panel-indent" style="margin-bottom:2em;">
+
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                      <p>Someone other than the owner (known as the &lsquo;cautioner&rsquo;) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get the cautioner&rsquo;s name and address from this service.</p>
+
+                      <p>Registration has only been compulsory throughout England and Wales since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                    </div>
+                  </details>
+                </dd> -->
+              {{/caution}}
+
+              <dt>Address</dt>
+              <dd>
+                <span class="heading-medium">
+                  {{#address}}
+                  {{.}}<br>
+                  {{/address}}
+                </span>
+                <span class="address-notes">
+                  {{#address_notes}}
+                  <p>
+                  {{.}}
+                  </p>
+                  {{/address_notes}}
+                </span>
+              </dd>
+              <dt>Title number</dt>
+              <dd class="bold-small">{{title_number}}</dd>
+
+<!--               {{#caution}}
+                <dt class="bold-small">Caution</dt>
+                <dd>
+                <b class="bold-small">Caution against first registration</b>&nbsp;
+                <details class="font-xsmall">
+                    <summary class="font-xsmall">What does this mean?</summary>
+                    <div class="panel-indent" style="margin-bottom:2em;">
+
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                    </div>
+                  </details>
+                </dd>
+              {{/caution}} -->
+
+
+              <dt>Tenure type</dt>
+              <dd>
+                <b class="bold-small">{{tenure}}</b>&nbsp;
+
+                <details class="font-xsmall">
+                  <summary>What does this mean?</summary>
+                  <div class="panel-indent" style="margin-bottom:2em;">
+
+                  {{#tenure_leasehold}}
+                    <p>You only own a leasehold property for a fixed period of time. You'll have a legal agreement the landlord (sometimes known as the ‘freeholder’) called a ‘lease’. This tells you how many years you’ll own the property.</p>
+                    <p>Most flats are leasehold. Houses can be leasehold too and usually are if they’re bought through a shared ownership scheme.</p>
+                    <p>The leasehold and freehold are registered separately with the Land Registry. Each has its own title documents.</p>
+                    <p><b class="bold-xsmall">You are buying a summary of the leasehold owner, not the freehold.</b></p>
+
+                    <a rel="external" href="https://www.gov.uk/leasehold-property/overview">More about Leasehold on GOV.UK</a>
+                  {{/tenure_leasehold}}
+
+                  {{#tenure_freehold}}
+                    <p>You own a freehold building and land outright. It is yours until you sell it or give it away.</p>
+                    <p>Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                    <p><b class="bold-xsmall">If you want to know who owns a particular flat, you probably need the leasehold instead.</b></p>
+                    <p>Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+
+                  {{/tenure_freehold}}
+                  </div>
+                </details>
+
+                <p class="font-xsmall">A property can have both a freehold and a leasehold title. To get a different tenure for this address, <a href="#" onClick="history.go(-1); return false;">go back</a> and select the one you need.</p>
+              </dd>
+
+            </dl>
+
+
+
+            <br>
+
+            {{#caution}}
+            <!-- <h2 class="heading-medium collapse-top">Land Registry don't have a record of who owns this property</h2> -->
+            <h2 class="heading-medium collapse-top">Land Registry does not know the owner of this property</h2>
+              
+              <ul class="list-bullet">
+                <li>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property.</li>
+                <li><b style="font-weight:600;">The summary will give you the cautioner's name and address</b>.</li>
+              </ul>
+
+              
+                <dt class="font-small">This is known as a caution against first registration</dt>
+                <dd>
+                <!-- <b class="bold-small">Caution against first registration</b>&nbsp; -->
+                <details class="font-xsmall">
+                    <summary class="font-xsmall">More about cautions against first registration</summary>
+                    <div class="panel-indent" style="margin-bottom:2em;">
+
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                      <p>Someone other than the owner (known as the ‘cautioner’) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get their name and address from this service.</p>
+
+                      <p>Registration has only been compulsory since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                    </div>
+                  </details>
+                </dd>
+              <br>
+              {{/caution}}
+
+
+
+              {{^caution}}
+                <h2 class="heading-medium collapse-top">The summary will tell you</h2>
+              
+                <ul class="list-bullet">
+                  {{#owner}}
+                    <li>current owner’s name and address</li>
+                  {{/owner}}
+
+                  {{#leaseholder}}
+                    <li>current leaseholder’s name and address</li>
+                  {{/leaseholder}}
+
+                  {{#lease_term}}<li>how long the lease is for</li>{{/lease_term}}
+
+                  <li>what was paid for the property – you won’t get this if it was bought before April 2000, if they paid less than £100, or if Land Registry have agreed not to record the price</li>
+                  <li>if there is a mortgage on the property, the lender’s name and  address</li>
+                </ul>
+              {{/caution}}
+
+<!--               {{#caution}}
+                <ul class="list-bullet">
+                  <li>the name and address of the person who has registered a right or interest in the property (&lsquo;the cautioner&rsquo;)</li>
+                  <li>a description of the land it applies to</li>
+                </ul>
+                <h3 class="heading-small collapse-top">Because this property or land is unregistered, the summary will not tell you</h3>
+                <ul class="list-bullet">
+                  <li>who the owner is</li>
+                  <li>what they paid for it</li>
+                  <li>whether there is a mortgage on it</li>
+                </ul>
+              {{/caution}} -->
+            
+
+
+            <div class="notice" style="background-color:#fff2d3;padding: 25px">
+              <img src="/public/lr-style-guide/lr-styleguide/images/icon-important.png" alt="" style="float: left;margin-right: 15px;" />
+              <p style="overflow:hidden;margin:0;"><strong class="bold-small">You'll only be able to view the information once</strong><br>
+                If you want to keep a copy you can print it out</p>
+            </div>
+
+
+              <h2 class="heading-medium">The summary costs £3 <span class="font-small">(£2.50+VAT)</span></h2>
+              <p>You can pay by credit or debit card.</p>
+              <p>You need to accept the following terms  to continue.</p>
+              <div class="form-group expand-bottom-half" id="right_to_cancel_group">
+                <label class="block-label" for="right_to_cancel">
+                <input id="right_to_cancel" name="right_to_cancel" type="checkbox" value="right_to_cancel">
+                I agree that you will provide the summary as soon as I’ve paid.<br>
+                I accept that I will lose my right to cancel the contract once the summary is displayed.
+                </label>
+              </div>
+
+              <form action="../worldpay_1" method="POST" onsubmit="return checkRightToCancel()">
+                <input name="id" value="{{id}}" type="hidden" />
+                <input type="submit" style="margin:10px 0" class="button" value="Buy title summary">
+              </form>
+              <p><span class="collapse-bottom font-xsmall"><small>for &pound;3 inc VAT</small></small></p>
+            <!-- </div> -->
+
+            <script>
+              var msg = document.createElement('span');
+              msg.classList.add('error-message');
+              msg.textContent = 'You need to agree to receive the summary straight away and that you’ll lose your right to cancel';
+
+              var rightToCancelGroup = document.getElementById('right_to_cancel_group');
+
+              function checkRightToCancel() {
+
+                if(msg.parentNode) {
+                  msg.parentNode.removeChild(msg);
+                  rightToCancelGroup.classList.remove('error');
+                }
+
+                if(!document.getElementById('right_to_cancel').checked) {
+
+                  rightToCancelGroup.classList.add('error');
+                  rightToCancelGroup.appendChild(msg);
+
+                  return false;
+                }
+              }
+            </script>
+          {{/has_data}}
+        </div>
+
+
+        <div style="width:30%;float:right;" class="expand-top-half">
+          <div id="map">
+            <div class="panel-simple">
+              <p>The map relies on JavaScript being enabled in your browser.</p>
+            </div>
+          </div>
+          <!-- <p class="font-xsmall">This map shows the property's rough extent and location, not legal boundaries.</p> -->
+        </div>
+
+        <br/>
+
+        <!-- Offer user a link back to the Search Results -->
+        <div style="clear:both;">
+          <a href="" onClick="history.go(-1); return false;">Back to search results</a>
+        </div>
+      {{/result}}
+
+      <script type='text/javascript'>
+        var indexData = {
+          "crs": {
+            "properties": {
+              "name": "urn:ogc:def:crs:EPSG::27700"
+            },
+            "type": "name"
+          },
+          "geometry": {
+            "coordinates": [
+              [
+                [441187.5, 112344.0],
+                [441186.0, 112354.0],
+                [441193.0, 112356.5],
+                [441194.5, 112346.5]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "colour": 25,
+            "feature_id": 4019,
+            "graphic_type": "Bordered Polygon",
+            "render_attributes": {
+              "border_colour": 25,
+              "border_width": 0,
+              "exterior_edge_colour": 1,
+              "exterior_edge_thickness": 2,
+              "exterior_edge_thickness_units": "Pixels",
+              "fill_colour": 25,
+              "fill_style": 9,
+              "render_level": "0"
+            },
+            "width": 0
+          },
+          "type": "Feature"
+        }
+      </script>
+
+      <script src="/public/javascripts/map.js"></script>
+      <link rel="stylesheet" href="/public/vendor/leaflet-0.7.3/leaflet.css" />
+      <script src="/public/vendor/leaflet-0.7.3/leaflet.js"></script><!-- Leaflet -->
+      <script src="/public/javascripts/proj4.js"></script><!-- proj4js -->
+      <script src="/public/javascripts/proj4leaflet.js"></script><!-- proj4leaflet -->
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul style="margin: 0.1em 0 0 0;">
+      <li><a href="/drv-19-guest-1/cookies">Cookies</a></li>
+      <li><a href="/drv-19-guest-1/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

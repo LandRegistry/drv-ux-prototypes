@@ -1,0 +1,176 @@
+{{<layout}}
+
+  {{$pageTitle}}Search results - search the land and property register{{/pageTitle}}
+
+  {{$content}}
+
+    <main id="content" role="main">
+      <!-- private beta banner -->
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This is a new service – your <a href="/drv-19/feedback">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+      <!-- -->
+
+      <!-- breadcrumb & sign out row -->
+<!--       <div class="grid-row">
+        <div class="column-two-thirds">
+          <div id="global-breadcrumb">
+            <nav role="navigation">
+              <ol>
+                <li><a href="../search">Search the land and property register</a></li>
+                <li>Search results</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div> -->
+      <!-- -->
+
+<!--       <div class="grid-row">
+        <div class="column-two-thirds">
+          <p style="margin-top:30px; margin-bottom: 15px;">Page {{page}}</p>
+        </div>
+      </div> -->
+
+      <div class="grid-row">
+        <div class="column-two-thirds" style="margin-top:30px;">
+
+          <!-- <p>Page {{page}}</p> -->
+          <p>
+            <label class="bold-medium" for="search_term">Search results for</label>
+          </p>
+          <input type="text" class="form-control" name="search_term" id="search_term" value="TR15 5RZ"  autofocus="autofocus">
+          <a class="button" href="search_results">Search</a>
+
+          <h2 class="font-xsmall expand-bottom-half">{{results_count}} results found</h2>
+
+          <ol class="search-results-listing">
+
+            {{#results}}
+              <li>
+                {{#has_data}}
+                  <h2 class="heading-small">
+                    <a href="/drv-19/result/{{id}}">{{address}}</a>
+                  </h2>
+
+                  {{^caution}}
+                  <div class="font-xsmall">
+                    {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
+
+                    {{#tenure_leasehold}}
+                      <b class="bold-xsmall">{{tenure}}</b>
+                    {{/tenure_leasehold}}
+
+                    {{#tenure_freehold}}
+                      <b class="bold-xsmall">{{tenure}}</b>
+                    {{/tenure_freehold}}
+                  </div>
+                  {{/caution}}
+
+                  {{#caution}}
+                    <div class="font-xsmall">
+                      {{title_number_prefix}} Title number: <b>{{title_number}}</b><br>
+
+                      {{#tenure_leasehold}}
+                        <b class="bold-xsmall">Caution against first registration - {{tenure}}</b>
+                      {{/tenure_leasehold}}
+
+                      {{#tenure_freehold}}
+                        <b class="bold-xsmall">Caution against first registration - {{tenure}}</b>
+                      {{/tenure_freehold}}
+                    </div>
+                    <details class="font-xsmall">
+                      <summary>What&rsquo;s this?</summary>
+                      <div class="panel-indent" style="margin-bottom:2em;">
+                      <p>This property hasn’t been registered yet. You can’t find out who owns it from this service. </p>
+
+                      <p>Someone other than the owner (known as the &lsquo;cautioner&rsquo;) has registered a right or interest in the property. They will be told if anyone tries to register it, and can object to the registration going ahead until their claim has been looked at. You can get the cautioner&rsquo;s name and address from this service.</p>
+
+                      <p>Registration has only been compulsory throughout England and Wales since the 1990s. Property that hasn’t changed hands since then may not be registered.</p>
+                      </div>
+                    </details>
+                  {{/caution}}
+                {{/has_data}}
+
+                {{#empty}}
+                  <h2 class="heading-small">
+                    {{address}}
+                  </h2>
+                  <div class="font-xsmall">
+                    <span class="collapse-bottom">No title information found&nbsp;</span>
+                    <details>
+                    <summary>Why not?</summary>
+                    <div class="panel-indent" style="margin-bottom:2em;">
+                      <p>This may be because:</p>
+<!--                       <img style="vertical-align: middle;margin-bottom:10px" src="/public/images/beta.png" alt="" />
+                      <ul>
+                        <li>The title details aren’t available through this new service. Try <a href="https://eservices.landregistry.gov.uk/www/wps/portal/!ut/p/b1/04_SjzS0MDc3NjeyNDDSj9CPykssy0xPLMnMz0vMAfGjzOKNjSxMDA1NjDwsjM3MDTxN3dyNDUNMjQ1MjPWDU_P0c6McFQGRbYf3/">searching on the Land Registry 'Find a Property' service</a> instead.</li>
+                        <li>The property isn’t registered yet. Registration has only been compulsory since the 1990s. If the property hasn’t changed hands since then it may not be registered.</li>
+                      </ul> -->
+                      <ul>
+                        <li> <!-- <img style="vertical-align: middle;margin-right:0.25em" src="/public/images/beta.png" alt="this service is new" data-pin-nopin="true"> -->This service is new, so some titles aren’t available here yet. Try  <a href="https://eservices.landregistry.gov.uk/www/wps/portal/!ut/p/b1/04_SjzS0MDc3NjeyNDDSj9CPykssy0xPLMnMz0vMAfGjzOKNjSxMDA1NjDwsjM3MDTxN3dyNDUNMjQ1MjPWDU_P0c6McFQGRbYf3/">searching on the Land Registry 'Find a Property' service</a> instead.</li>
+                        <li>The property isn’t registered yet. Registration has only been compulsory across England and Wales since the 1990s. If the property hasn’t changed hands since then it may not be registered.</li>
+                        
+                      </ul>
+<!--                       <p>If you need additional help, you can call Land Registry on <b>0300 006 0411</b>.</p> -->
+                    </div>
+                    </details>
+                  </div>
+                {{/empty}}
+              </li>
+            {{/results}}
+
+          </ol>
+
+          <nav class="pagination-prev-next">
+            <ul>
+              {{#prev}}
+                <li class="previous-page" role="navigation" aria-label="Pagination">
+                 <a href="{{prev}}">
+                   <span class="pagination-label">Previous page</span>
+                   <span>{{prev}} of {{pages}}</span>
+                 </a>
+               </li>
+              {{/prev}}
+
+              {{#next}}
+              <li class="next-page">
+                <a href="{{next}}">
+                  <span class="pagination-label">Next page</span>
+                  <span>{{next}} of {{pages}}</span>
+                </a>
+              </li>
+              {{/next}}
+            </ul>
+          </nav>
+          <!-- <div id="pagination" style="text-align: center">Page 1 of 2</div> -->
+
+        </div> <!-- end column two thirds -->
+
+        <div class="column-third">
+          <h2 style="border-top: 10px solid #005ea5;padding-top:25px;" class="heading-medium">Help finding the right property</h2>
+          <p>
+            <img style="display: block;margin-bottom:10px" src="/public/images/beta.png" alt="this is a new service" />
+            This is a new service. If you're not seeing the search results you expect please <a rel="external" href="../feedback">let us know</a>
+          </p>
+          <p>If you're having trouble finding the property or land you're looking for, try the <a href="https://eservices.landregistry.gov.uk/www/wps/portal/!ut/p/b1/04_SjzS0MDc3NjeyNDDSj9CPykssy0xPLMnMz0vMAfGjzOKNjSxMDA1NjDwsjM3MDTxN3dyNDUNMjQ1MjPWDU_P0c6McFQGRbYf3/"> Land Registry 'Find a Property' service</a> instead</p>
+        </div>
+      </div>
+
+    </main>
+
+  {{/content}}
+
+  {{$footerSupportLinks}}
+    <ul style="margin: 0.1em 0 0 0;">
+      <li><a href="/drv-19/cookies">Cookies</a></li>
+      <li><a href="/drv-19/terms">Terms &amp; Conditions</a></li>
+      <li>Built by the <a href="https://www.gov.uk/government/organisations/land-registry">Land Registry</a></li>
+      
+    </ul>
+  {{/footerSupportLinks}}
+
+{{/layout}}

@@ -50,8 +50,8 @@ router.all('/drv-:version/worldpay_:stage', function (req, res) {
 });
 
 /**
- * Sign-in - added for DRV-17 to POST result ID
- * not needed for previous protos, but does not break 16 or earlier
+ * Sign-in - added for DRV-19 and DRV-17 to POST result ID
+ * not needed for other protos, but does not break 18, 16 or earlier
  */
 router.all('/drv-:version/sign-in', function (req, res) {
   var id;
@@ -113,12 +113,12 @@ router.get('/drv-:version/result/:id', function (req, res) {
 /**
  * Individual item route - confirm
  */
-router.get('/drv-:version/confirm/:id', function (req, res) {
+router.get('/drv-:version/result_confirm/:id', function (req, res) {
 
   var id = parseInt(req.params.id);
   var results = require('./views/drv-' + req.params.version + '/results')();
 
-  res.render('drv-' + req.params.version + '/confirm', {
+  res.render('drv-' + req.params.version + '/result_confirm', {
     'id': id,
     'result': results[id - 1],
     'query': req.query
